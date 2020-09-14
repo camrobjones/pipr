@@ -1,0 +1,17 @@
+{% extends 'pronouns/base.html' %}
+
+{% block content %}
+
+<div id='expt-container'>
+
+</div>
+
+<!-- Render django data as JSON scripts -->
+{{ items | json_script:"stimuli"}}
+{{ conf | json_script:"conf"}}
+
+<!-- Local JS -->
+<script src="/static/pronouns/pronouns.js"></script>
+
+
+{% endblock %}

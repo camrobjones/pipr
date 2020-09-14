@@ -1,0 +1,265 @@
+/* === PIPR experiment CSS === */
+
+/* General */
+
+body {
+    margin:0;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+/* --- Header Bar --- */
+
+header.top-bar {
+    top: 0;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    align-items: center;
+}
+
+h1#top-bar-title {
+    color: white;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    margin: 0 20px 0 30px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    min-width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  h1#top-bar-title {
+    font-size: 1rem;
+    min-width: 250px;
+  }
+}
+
+/* Progress Bar */
+
+div#progress-container {
+    width: 300px;
+    max-width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+div#progress-label {
+    color: white;
+    margin-right: 20px;
+}
+
+div#progress-bar-container {
+    width: 200px;
+    height: 10px;
+    background: #444;
+    border-radius: 2px;
+}
+
+div#progress-bar {
+    height: 100%;
+    width: 1%;
+    background: white;
+    /* background: #ff8000; */
+    border-radius: inherit;
+}
+
+.hide {
+    display:none!important;
+}
+
+/* --- Home --- */
+
+div#control-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 20px 0 50px;
+}
+
+.input-section {
+    width: 250px;
+    margin-bottom:25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.input-group input {
+    margin-right: 10px;.input-group: margin-right;
+}
+
+h3.input-section-title {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+div.input-section-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-group.cols {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.input-group.cols label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+input#limit {
+    margin-right: 0;
+    width: 40px;
+    padding: 7px 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00000088;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+
+.submit-container {
+    padding: 20px;
+    padding-right: 130px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button#submit {
+    padding: 10px;
+    background: #000000ee;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 1px 4px 1px #00000044;
+    cursor: pointer;
+}
+
+button#submit:hover {
+    background: #000000;
+    box-shadow: 0px 1px 4px 1px #00000044, 0px 1px 8px 2px #00000044;
+}
+
+
+/* --- Experiment: Main content --- */
+
+div#expt-container {
+    min-height: calc(100vh - 92px);
+    width: 95vw;
+    margin:0 auto;
+    font-size:1.4rem;
+    margin-bottom:20px;
+}
+
+@media (max-width: 600px) {
+  div#expt-container {
+    font-size: 1.2rem;
+  }
+}
+
+
+span.key-demo {
+    border: 2px solid black;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+p.instructions {
+    text-align: justify;
+}
+
+#continue {
+    margin-top:2.5em;
+}
+
+.instructions-container {
+    height: calc(90vh - 92px);
+}
+
+h2.instructions-header {
+    margin-bottom: 1.5em;
+}
+
+.example {
+    border: 1px solid #00000088;
+    padding:5px;
+}
+
+
+.fixation-cross {
+    font-size: 60px;
+}
+
+.response-container {
+  display:flex;
+  justify-content: space-evenly;
+  min-height: 5em;
+}
+
+p.sent {
+    min-height: 5em;
+    margin:1em;
+}
+
+p.question {
+    min-height: 3em;
+    margin-bottom:0;
+}
+
+.response {
+    display: flex;
+    flex-direction: column;
+}
+
+.trial-container {
+    width: 80%;
+    margin: auto;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.response-label {font-weight: 600;}
+
+
+.key-reminder {
+    border: 2px solid black;
+    width: 35px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.key-reminder-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}

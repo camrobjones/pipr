@@ -1,0 +1,81 @@
+{% extends 'pronouns/base.html' %}
+
+{% block content %}
+
+<div id='control-container'>
+
+    <h2>Experiment Config</h2>
+
+    <form action ='/pronouns/expt' method="GET" id='expt-config'>
+
+        <div class='input-section-container'>
+
+            <div class='input-section'>
+
+                <h3 class='input-section-title'>Mode</h3>
+
+                <div class='form-group'>
+
+                    <div class='input-group'>
+                        <label for='mode-expt'>Experiment</label>
+                        <input type='radio' name='mode' value='expt' id='mode-expt' checked>
+                    </div>
+
+                    <div class='input-group'>
+                        <label for='mode-syntax'>Syntax Norming</label>
+                        <input type='radio' name='mode' value='syntax_norm' id='mode-syntax'>
+                    </div>
+
+                    <div class='input-group'>
+                        <label for='mode-physics'>Physics Norming</label>
+                        <input type='radio' name='mode' value='physics_norm' id='mode-physics'>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Filler Group -->
+            <div class='input-section'>
+
+                <h3 class='input-section-title'>Fillers</h3>
+
+                <div class='form-group'>
+
+                    <div class='input-group'>
+                        <label for='fillers'>Include Fillers</label>
+                        <input type='checkbox' name='fillers' id='fillers' checked>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Limit -->
+            <div class='input-section'>
+
+                <h3 class='input-section-title'>Limit</h3>
+
+                <div class='form-group'>
+
+                    <div class='input-group cols'>
+                        <label for='limit'>Max Experimental Items</label>
+                        <input type='number' name='n' id='limit' value="20">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class='submit-container'>
+            <button id='submit' type='submit'>Launch</button>
+        </div>
+
+
+    </form>
+
+</div>
+
+
+{% endblock %}

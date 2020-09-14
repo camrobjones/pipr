@@ -1,0 +1,61 @@
+filler_type,sent_id,filler_bias,item_id,sent,question,NP1,NP2,item_type
+parallel,F_parallel_1,NP1,F_parallel_1_NP1,Mary helped Julie change the tire and then she helped Peter change the oil.,Who helped Peter?,Mary,Julie,filler
+parallel,F_parallel_2,NP1,F_parallel_2_NP1,Shirley wrote to Carol about a meeting and then she wrote to Martin about a party.,Who wrote to Martin?,Shirley,Carol,filler
+parallel,F_parallel_3,NP1,F_parallel_3_NP1,Richard chased Jim around the corner and then he chased Caroline down Yonge Street.,Who chased Caroline?,Richard,Jim,filler
+parallel,F_parallel_4,NP1,F_parallel_4_NP1,Robert bullied Peter and then he attacked Melanie.,Who attacked Melanie?,Robert,Peter,filler
+parallel,F_parallel_5,NP1,F_parallel_5_NP1,Liz tried to catch Melanie and then she tried to trip Frank.,Who tried to trip Frank?,Liz,Melanie,filler
+parallel,F_parallel_6,NP1,F_parallel_6_NP1,Sue gave Maureen a new watch and then she gave Joe a record.,Who gave Joe a record?,Sue,Maureen,filler
+parallel,F_parallel_7,NP1,F_parallel_7_NP1,Gloria tickled Emma and then she poked Mike.,Who poked Mike?,Gloria,Emma,filler
+parallel,F_parallel_8,NP1,F_parallel_8_NP1,Keith shared his chocolate bar with Timothy and then he shared his sandwich with Claudia.,Who shared their sandwich with Claudia?,Keith,Timothy,filler
+parallel,F_parallel_9,NP1,F_parallel_9_NP1,Patricia gave Martha a present and then she sold Nicholas a painting.,Who sold Nicholas a painting?,Patricia,Martha,filler
+parallel,F_parallel_10,NP1,F_parallel_10_NP1,Cheryl spoke to Monica about the next meeting and then she wrote to Nicholas about the elections.,Who spoke to Nicholas?,Cheryl,Monica,filler
+parallel,F_parallel_1,NP2,F_parallel_1_NP2,John pushed Sammy and then Evelyn kicked him.,Who did Evelyn kick?,John,Sammy,filler
+parallel,F_parallel_2,NP2,F_parallel_2_NP2,Sarah visited Cathy at home and then Charles phoned her at work. ,Who did Charles phone?,Sarah,Cathy,filler
+parallel,F_parallel_3,NP2,F_parallel_3_NP2,Tommy told Kevin to find the new bikes and then Samantha asked him to find the new tires.,Who did Samantha ask to find the tires?,Tommy,Kevin,filler
+parallel,F_parallel_4,NP2,F_parallel_4_NP2,Geoffrey followed Mark into the pool and then Sara followed him into the bar.,Who did Sara follow?,Geoffrey,Mark,filler
+parallel,F_parallel_5,NP2,F_parallel_5_NP2,Jean called to Penelope in the next room and then the security guard shouted at her across the street.,Who did the security guard shout at?,Jean,Penelope,filler
+parallel,F_parallel_6,NP2,F_parallel_6_NP2,Adam argued with Barry about the new format and then Linda argued with him about the new rules.,Who did Linda argue with?,Adam,Barry,filler
+parallel,F_parallel_7,NP2,F_parallel_7_NP2,Simon gave William a ride to the party and then Fiona gave him a bottle of wine.,Who did Fiona give a bottle of wine to?,Simon,William,filler
+parallel,F_parallel_8,NP2,F_parallel_8_NP2,Stuart raced James along the track and then Jessica raced him across the field.,Who did Jessica race?,Stuart,James,filler
+parallel,F_parallel_9,NP2,F_parallel_9_NP2,David showed Christopher a pamphlet about a hotel and then the woman showed him an advertisement about a ski lodge.,Who did the woman show the advertisement to?,David,Cristopher,filler
+parallel,F_parallel_10,NP2,F_parallel_10_NP2,Alison asked Eleanor to dinner and then my father invited her to the cottage.,Who did my father invite?,Alison,Eleanor,filler
+winograd,F_winograd_3,NP1,F_winograd_3_NP1,Joan made sure to thank Susan for all the help she had received.,Who had received help?,Joan,Susan,filler
+winograd,F_winograd_3,NP2,F_winograd_3_NP2,Joan made sure to thank Susan for all the help she had given.,Who had given help?,Joan,Susan,filler
+winograd,F_winograd_4,NP1,F_winograd_4_NP1,"Paul tried to call George on the phone, but he wasn't successful.",Who was not successful?,Paul,George,filler
+winograd,F_winograd_4,NP2,F_winograd_4_NP2,"Paul tried to call George on the phone, but he wasn't available.",Who was not available?,Paul,George,filler
+winograd,F_winograd_18,NP1,F_winograd_18_NP1,Jim yelled at Kevin because he was so upset.,Who was upset?,Jim,Kevin,filler
+winograd,F_winograd_18,NP2,F_winograd_18_NP2,Jim comforted Kevin because he was so upset.,Who was upset?,Jim,Kevin,filler
+winograd,F_winograd_25,NP1,F_winograd_25_NP1,Susan knows all about Ann's personal problems because she is nosy.,Who is nosy?,Susan,Anne,filler
+winograd,F_winograd_25,NP2,F_winograd_25_NP2,Susan knows all about Ann's personal problems because she is indiscreet.,Who is indiscreet?,Susan,Anne,filler
+winograd,F_winograd_32,NP1,F_winograd_32_NP1,The drain is clogged with hair. It has to be cleaned.,What has to be cleaned?,The drain,The hair,filler
+winograd,F_winograd_32,NP2,F_winograd_32_NP2,The drain is clogged with hair. It has to be removed.,What has to be removed?,The drain,The hair,filler
+winograd,F_winograd_37,NP1,F_winograd_37_NP1,"I used an old rag to clean the knife, and then I put it in the trash.",What did I put in the trash?,The rag,The knife,filler
+winograd,F_winograd_37,NP2,F_winograd_37_NP2,"I used an old rag to clean the knife, and then I put it in the drawer.",What did I put in the drawer?,The rag,The knife,filler
+winograd,F_winograd_38,NP1,F_winograd_38_NP1,"Ann asked Mary what time the library closes, because she had forgotten.",Who had forgotten?,Ann,Mary,filler
+winograd,F_winograd_38,NP2,F_winograd_38_NP2,"Ann asked Mary what time the library closes, but she had forgotten.",Who had forgotten?,Ann,Mary,filler
+winograd,F_winograd_41,NP1,F_winograd_41_NP1,I'm sure that my map will show this building; it is very good.,What is good?,The map,The building,filler
+winograd,F_winograd_41,NP2,F_winograd_41_NP2,I'm sure that my map will show this building; it is very famous.,What is famous?,The map,The building,filler
+winograd,F_winograd_42,NP1,F_winograd_42_NP1,Bob paid for Charlie's college education. He is very generous.,Who is generous?,Bob,Charlie,filler
+winograd,F_winograd_42,NP2,F_winograd_42_NP2,Bob paid for Charlie's college education. He is very grateful.,Who is grateful?,Bob,Charlie,filler
+winograd,F_winograd_43,NP1,F_winograd_43_NP1,"Bob paid for Charlie's college education, but now Charlie acts as though it never happened. He is very hurt.",Who is hurt?,Bob,Charlie,filler
+winograd,F_winograd_43,NP2,F_winograd_43_NP2,"Bob paid for Charlie's college education, but now Charlie acts as though it never happened. He is very ungrateful.",Who is ungrateful?,Bob,Charlie,filler
+winograd,F_winograd_44,NP1,F_winograd_44_NP1,"Bob was playing cards with Adam and was way ahead. If Adam hadn't had a sudden run of good luck, he would have won.",Who would have won?,Bob,Adam,filler
+winograd,F_winograd_44,NP2,F_winograd_44_NP2,"Bob was playing cards with Adam and was way ahead. If Adam hadn't had a sudden run of good luck, he would have lost.",Who would have lost?,Bob,Adam,filler
+winograd,F_winograd_46,NP1,F_winograd_46_NP1,"If the con artist has succeeded in fooling Sam, he would have gotten a lot of money.",Who would have gotten the money?,The con artist,Sam,filler
+winograd,F_winograd_46,NP2,F_winograd_46_NP2,"If the con artist has succeeded in fooling Sam, he would have lost a lot of money.",Who would have lost the money?,The con artist,Sam,filler
+winograd,F_winograd_48,NP1,F_winograd_48_NP1,"The cat was lying by the mouse hole waiting for the mouse, but it was too impatient.",What was too impatient?,The cat,The mouse,filler
+winograd,F_winograd_48,NP2,F_winograd_48_NP2,"The cat was lying by the mouse hole waiting for the mouse, but it was too cautious.",What was too cautious?,The cat,The mouse,filler
+winograd,F_winograd_52,NP1,F_winograd_52_NP1,The fish ate the worm. It was tasty.,What was tasty?,The worm,The fish,filler
+winograd,F_winograd_52,NP2,F_winograd_52_NP2,The fish ate the worm. It was hungry.,What was hungry?,The worm,The fish,filler
+winograd,F_winograd_55,NP1,F_winograd_55_NP1,"In the storm, the tree fell down and crashed through the roof of my house. Now, I have to get it removed.",What has to be removed?,The tree,The roof,filler
+winograd,F_winograd_55,NP2,F_winograd_55_NP2,"In the storm, the tree fell down and crashed through the roof of my house. Now, I have to get it repaired.",What has to be repaired?,The tree,The roof,filler
+winograd,F_winograd_56,NP1,F_winograd_56_NP1,The customer walked into the bank and stabbed one of the tellers. He was immediately taken to the emergency room.,Who was taken to the emergency room?,The teller,The customer,filler
+winograd,F_winograd_56,NP2,F_winograd_56_NP2,The customer walked into the bank and stabbed one of the tellers. He was immediately taken to the police station.,Who was taken to the police station?,The teller,The customer,filler
+winograd,F_winograd_57,NP1,F_winograd_57_NP1,John was doing research in the library when he heard a man humming and whistling. He was very annoyed.,Who was annoyed?,John,The hummer,filler
+winograd,F_winograd_57,NP2,F_winograd_57_NP2,John was doing research in the library when he heard a man humming and whistling. He was very annoying.,Who was annoying?,John,The hummer,filler
+winograd,F_winograd_58,NP1,F_winograd_58_NP1,John was jogging through the park when he saw a man juggling watermelons. He was very impressed.,Who was impressed?,John,The juggler,filler
+winograd,F_winograd_58,NP2,F_winograd_58_NP2,John was jogging through the park when he saw a man juggling watermelons. He was very impressive.,Who was impressive?,John,The juggler,filler
+winograd,F_winograd_61,NP1,F_winograd_61_NP1,"Mark told Pete many lies about himself, which Pete included in his book. He should have been more truthful.",Who should have been more truthful?,Mark,Pete,filler
+winograd,F_winograd_61,NP2,F_winograd_61_NP2,"Mark told Pete many lies about himself, which Pete included in his book. He should have been more skeptical.",Who should have been more skeptical?,Mark,Pete,filler
+winograd,F_winograd_65,NP1,F_winograd_65_NP1,"Sam pulled up a chair to the piano, but it was broken, so he had to stand instead.",What was broken?,The chair,The piano,filler
+winograd,F_winograd_65,NP2,F_winograd_65_NP2,"Sam pulled up a chair to the piano, but it was broken, so he had to sing instead.",What was broken?,The chair,The piano,filler
