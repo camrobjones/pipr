@@ -8,10 +8,12 @@ Retrieve item data and render as HTTP Responses
 import os
 import random
 import json
+import requests
 
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.utils import timezone as tz
+from django.conf import settings
 import pandas as pd
 
 """
@@ -33,6 +35,10 @@ MODE_COLUMNS = {
                      "expt_NP1", "expt_NP2"],
 }
 
+RECAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
+
+
+random.seed()
 
 """
 Load Data
@@ -113,6 +119,20 @@ def get_fillers(n_fillers):
     return filler_sample.to_dict(orient='records')
 
 
+def get_catch(condition):
+    """Get catch trials"""
+    catch_df = pd.read_csv('pronouns/data/catch.csv')
+
+    if condition == "physics_norm":
+        trial_type = "physics"
+    else:
+        trial_type = "experimental"
+
+    catch_trials = catch_df[catch_df.trial_type == trial_type].fillna("")
+
+    return catch_trials.to_dict(orient="records")
+
+
 def home(request):
     """Control panel for launching the experiment"""
     return render(request, 'pronouns/home.html')
@@ -135,6 +155,9 @@ def expt(request):
     # Get experimental items
     items = get_stimuli(mode=mode, limit=limit)
 
+    # Get experimental items
+    items += get_catch(condition=mode)
+
     # Get fillers if requested
     if fillers is not None and mode != "physics_norm":
         n_fillers = FILLER_RATIO * len(items)
@@ -150,6 +173,16 @@ def expt(request):
 
     # Return view
     return render(request, 'pronouns/expt.html', context)
+
+
+def error(request):
+    """Control panel for launching the experiment"""
+    return render(request, 'pronouns/error.html')
+
+
+"""
+API Views
+"""
 
 
 def save_results(request):
@@ -176,3 +209,28 @@ def save_results(request):
 
     # Notify User
     return JsonResponse({"success": True})
+
+
+def validate_captcha(request):
+    """Validate captcha token"""
+
+    post = json.loads(request.body.decode('utf-8'))
+
+    token = post.get('token')
+
+    print(token)
+
+    data = {"response": token,
+            "secret": settings.CAPTCHA_SECRET_KEY}
+
+    print(data)
+
+    response = requests.post(RECAPTCHA_URL, data=data)
+
+    print(response)
+    content = response.content
+    print(response.content)
+
+    response_data = json.loads(content)
+    print(response_data)
+    return JsonResponse(response_data)

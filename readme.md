@@ -27,3 +27,7 @@ User responses are sent back at the end of the experiment and saved as a JSON in
         - Stimuli
         - Particicpants
         - Participant Responses
+
+## Updates
+
+- Added CAPTCHA v3 protection

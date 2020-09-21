@@ -30,11 +30,13 @@ function saveResults() {
     });
 }
 
+var template = document.querySelector('#demographics');
+
 /* --- Progress Bar --- */
 
 // Initialise variables
-var total_trials = 4 + stimuli.length;
-var current_trial = 1;
+var total_trials = 6 + stimuli.length;
+var current_trial = 0;
 
 
 function updateProgress() {
@@ -59,15 +61,65 @@ function updateProgress() {
 
 }
 
+// CAPTCHA
+
+function close_captcha() {
+  let badges = document.getElementsByClassName('grecaptcha-badge');
+  for (badge of badges) {
+    badge.style.visibility = "hidden"
+  }
+}
+
+function validate_captcha(token) {
+  // console.log(`validate_captcha(${token})`)
+  let url = "/pronouns/validate_captcha/";
+  let csrftoken = Cookies.get('csrftoken');
+  let headers = {"X-CSRFToken": csrftoken};
+  let data = {token: token};
+  axios.post(url, data, {headers: headers})
+    .then(response => {
+      console.log(response.data)
+      if (response.data.score > 0.2) {
+        close_captcha()
+        // jsPsych.finishTrial(response.data)
+      } else {
+        window.location.href = "/pronouns/error"
+      }
+    });
+}
+
+function ex_captcha() {
+  grecaptcha.execute(
+    '6Lc8nMwZAAAAAD9VUlj6EX69mgSSJ9ODDVPqrzJe',
+    {action: 'submit'})
+  .then(function(token) {
+      // console.log(token)
+      validate_captcha(token);
+  });
+}
+
+
 
 /* === JsPsych Code === */
 
 /* --- Intro Components --- */
 
+// // captcha
+// var captcha = {
+//   type: "html-keyboard-response",
+//   stimulus: `
+//              <div class='instructions-container'>
+//               <h2 class='instructions-header'></h2>
+              
+//             </div>`,
+//   choices: jsPsych.NO_KEYS,
+// };
+
 // Fullscreen
 var start_fullscreen = {
   type: 'fullscreen',
-  fullscreen_mode: true
+  fullscreen_mode: true,
+  post_trial_gap: 500
 }
 
 var end_fullscreen = {
@@ -85,6 +137,7 @@ var welcome = {
               <p class='welcome'><b>Press any key to continue</b></p>
             </div>`,
   on_finish: updateProgress,
+  on_load: ex_captcha,
 };
 
 // Instructions
@@ -185,7 +238,7 @@ var example = {
           </div>
 
           <div class='response-label'>
-            John
+            Mary
           </div>
           
         </div> 
@@ -199,7 +252,74 @@ var example = {
           </div>
           
           <div class='response-label'>
-            Mary
+            John
+          </div>
+
+        </div> 
+
+      </div>
+    </div>
+
+    <p class='instructions'>
+      In this example, you would press <span class='key-demo'>j</span>
+      to indicate that <b>John</b> was jealous.
+    </p>
+
+    <p class='instructions' id='continue'>
+      <b>Press any key to continue<b>
+    </p>
+
+  </div>`,
+  on_finish: updateProgress,
+  post_trial_gap: 500,
+};
+
+
+// Example
+var example_2 = {
+  type: "html-keyboard-response",
+  stimulus: 
+  `
+  <div class='instructions-container'>
+    <h2 class='instructions-header'>
+      Example 2
+    </h2>
+    <p class='instructions'>
+      Here is another example:
+    </p>
+
+    <div class='trial-container example'>
+      <p class='sent'>
+        The mechanic asked the customer a question, 
+        but he didn't know the answer.
+      </p> 
+      <p class='question'>Who didn't know the answer?</p> 
+      <div class='response-container'> 
+
+        <div class='response np1'>
+
+          <div class='key-reminder-container'>
+            <div class='key-reminder'>
+              f
+            </div>
+          </div>
+
+          <div class='response-label'>
+            The customer
+          </div>
+          
+        </div> 
+
+        <div class='response np2'>
+
+          <div class='key-reminder-container'>
+            <div class='key-reminder'>
+              j
+            </div>
+          </div>
+          
+          <div class='response-label'>
+            The mechanic
           </div>
 
         </div> 
@@ -209,7 +329,7 @@ var example = {
 
     <p class='instructions'>
       In this example, you would press <span class='key-demo'>f</span>
-      to indicate that <b>John</b> was jealous.
+      to indicate that <b>the customer</b> didn't know the answer.
     </p>
 
     <p class='instructions' id='continue'>
@@ -223,6 +343,7 @@ var example = {
   post_trial_gap: 500,
   on_finish: updateProgress,
 };
+
 
 // Physics Example
 var phys_example = {
@@ -252,7 +373,7 @@ var phys_example = {
           </div>
 
           <div class='response-label'>
-            The steel ball
+            The styrofoam ball
           </div>
           
         </div> 
@@ -266,7 +387,7 @@ var phys_example = {
           </div>
           
           <div class='response-label'>
-            The styrofoam ball
+            The steel ball
           </div>
 
         </div> 
@@ -275,8 +396,76 @@ var phys_example = {
     </div>
 
     <p class='instructions'>
-      In this example, you would press <span class='key-demo'>f</span>
+      In this example, you would press <span class='key-demo'>j</span>
       to indicate that <b>The steel ball</b> is more likely to sink.
+    </p>
+
+    <p class='instructions' id='continue'>
+      <b>Press any key to continue<b>
+    </p>
+
+  </div>`,
+  post_trial_gap: 500,
+  on_finish: updateProgress,
+};
+
+// Physics Example
+var phys_example_2 = {
+  type: "html-keyboard-response",
+  stimulus: 
+  `
+  <div class='instructions-container'>
+    <h2 class='instructions-header'>
+      Example
+    </h2>
+    <p class='instructions'>
+      Here is another example:
+    </p>
+
+    <div class='trial-container example'>
+      <p class='sent'>
+        If an apple and a leaf are dropped from a tall builiding
+        at the same time, which is more likely to reach the ground
+        first?
+      </p> 
+      <p class='question'></p> 
+      <div class='response-container'> 
+
+        <div class='response np1'>
+
+          <div class='key-reminder-container'>
+            <div class='key-reminder'>
+              f
+            </div>
+          </div>
+
+          <div class='response-label'>
+            The leaf
+          </div>
+          
+        </div> 
+
+        <div class='response np2'>
+
+          <div class='key-reminder-container'>
+            <div class='key-reminder'>
+              j
+            </div>
+          </div>
+          
+          <div class='response-label'>
+            The apple
+          </div>
+
+        </div> 
+
+      </div>
+    </div>
+
+    <p class='instructions'>
+      In this example, you would press <span class='key-demo'>j</span>
+      to indicate that <b>The apple</b> is more likely to reach the ground
+      first.
     </p>
 
     <p class='instructions' id='continue'>
@@ -469,6 +658,61 @@ var trial_procedure = {
 };
 
 
+// End Trials
+var end_trials = {
+  type: "html-keyboard-response",
+  stimulus: `
+
+  <p>You have completed all of the completed all of the comprehension questions.</p>
+
+  <p>You will now be asked a short series of questions about yourself and
+     your thoughts about the experiment.</p>
+
+  <p id='next'>Press any key to continue.</p>
+  `,
+  on_finish: updateProgress
+};
+
+
+var demographics = {
+
+  // Demographics Trial
+  type: "survey-html-form",
+  html: template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'demographics'},
+  on_finish: updateProgress
+
+};
+
+
+var post_test = {
+
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>What did you the experiment was about overall?</h3>
+  
+    <textarea class="form-control feedback" id="feedback_1" name="feedback_1" required></textarea>
+
+  </div>
+
+  <div class='question'>
+    <h3 class='question-title'>Do you have any other feedback or thoughts on the experiment? (optional)</h3>
+  
+    <textarea class="form-control feedback" id="feedback_2" name="feedback_2"></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: updateProgress
+  // Randomly sample trial duration
+};
+
+
+
 /* --- Debrief Components --- */
 
 var debrief_block = {
@@ -498,7 +742,7 @@ var debrief_block = {
     //         and ${physics_pct}% consistent with physics.</p>`
     // }
     
-    s += "<p>Press any key to complete the experiment. Thank you!</p>";
+    s = "<p>Press any key to complete the experiment. Thank you!</p>";
 
     return s;
 
@@ -511,11 +755,13 @@ var debrief_block = {
 if (conf.mode == "physics_norm") {
   instructions = phys_instructions;
   example = phys_example;
+  example_2 = phys_example_2;
 }
 
 // Create jsPsych timeline
-var timeline = [start_fullscreen, welcome, instructions, example,
-                trial_procedure, debrief_block, end_fullscreen]
+var timeline = [start_fullscreen, welcome, instructions, example, example_2,
+                trial_procedure, demographics, post_test, debrief_block,
+                end_fullscreen]
 
 // Launch jsPsych
 window.onload = function() {

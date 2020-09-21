@@ -1,6 +1,6 @@
 filler_type,sent_id,filler_bias,item_id,sent,question,NP1,NP2,item_type
 parallel,F_parallel_1,NP1,F_parallel_1_NP1,Mary helped Julie change the tire and then she helped Peter change the oil.,Who helped Peter?,Mary,Julie,filler
-parallel,F_parallel_2,NP1,F_parallel_2_NP1,Shirley wrote to Carol about a meeting and then she wrote to Martin about a party.,Who wrote to Martin?,Shirley,Carol,filler
+parallel,F_parallel_2,NP1,F_parallel_2_NP1,Amy wrote to Carol about a meeting and then she wrote to Martin about a party.,Who wrote to Martin?,Amy,Carol,filler
 parallel,F_parallel_3,NP1,F_parallel_3_NP1,Richard chased Jim around the corner and then he chased Caroline down Yonge Street.,Who chased Caroline?,Richard,Jim,filler
 parallel,F_parallel_4,NP1,F_parallel_4_NP1,Robert bullied Peter and then he attacked Melanie.,Who attacked Melanie?,Robert,Peter,filler
 parallel,F_parallel_5,NP1,F_parallel_5_NP1,Liz tried to catch Melanie and then she tried to trip Frank.,Who tried to trip Frank?,Liz,Melanie,filler
@@ -13,26 +13,26 @@ parallel,F_parallel_1,NP2,F_parallel_1_NP2,John pushed Sammy and then Evelyn kic
 parallel,F_parallel_2,NP2,F_parallel_2_NP2,Sarah visited Cathy at home and then Charles phoned her at work. ,Who did Charles phone?,Sarah,Cathy,filler
 parallel,F_parallel_3,NP2,F_parallel_3_NP2,Tommy told Kevin to find the new bikes and then Samantha asked him to find the new tires.,Who did Samantha ask to find the tires?,Tommy,Kevin,filler
 parallel,F_parallel_4,NP2,F_parallel_4_NP2,Geoffrey followed Mark into the pool and then Sara followed him into the bar.,Who did Sara follow?,Geoffrey,Mark,filler
-parallel,F_parallel_5,NP2,F_parallel_5_NP2,Jean called to Penelope in the next room and then the security guard shouted at her across the street.,Who did the security guard shout at?,Jean,Penelope,filler
+parallel,F_parallel_5,NP2,F_parallel_5_NP2,Emily called to Penelope in the next room and then the security guard shouted at her across the street.,Who did the security guard shout at?,Emily,Penelope,filler
 parallel,F_parallel_6,NP2,F_parallel_6_NP2,Adam argued with Barry about the new format and then Linda argued with him about the new rules.,Who did Linda argue with?,Adam,Barry,filler
 parallel,F_parallel_7,NP2,F_parallel_7_NP2,Simon gave William a ride to the party and then Fiona gave him a bottle of wine.,Who did Fiona give a bottle of wine to?,Simon,William,filler
 parallel,F_parallel_8,NP2,F_parallel_8_NP2,Stuart raced James along the track and then Jessica raced him across the field.,Who did Jessica race?,Stuart,James,filler
 parallel,F_parallel_9,NP2,F_parallel_9_NP2,David showed Christopher a pamphlet about a hotel and then the woman showed him an advertisement about a ski lodge.,Who did the woman show the advertisement to?,David,Cristopher,filler
 parallel,F_parallel_10,NP2,F_parallel_10_NP2,Alison asked Eleanor to dinner and then my father invited her to the cottage.,Who did my father invite?,Alison,Eleanor,filler
-winograd,F_winograd_3,NP1,F_winograd_3_NP1,Joan made sure to thank Susan for all the help she had received.,Who had received help?,Joan,Susan,filler
-winograd,F_winograd_3,NP2,F_winograd_3_NP2,Joan made sure to thank Susan for all the help she had given.,Who had given help?,Joan,Susan,filler
+winograd,F_winograd_3,NP1,F_winograd_3_NP1,Olivia made sure to thank Susan for all the help she had received.,Who had received help?,Olivia,Susan,filler
+winograd,F_winograd_3,NP2,F_winograd_3_NP2,Olivia made sure to thank Susan for all the help she had given.,Who had given help?,OIivia,Susan,filler
 winograd,F_winograd_4,NP1,F_winograd_4_NP1,"Paul tried to call George on the phone, but he wasn't successful.",Who was not successful?,Paul,George,filler
 winograd,F_winograd_4,NP2,F_winograd_4_NP2,"Paul tried to call George on the phone, but he wasn't available.",Who was not available?,Paul,George,filler
 winograd,F_winograd_18,NP1,F_winograd_18_NP1,Jim yelled at Kevin because he was so upset.,Who was upset?,Jim,Kevin,filler
 winograd,F_winograd_18,NP2,F_winograd_18_NP2,Jim comforted Kevin because he was so upset.,Who was upset?,Jim,Kevin,filler
-winograd,F_winograd_25,NP1,F_winograd_25_NP1,Susan knows all about Ann's personal problems because she is nosy.,Who is nosy?,Susan,Anne,filler
-winograd,F_winograd_25,NP2,F_winograd_25_NP2,Susan knows all about Ann's personal problems because she is indiscreet.,Who is indiscreet?,Susan,Anne,filler
+winograd,F_winograd_25,NP1,F_winograd_25_NP1,Susan knows all about Anne's personal problems because she is nosy.,Who is nosy?,Susan,Anne,filler
+winograd,F_winograd_25,NP2,F_winograd_25_NP2,Susan knows all about Anne's personal problems because she is indiscreet.,Who is indiscreet?,Susan,Anne,filler
 winograd,F_winograd_32,NP1,F_winograd_32_NP1,The drain is clogged with hair. It has to be cleaned.,What has to be cleaned?,The drain,The hair,filler
 winograd,F_winograd_32,NP2,F_winograd_32_NP2,The drain is clogged with hair. It has to be removed.,What has to be removed?,The drain,The hair,filler
 winograd,F_winograd_37,NP1,F_winograd_37_NP1,"I used an old rag to clean the knife, and then I put it in the trash.",What did I put in the trash?,The rag,The knife,filler
 winograd,F_winograd_37,NP2,F_winograd_37_NP2,"I used an old rag to clean the knife, and then I put it in the drawer.",What did I put in the drawer?,The rag,The knife,filler
-winograd,F_winograd_38,NP1,F_winograd_38_NP1,"Ann asked Mary what time the library closes, because she had forgotten.",Who had forgotten?,Ann,Mary,filler
-winograd,F_winograd_38,NP2,F_winograd_38_NP2,"Ann asked Mary what time the library closes, but she had forgotten.",Who had forgotten?,Ann,Mary,filler
+winograd,F_winograd_38,NP1,F_winograd_38_NP1,"Alice asked Mary what time the library closes, because she had forgotten.",Who had forgotten?,Alice,Mary,filler
+winograd,F_winograd_38,NP2,F_winograd_38_NP2,"Alice asked Mary what time the library closes, but she had forgotten.",Who had forgotten?,Alice,Mary,filler
 winograd,F_winograd_41,NP1,F_winograd_41_NP1,I'm sure that my map will show this building; it is very good.,What is good?,The map,The building,filler
 winograd,F_winograd_41,NP2,F_winograd_41_NP2,I'm sure that my map will show this building; it is very famous.,What is famous?,The map,The building,filler
 winograd,F_winograd_42,NP1,F_winograd_42_NP1,Bob paid for Charlie's college education. He is very generous.,Who is generous?,Bob,Charlie,filler
@@ -41,8 +41,8 @@ winograd,F_winograd_43,NP1,F_winograd_43_NP1,"Bob paid for Charlie's college edu
 winograd,F_winograd_43,NP2,F_winograd_43_NP2,"Bob paid for Charlie's college education, but now Charlie acts as though it never happened. He is very ungrateful.",Who is ungrateful?,Bob,Charlie,filler
 winograd,F_winograd_44,NP1,F_winograd_44_NP1,"Bob was playing cards with Adam and was way ahead. If Adam hadn't had a sudden run of good luck, he would have won.",Who would have won?,Bob,Adam,filler
 winograd,F_winograd_44,NP2,F_winograd_44_NP2,"Bob was playing cards with Adam and was way ahead. If Adam hadn't had a sudden run of good luck, he would have lost.",Who would have lost?,Bob,Adam,filler
-winograd,F_winograd_46,NP1,F_winograd_46_NP1,"If the con artist has succeeded in fooling Sam, he would have gotten a lot of money.",Who would have gotten the money?,The con artist,Sam,filler
-winograd,F_winograd_46,NP2,F_winograd_46_NP2,"If the con artist has succeeded in fooling Sam, he would have lost a lot of money.",Who would have lost the money?,The con artist,Sam,filler
+winograd,F_winograd_46,NP1,F_winograd_46_NP1,"If the con artist had succeeded in fooling Sam, he would have gotten a lot of money.",Who would have gotten the money?,The con artist,Sam,filler
+winograd,F_winograd_46,NP2,F_winograd_46_NP2,"If the con artist had succeeded in fooling Sam, he would have lost a lot of money.",Who would have lost the money?,The con artist,Sam,filler
 winograd,F_winograd_48,NP1,F_winograd_48_NP1,"The cat was lying by the mouse hole waiting for the mouse, but it was too impatient.",What was too impatient?,The cat,The mouse,filler
 winograd,F_winograd_48,NP2,F_winograd_48_NP2,"The cat was lying by the mouse hole waiting for the mouse, but it was too cautious.",What was too cautious?,The cat,The mouse,filler
 winograd,F_winograd_52,NP1,F_winograd_52_NP1,The fish ate the worm. It was tasty.,What was tasty?,The worm,The fish,filler
@@ -59,3 +59,35 @@ winograd,F_winograd_61,NP1,F_winograd_61_NP1,"Mark told Pete many lies about him
 winograd,F_winograd_61,NP2,F_winograd_61_NP2,"Mark told Pete many lies about himself, which Pete included in his book. He should have been more skeptical.",Who should have been more skeptical?,Mark,Pete,filler
 winograd,F_winograd_65,NP1,F_winograd_65_NP1,"Sam pulled up a chair to the piano, but it was broken, so he had to stand instead.",What was broken?,The chair,The piano,filler
 winograd,F_winograd_65,NP2,F_winograd_65_NP2,"Sam pulled up a chair to the piano, but it was broken, so he had to sing instead.",What was broken?,The chair,The piano,filler
+gender,F_gender_1,NP1,F_gender_1_NP1,Gary amazed Ellen time after time because he was so talented at the juggling competition.,Who was so talented?,Gary,Ellen,filler
+gender,F_gender_2,NP1,F_gender_2_NP1,Liz amazed Rob this morning because she was so cheerful during the coffee break.,Who was so cheerful?,Liz,Rob,filler
+gender,F_gender_3,NP1,F_gender_3_NP1,Mia amused Larry around the clock because she was so entertaining during the power outage.,Who was so entertaining?,Mia,Larry,filler
+gender,F_gender_4,NP1,F_gender_4_NP1,Carl amused Olivia frequently because he was so humorous during the comic presentation.,Who was so humorous?,Carl,Olivia,filler
+gender,F_gender_5,NP1,F_gender_5_NP1,Peter annoyed Samantha occasionally because he was so talkative during the opera broadcast.,Who was so talkative?,Peter,Samantha,filler
+gender,F_gender_6,NP1,F_gender_6_NP1,Lauren annoyed Ben yesterday because she was so pushy during the evening news.,Who was so pushy?,Lauren,Ben,filler
+gender,F_gender_7,NP1,F_gender_7_NP1,Linda bored Martin to tears because she was so repetitious during the discussion group.,Who was so repetitious?,Linda,Martin,filler
+gender,F_gender_8,NP1,F_gender_8_NP1,Alan bored Madison beyond belief because he was so monotonous during the lengthypresentation.,Who was so monotonous?,Alan,Madison,filler
+gender,F_gender_9,NP1,F_gender_9_NP1,Tim deceived Jane repeatedly because he was so underhanded during the police investigation.,Who was so underhanded?,Tim,Jane,filler
+gender,F_gender_10,NP1,F_gender_10_NP1,Natalie deceived Michael on purpose because she was so cunning at the murder scene.,Who was so cunning?,Natalie,Michael,filler
+gender,F_gender_11,NP1,F_gender_11_NP1,Victoria disappointed Paul bitterly because she was so hard-hearted at the anniversary party.,Who was so hard?,Victoria,Paul,filler
+gender,F_gender_12,NP1,F_gender_12_NP1,Matthew disappointed Helen last week because he was so unmotivated at the board meeting.,Who was so unmotivated?,Matthew,Helen,filler
+gender,F_gender_13,NP1,F_gender_13_NP1,Dylan frightened Chloe to death because he was so violent at the Halloween party.,Who was so violent?,Dylan,Chloe,filler
+gender,F_gender_14,NP1,F_gender_14_NP1,Julia frightened Justin at times because she was so unpredictable during the gruesome story.,Who was so unpredictable?,Julia,Justin,filler
+gender,F_gender_15,NP1,F_gender_15_NP1,Kaitlyn inspired Jose tremendously because she was so enthusiastic at the pep assembly.,Who was so enthusiastic?,Kaitlyn,Jose,filler
+gender,F_gender_16,NP1,F_gender_16_NP1,Brian inspired Jennifer last night because he was so optimistic at the religious revival.,Who was so optimistic?,Brian,Jennifer,filler
+gender,F_gender_17,NP2,F_gender_17_NP2,Kevin admired Becky openly because she was so intelligent at the tennis tournament.,Who was so intelligent?,Kevin,Becky,filler
+gender,F_gender_18,NP2,F_gender_18_NP2,Ruth admired Craig quite a bit because he was so courageous during the debate championship.,Who was so courageous?,Ruth,Craig,filler
+gender,F_gender_19,NP2,F_gender_19_NP2,Amy detested Hunter to the extreme because he was so obnoxious after the cheating scandal.,Who was so obnoxious?,Amy,Hunter,filler
+gender,F_gender_20,NP2,F_gender_20_NP2,Evan detested Nicole intensely because she was so condescending during the trial testimony.,Who was so condescending?,Evan,Nicole,filler
+gender,F_gender_21,NP2,F_gender_21_NP2,Jerry envied Kate sometimes because she was so artistic after the well-deserved promotion.,Who was so artistic?,Jerry,Kate,filler
+gender,F_gender_22,NP2,F_gender_22_NP2,Megan envied Gavin in secret because he was so good-looking during the awards banquet.,Who was so good-looking?,Megan,Gavin,filler
+gender,F_gender_23,NP2,F_gender_23_NP2,Amanda feared David all the time because he was so aggressive during the assault trial.,Who was so aggressive?,Amanda,David,filler
+gender,F_gender_24,NP2,F_gender_24_NP2,John feared Michelle extremely because she was so vengeful after the violent attack.,Who was so vengeful?,John,Michelle,filler
+gender,F_gender_25,NP2,F_gender_25_NP2,Bob hated Ann a great deal because she was so manipulative after the damaging betrayal.,Who was so manipulative?,Bob,Ann,filler
+gender,F_gender_26,NP2,F_gender_26_NP2,Caroline hated Jason with a passion because he was so bossy after the bitter falling out..,Who was so bossy?,Caroline,Jason,filler
+gender,F_gender_27,NP2,F_gender_27_NP2,Claire noticed Tim immediately because he was so overdressed at the Japanese restaurant.,Who was so overdressed?,Claire,Tim,filler
+gender,F_gender_28,NP2,F_gender_28_NP2,Richard noticed Lisa at the party because she was so striking at the governor's mansion.,Who was so striking?,Richard,Lisa,filler
+gender,F_gender_29,NP2,F_gender_29_NP2,Jeff pitied Autumn much of the time because she was so unsuccessful during the custody case.,Who was so unsuccessful?,Jeff,Autumn,filler
+gender,F_gender_30,NP2,F_gender_30_NP2,Stella pitied Harry deeply because he was so unfortunate during the funeral service.,Who was so unfortunate?,Stella,Harry,filler
+gender,F_gender_31,NP2,F_gender_31_NP2,Erin trusted Tom completely because he was so sincere during the hypnosis session.,Who was so sincere?,Erin,Tom,filler
+gender,F_gender_32,NP2,F_gender_32_NP2,Calvin trusted Molly at once because she was so forthright at the psychotherapy workshop.,Who was so forthright?,Calvin,Molly,filler

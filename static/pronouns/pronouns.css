@@ -144,7 +144,7 @@ input#limit {
     justify-content: flex-end;
 }
 
-button#submit {
+button#submit, .btn {
     padding: 10px;
     background: #000000ee;
     color: white;
@@ -154,11 +154,90 @@ button#submit {
     cursor: pointer;
 }
 
-button#submit:hover {
+button#submit:hover, .btn:hover {
     background: #000000;
     box-shadow: 0px 1px 4px 1px #00000044, 0px 1px 8px 2px #00000044;
 }
 
+/* Demographics */
+
+div.question {
+    /* display: flex; */
+    text-align: left;
+    color: #000000cc;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size:1rem;
+    line-height: 1.6em;
+}
+
+h3.question-title {
+    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000d1;
+}
+
+div.question input[type="number"], select {
+    width: 135px;
+    padding: 10px 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #0000003b;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+
+select {
+    height:43px;
+}
+
+.form-row {
+    display: flex;
+    font-size: 1rem;
+}
+
+.col {
+    flex: 1;
+}
+
+.radio-option {
+    /* padding: 0px; */
+    /* height: 30px; */
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
+
+input[type="radio" i] {
+    margin: 3px 7px 3px 3px;
+}
+
+div#language-box-container {
+    width: 800px;
+}
+
+.col-header {
+    font-weight: 600;
+    padding: 0px 10px 0px 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+button#addLanguageButton {
+    margin: 10px 12px 0px auto;
+}
+
+textarea {
+    width: 100%;
+    height: 5em;
+    border-radius: 5px;
+    border: 1px solid #00000054;
+    font-family: 'Open Sans', sans-serif;
+    padding:5px;
+    text-indent: 5px
+}
 
 /* --- Experiment: Main content --- */
 
@@ -199,6 +278,8 @@ p.instructions {
 
 .instructions-container {
     height: calc(90vh - 92px);
+    max-width:800px;
+    margin:auto;
 }
 
 h2.instructions-header {

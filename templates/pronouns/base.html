@@ -8,6 +8,7 @@
     <script src="/static/pronouns/jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="/static/pronouns/jspsych-6.1.0/plugins/jspsych-fullscreen.js"></script>
     <script src="/static/pronouns/jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+    <script src="/static/pronouns/jspsych-6.1.0/plugins/jspsych-survey-html-form.js"></script>
     <link href="/static/pronouns/jspsych-6.1.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
 
     <!-- Axois -->
@@ -18,6 +19,9 @@
 
     <!-- Local CSS -->
     <link href="/static/pronouns/pronouns.css" rel="stylesheet" type="text/css"></link>
+
+    <!-- Create CSRFToken -->
+    {% csrf_token %}
 
     {% block head %}
 

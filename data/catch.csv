@@ -1,0 +1,7 @@
+sent_id,trial_type,item_id,sent,question,NP1,NP2,item_type
+Catch_1,experimental,Catch_1_experimental,Angela threw away her lunch because she wasn't hungry.,Select the response on the left,Angela,Angela's lunch,catch
+Catch_2,experimental,Catch_2_experimental,"John passed the ball to Michael, who scored.",Which response contains the most letters?,John,Michael's brilliant goal,catch
+Catch_3,experimental,Catch_3_experimental,Donald put his hands in his pockets because they were getting cold,How many fingers does a typical human have on their hand?,Five,Four,catch
+Catch_1,physics,Catch_1_physics,"If someone drops a marble from the top of the Empire State Building, how long will it take to reach the ground?",,9 seconds,9 minutes,catch
+Catch_2,physics,Catch_2_physics,"If you are paying attention, wait for the question to appear.",Which response contains the most letters?,John,Michael's brilliant goal,catch
+Catch_3,physics,Catch_3_physics,,How many fingers does a typical human have on their hand?,Five,Four,catch

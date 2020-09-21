@@ -1,5 +1,12 @@
 {% extends 'pronouns/base.html' %}
 
+{% block head %}
+
+<!-- reCAPTCHA -->
+ <script src="https://www.google.com/recaptcha/api.js?render=6Lc8nMwZAAAAAD9VUlj6EX69mgSSJ9ODDVPqrzJe"></script>
+
+{% endblock %}
+
 {% block content %}
 
 <div id='expt-container'>
@@ -10,8 +17,13 @@
 {{ items | json_script:"stimuli"}}
 {{ conf | json_script:"conf"}}
 
+<!-- HTML Templates -->
+{% include 'pronouns/demographics.html' %}
+
 <!-- Local JS -->
 <script src="/static/pronouns/pronouns.js"></script>
+
+<script src="/static/pronouns/demographics.js"></script>
 
 
 {% endblock %}
