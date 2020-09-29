@@ -66,14 +66,14 @@ gender,F_gender_4,NP1,F_gender_4_NP1,Carl amused Olivia frequently because he wa
 gender,F_gender_5,NP1,F_gender_5_NP1,Peter annoyed Samantha occasionally because he was so talkative during the opera broadcast.,Who was so talkative?,Peter,Samantha,filler
 gender,F_gender_6,NP1,F_gender_6_NP1,Lauren annoyed Ben yesterday because she was so pushy during the evening news.,Who was so pushy?,Lauren,Ben,filler
 gender,F_gender_7,NP1,F_gender_7_NP1,Linda bored Martin to tears because she was so repetitious during the discussion group.,Who was so repetitious?,Linda,Martin,filler
-gender,F_gender_8,NP1,F_gender_8_NP1,Alan bored Madison beyond belief because he was so monotonous during the lengthypresentation.,Who was so monotonous?,Alan,Madison,filler
+gender,F_gender_8,NP1,F_gender_8_NP1,Alan bored Madison beyond belief because he was so monotonous during the lengthy presentation.,Who was so monotonous?,Alan,Madison,filler
 gender,F_gender_9,NP1,F_gender_9_NP1,Tim deceived Jane repeatedly because he was so underhanded during the police investigation.,Who was so underhanded?,Tim,Jane,filler
 gender,F_gender_10,NP1,F_gender_10_NP1,Natalie deceived Michael on purpose because she was so cunning at the murder scene.,Who was so cunning?,Natalie,Michael,filler
-gender,F_gender_11,NP1,F_gender_11_NP1,Victoria disappointed Paul bitterly because she was so hard-hearted at the anniversary party.,Who was so hard?,Victoria,Paul,filler
+gender,F_gender_11,NP1,F_gender_11_NP1,Victoria disappointed Paul bitterly because she was so hard-hearted at the anniversary party.,Who was so hard-hearted?,Victoria,Paul,filler
 gender,F_gender_12,NP1,F_gender_12_NP1,Matthew disappointed Helen last week because he was so unmotivated at the board meeting.,Who was so unmotivated?,Matthew,Helen,filler
 gender,F_gender_13,NP1,F_gender_13_NP1,Dylan frightened Chloe to death because he was so violent at the Halloween party.,Who was so violent?,Dylan,Chloe,filler
 gender,F_gender_14,NP1,F_gender_14_NP1,Julia frightened Justin at times because she was so unpredictable during the gruesome story.,Who was so unpredictable?,Julia,Justin,filler
-gender,F_gender_15,NP1,F_gender_15_NP1,Kaitlyn inspired Jose tremendously because she was so enthusiastic at the pep assembly.,Who was so enthusiastic?,Kaitlyn,Jose,filler
+gender,F_gender_15,NP1,F_gender_15_NP1,Kaitlyn inspired Jose tremendously because she was so enthusiastic at the pep rally.,Who was so enthusiastic?,Kaitlyn,Jose,filler
 gender,F_gender_16,NP1,F_gender_16_NP1,Brian inspired Jennifer last night because he was so optimistic at the religious revival.,Who was so optimistic?,Brian,Jennifer,filler
 gender,F_gender_17,NP2,F_gender_17_NP2,Kevin admired Becky openly because she was so intelligent at the tennis tournament.,Who was so intelligent?,Kevin,Becky,filler
 gender,F_gender_18,NP2,F_gender_18_NP2,Ruth admired Craig quite a bit because he was so courageous during the debate championship.,Who was so courageous?,Ruth,Craig,filler
@@ -84,7 +84,7 @@ gender,F_gender_22,NP2,F_gender_22_NP2,Megan envied Gavin in secret because he w
 gender,F_gender_23,NP2,F_gender_23_NP2,Amanda feared David all the time because he was so aggressive during the assault trial.,Who was so aggressive?,Amanda,David,filler
 gender,F_gender_24,NP2,F_gender_24_NP2,John feared Michelle extremely because she was so vengeful after the violent attack.,Who was so vengeful?,John,Michelle,filler
 gender,F_gender_25,NP2,F_gender_25_NP2,Bob hated Ann a great deal because she was so manipulative after the damaging betrayal.,Who was so manipulative?,Bob,Ann,filler
-gender,F_gender_26,NP2,F_gender_26_NP2,Caroline hated Jason with a passion because he was so bossy after the bitter falling out..,Who was so bossy?,Caroline,Jason,filler
+gender,F_gender_26,NP2,F_gender_26_NP2,Caroline hated Jason with a passion because he was so bossy after the bitter falling out.,Who was so bossy?,Caroline,Jason,filler
 gender,F_gender_27,NP2,F_gender_27_NP2,Claire noticed Tim immediately because he was so overdressed at the Japanese restaurant.,Who was so overdressed?,Claire,Tim,filler
 gender,F_gender_28,NP2,F_gender_28_NP2,Richard noticed Lisa at the party because she was so striking at the governor's mansion.,Who was so striking?,Richard,Lisa,filler
 gender,F_gender_29,NP2,F_gender_29_NP2,Jeff pitied Autumn much of the time because she was so unsuccessful during the custody case.,Who was so unsuccessful?,Jeff,Autumn,filler

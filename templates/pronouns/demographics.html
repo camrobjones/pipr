@@ -9,7 +9,7 @@
 
             <h3 class='question-title'>In what year were you born?</h3>
 
-            <input type="number" min="1800" max="2020" style="width:100px" name="demographics_year" required class='form-control'>
+            <input type="number" min="1800" max="2020" style="width:100px" name="demographics_year" class='form-control'>
 
         </div>
 
@@ -20,28 +20,32 @@
 
             
             <div class='radio-option'>
-                <input type='radio' name='demographics_gender' id='gender_1' value="Female" required/>
+                <input type='radio' name='demographics_gender' id='gender_1'
+                value="f"/>
                 <label for='gender_1'>1) Female</label>
             </div>
 
 
             
             <div class='radio-option'>
-                <input type='radio' name='demographics_gender' id='gender_2' value="Male" required/>
+                <input type='radio' name='demographics_gender' id='gender_2'
+                value="m"/>
                 <label for='gender_2'>2) Male</label>
             </div>
 
 
             
             <div class='radio-option'>
-                <input type='radio' name='demographics_gender' id='gender_3' value="Non-binary" required/>
+                <input type='radio' name='demographics_gender' id='gender_3'
+                value="nb"/>
                 <label for='gender_3'>3) Non-binary</label>
             </div>
 
 
             
             <div class='radio-option'>
-                <input type='radio' name='demographics_gender' id='gender_4' value="Prefer not to say" required/>
+                <input type='radio' name='demographics_gender' id='gender_4'
+                value="na"/>
                 <label for='gender_4'>4) Prefer not to say</label>
             </div>
 
@@ -78,7 +82,7 @@
                 </div>
                 <div class='form-row'>
                     <div class='col'>
-                    <select class="form-control" required name='language_1'>
+                    <select class="form-control" name='language_1'>
                         <option></option>
                         <option>English</option>
                         <option>-----------</option>
@@ -445,11 +449,13 @@
                         <option value=Yoruba>Yoruba</option>
                     
                         <option value=Zhuang, Chuang>Zhuang, Chuang</option>
+
+                        <option value=Other, Chuang>Other</option>
                     </select>
                     </div>
 
                     <div class='col'>
-                        <select class="form-control" required name='language_proficiency_1'>
+                        <select class="form-control" name='language_proficiency_1'>
                             <option>5 - Native</option>
                             <option>4 - Fluent</option>
                             <option>3 - Conversational</option>
@@ -459,15 +465,15 @@
                     </div>
 
                     <div class='col'>
-                        <input type='number' class='form-control' name='language_learned_1' placeholder="e.g. 0" required>
+                        <input type='number' class='form-control' name='language_learned_1' placeholder="e.g. 0">
                     </div>
 
                     <div class='col'>
-                        <input type='number' class='form-control' name='language_active_1' placeholder="e.g. 35" required>
+                        <input type='number' class='form-control' name='language_active_1' placeholder="e.g. 35">
                     </div>
 
                     <div class='col'>
-                        <input type='number' class='form-control' name='language_proportion_1' placeholder="e.g. 75" required>
+                        <input type='number' class='form-control' name='language_proportion_1' placeholder="e.g. 75">
                     </div>
 
                 </div>
@@ -855,6 +861,7 @@
                     <option value=Yoruba>Yoruba</option>
                 
                     <option value=Zhuang, Chuang>Zhuang, Chuang</option>
+                    <option value=Other, Chuang>Other</option>
             </select>
             </div>
 

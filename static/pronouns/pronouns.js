@@ -15,6 +15,25 @@ const stimuli = JSON.parse(document.getElementById('stimuli')
 const conf = JSON.parse(document.getElementById('conf')
     .textContent);
 
+// Detect touchscreens
+window.mobileAndTabletCheck = function() {
+  let check = false;
+  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+  return check;
+};
+const isTouch = window.mobileAndTabletCheck();
+
+// if ("ontouchstart" in window || navigator.msMaxTouchPoints) {
+//     isTouch = true;
+// } else {
+//     isTouch = false;
+// }
+
+var continueText = "the spacebar";
+if (isTouch) {
+  var continueText = "here";
+}
+
 /* === Util Functions === */
 
 function saveResults() {
@@ -24,41 +43,64 @@ function saveResults() {
   let headers = {"X-CSRFToken": csrftoken};
   let results = jsPsych.data.get().values();
   let data = {results: results};
+  data.key = conf.key;
   axios.post(url, data, {headers: headers})
     .then(response => {
       console.log(response.data);
     });
 }
 
-var template = document.querySelector('#demographics');
 
-/* --- Progress Bar --- */
+function ua_data() {
+    let data = {};
+    data.ua_header = navigator.userAgent;
+    data.width = window.innerWidth;
+    data.height = window.innerHeight;
+    data.key = conf.key;
+    return data;
+}
 
-// Initialise variables
-var total_trials = 6 + stimuli.length;
-var current_trial = 0;
+function send_ua_data() {
+  let data = ua_data();
+  let url = "/pipr/ua_data/";
+  let csrftoken = Cookies.get('csrftoken');
+  let headers = {"X-CSRFToken": csrftoken};
+  axios.post(url, data, {headers: headers})
+    .then(response => {
+      console.log(response.data);
+    });
+}
 
+function response(key_response) {
+  document.querySelector('.jspsych-display-element')
+  .dispatchEvent(new KeyboardEvent('keydown', {keyCode: key_response}));
+  document.querySelector('.jspsych-display-element')
+  .dispatchEvent(new KeyboardEvent('keyup', {keyCode: key_response}));
+}
 
-function updateProgress() {
-  // Increment progress and update progress bar
+function copyToClipboard() {
 
-  // Increment progress
-  current_trial += 1;
-  let pc = Math.round(current_trial * 100 / total_trials)
+  const el = document.createElement('textarea');
+  el.value = conf.key;
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
 
-  // Show progress container
-  let container = document.getElementById('progress-container');
-  container.classList.remove('hide');
+  var confirm = document.getElementById('copy-confirm');
 
+  confirm.classList.add('show');
 
-  // Update bar
-  let bar = document.getElementById('progress-bar');
-  bar.style.width = pc + "%"
+  setTimeout(function(){
+    var confirm = document.getElementById('copy-confirm');
+    confirm.classList.remove('show');
+  }, 2000);
 
-  // Update counter
-  let label = document.getElementById('progress-label');
-  label.innerText = pc + "%"
-
+  /* Alert the copied text */
+  // alert("Copied the text: " + copyText.value);
 }
 
 // CAPTCHA
@@ -66,7 +108,7 @@ function updateProgress() {
 function close_captcha() {
   let badges = document.getElementsByClassName('grecaptcha-badge');
   for (badge of badges) {
-    badge.style.visibility = "hidden"
+    badge.style.visibility = "hidden";
   }
 }
 
@@ -75,10 +117,13 @@ function validate_captcha(token) {
   let url = "/pronouns/validate_captcha/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
-  let data = {token: token};
+  let data = {
+    token: token,
+    key: conf.key
+  };
   axios.post(url, data, {headers: headers})
     .then(response => {
-      console.log(response.data)
+      console.log(response.data);
       if (response.data.score > 0.2) {
         close_captcha()
         // jsPsych.finishTrial(response.data)
@@ -98,7 +143,36 @@ function ex_captcha() {
   });
 }
 
+var template = document.querySelector('#demographics');
 
+/* --- Progress Bar --- */
+
+// Initialise variables
+var total_trials = 8 + stimuli.length;
+var current_trial = 0;
+
+
+function updateProgress() {
+  // Increment progress and update progress bar
+
+  // Increment progress
+  current_trial += 1;
+  let pc = Math.round(current_trial * 100 / total_trials);
+
+  // Show progress container
+  let container = document.getElementById('progress-container');
+  container.classList.remove('hide');
+
+
+  // Update bar
+  let bar = document.getElementById('progress-bar');
+  bar.style.width = pc + "%"
+
+  // Update counter
+  let label = document.getElementById('progress-label');
+  label.innerText = pc + "%"
+
+}
 
 /* === JsPsych Code === */
 
@@ -120,12 +194,12 @@ var start_fullscreen = {
   type: 'fullscreen',
   fullscreen_mode: true,
   post_trial_gap: 500
-}
+};
 
 var end_fullscreen = {
   type: 'fullscreen',
   fullscreen_mode: false
-}
+};
 
 // Welcome
 var welcome = {
@@ -134,15 +208,38 @@ var welcome = {
              <div class='instructions-container'>
               <h2 class='instructions-header'>Welcome</h2>
               <p class='welcome'>Thank you for accepting this HIT.</p>
-              <p class='welcome'><b>Press any key to continue</b></p>
+              <p class='welcome' ontouchstart="response(13)"><b>Press ${continueText} to continue</b></p>
             </div>`,
   on_finish: updateProgress,
   on_load: ex_captcha,
 };
 
+
+// Consent
+var consent = {
+  type: "survey-html-form",
+  html: `
+             <div>
+              <h2 class='instructions-header'>Consent</h2>
+              <p class='instructions'>
+              Please review the consent form below and check the box if
+              you agree to participate.
+              </p>
+              <iframe src="/static/pronouns/consent_form.pdf"
+              width="100%", height="800px"></iframe>
+
+              <div class='input-group'>
+                  <label for='fillers'>I agree</label>
+                  <input type='checkbox' name='consent' id='consent' required>
+              </div>
+            </div>`,
+  on_finish: updateProgress
+};
+
 // Instructions
 var instructions = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -157,28 +254,33 @@ var instructions = {
 
     <p class='instructions'>
       Each passage will appear for a few seconds to give you time to read it.
-      Then a question will appear, with two possible answers. Select your
-      answer using the keyboard: use the <span class='key-demo'>f</span>
+      Then a question will appear, with two possible answers.
+      Select your answer using the keyboard: use the <span class='key-demo'>f</span>
       key to indicate the choice on the <b>left</b>, and the 
       <span class='key-demo'>j</span> key to indicate the choice on the
-      <b>right</b>.
+      <b>right</b>. If you are using a touchscreen, you can simply tap your selected
+      answer.
     </p>
     <p class='instructions'>
       Read each sentence carefully and answer the questions as quickly
       and accurately as possible. The experiment will last around 20 minutes.
     </p>
 
-    <p class='instructions' id='continue'>
-      <b>Press any key to continue</b>
+    <p class='instructions' id='continue' ontouchstart="response(13)">
+      <b>Press ${continueText} to continue</b>
     </p>
   </div>`,
   post_trial_gap: 500,
-  on_finish: updateProgress,
+  on_finish: function() {
+    updateProgress();
+    send_ua_data();
+    },
 };
 
 // Physics Instructions
 var phys_instructions = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -186,8 +288,8 @@ var phys_instructions = {
       Instructions
     </h2>
     <p class='instructions'>
-      In this experiment, you will be asked to read questions 
-      about common objects.
+      In this experiment, you will be asked questions about hypothetical
+      situations involving common objects.
     </p>
 
     <p class='instructions'>
@@ -196,24 +298,29 @@ var phys_instructions = {
       answer using the keyboard: use the <span class='key-demo'>f</span>
       key to indicate the choice on the <b>left</b>, and the 
       <span class='key-demo'>j</span> key to indicate the choice on the
-      <b>right</b>.
+      <b>right</b>. If you are using a touchscreen, you can simply tap your selected
+      answer.
     </p>
     <p class='instructions'>
       Read each question carefully and answer as quickly
       and accurately as possible. The experiment will last around 20 minutes.
     </p>
 
-    <p class='instructions' id='continue'>
-      <b>Press any key to continue</b>
+    <p class='instructions' id='continue' ontouchstart="response(13)">
+      <b>Press ${continueText} to continue</b>
     </p>
   </div>`,
   post_trial_gap: 500,
-  on_finish: updateProgress,
+  on_finish: function() {
+    updateProgress();
+    send_ua_data();
+  }
 };
 
 // Example
 var example = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -266,7 +373,7 @@ var example = {
     </p>
 
     <p class='instructions' id='continue'>
-      <b>Press any key to continue<b>
+      <b>Press ${continueText} to continue<b>
     </p>
 
   </div>`,
@@ -278,6 +385,7 @@ var example = {
 // Example
 var example_2 = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -332,11 +440,11 @@ var example_2 = {
       to indicate that <b>the customer</b> didn't know the answer.
     </p>
 
-    <p class='instructions' id='continue'>
+    <p class='instructions' id='continue' ontouchstart="response(13)">
       <b>The experiment will begin on the next page.</b>
     </p>
     <p class='instructions'>
-      <b>Press any key to begin<b>
+      <b>Press ${continueText} to begin<b>
     </p>
 
   </div>`,
@@ -348,6 +456,7 @@ var example_2 = {
 // Physics Example
 var phys_example = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -397,11 +506,11 @@ var phys_example = {
 
     <p class='instructions'>
       In this example, you would press <span class='key-demo'>j</span>
-      to indicate that <b>The steel ball</b> is more likely to sink.
+      to indicate that <b>the steel ball</b> is more likely to sink.
     </p>
 
-    <p class='instructions' id='continue'>
-      <b>Press any key to continue<b>
+    <p class='instructions' id='continue' ontouchstart="response(13)">
+      <b>Press ${continueText} to continue<b>
     </p>
 
   </div>`,
@@ -412,6 +521,7 @@ var phys_example = {
 // Physics Example
 var phys_example_2 = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
@@ -464,15 +574,15 @@ var phys_example_2 = {
 
     <p class='instructions'>
       In this example, you would press <span class='key-demo'>j</span>
-      to indicate that <b>The apple</b> is more likely to reach the ground
+      to indicate that <b>the apple</b> is more likely to reach the ground
       first.
     </p>
 
     <p class='instructions' id='continue'>
       <b>The experiment will begin on the next page.</b>
     </p>
-    <p class='instructions'>
-      <b>Press any key to begin<b>
+    <p class='instructions' ontouchstart="response(13)">
+      <b>Press ${continueText} to begin<b>
     </p>
 
   </div>`,
@@ -501,11 +611,11 @@ var fixation = {
 
 function getTVData(data) {
   // Add data from item to jsPsych data
-  data.sent_id = jsPsych.timelineVariable('sent_id')(),
-  data.item_type = jsPsych.timelineVariable('item_type')(),
-  data.item_id = jsPsych.timelineVariable('item_id')(),
-  data.order = jsPsych.timelineVariable('order')(),
-  data.reversed = jsPsych.timelineVariable('reversed')()
+  data.sent_id = jsPsych.timelineVariable('sent_id')();
+  data.item_type = jsPsych.timelineVariable('item_type')();
+  data.item_id = jsPsych.timelineVariable('item_id')();
+  data.order = jsPsych.timelineVariable('order')();
+  data.reversed = jsPsych.timelineVariable('reversed')();
 }
 
 function mapKeyCodes(data) {
@@ -515,24 +625,24 @@ function mapKeyCodes(data) {
   let np1 = "NP1";
   let np2 = "NP2";
   if (data.reversed) {
-    [np1, np2] = [np2, np1]
-  };
+    [np1, np2] = [np2, np1];
+  }
 
   if (data.key_press == 70) {
-    data.response = np1
+    data.response = np1;
   } else if (data.key_press == 74) {
-    data.response = np2
+    data.response = np2;
   } else {
-    data.response = "Other"
+    data.response = "Other";
   }
 }
 
 function getPreferenceData(data) {
   // Add preference info to trial data
   data.expt_syntax_pref = jsPsych.timelineVariable(
-    'expt_syntax_pref', true)
+    'expt_syntax_pref', true);
   data.expt_physics_pref = jsPsych.timelineVariable(
-    'expt_physics_pref', true)
+    'expt_physics_pref', true);
 
   // Add Syntax and Physics congruency data
   data.syntax_congruent = data.response == data.expt_syntax_pref
@@ -565,8 +675,8 @@ var preview = {
         <p class='question'>${question}</p> 
         <div class='response-container'> 
 
-          <div class='response np1'>${np1}</div> 
-          <div class='response np2'>${np2}</div>
+          <div class='np1'>${np1}</div> 
+          <div class='np2'>${np2}</div>
 
         </div>
       </div>`;
@@ -606,7 +716,7 @@ var trial = {
         <p class='question'>${question}</p> 
         <div class='response-container'> 
 
-          <div class='response np1'>
+          <div class='response np1' ontouchstart='response(70)'>
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
@@ -620,7 +730,7 @@ var trial = {
             
           </div> 
 
-          <div class='response np2'>
+          <div class='response np2' ontouchstart='response(74)'>
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
@@ -662,13 +772,22 @@ var trial_procedure = {
 var end_trials = {
   type: "html-keyboard-response",
   stimulus: `
+  <div class='instructions-container'>
+      <h2 class='instructions-header'>
+        Trials Complete
+      </h2>
+    <p class='instructions'>
+      Thank you. You have completed all of the comprehension questions.
+    </p>
 
-  <p>You have completed all of the completed all of the comprehension questions.</p>
+    <p class='instructions'>
+    You will now be asked a short series of questions about yourself and
+    your thoughts about the experiment.</p>
+    </p>
 
-  <p>You will now be asked a short series of questions about yourself and
-     your thoughts about the experiment.</p>
-
-  <p id='next'>Press any key to continue.</p>
+  <p class='instructions' ontouchstart="response(13)" id='next'>
+      <b>Press ${continueText} to begin<b>
+    </p>
   `,
   on_finish: updateProgress
 };
@@ -693,7 +812,7 @@ var post_test = {
   html: `<h3 class='title'>Feedback</h3>
 
   <div class='question'>
-    <h3 class='question-title'>What did you the experiment was about overall?</h3>
+    <h3 class='question-title'>What did you think the experiment was about overall?</h3>
   
     <textarea class="form-control feedback" id="feedback_1" name="feedback_1" required></textarea>
 
@@ -707,7 +826,10 @@ var post_test = {
   </div>`,
   choices: jsPsych.NO_KEYS,
   data: {trial_part: 'post_test'},
-  on_finish: updateProgress
+  on_finish: function() {
+    saveResults();
+    updateProgress();
+  }
   // Randomly sample trial duration
 };
 
@@ -717,32 +839,48 @@ var post_test = {
 
 var debrief_block = {
   type: "html-keyboard-response",
+  choices: jsPsych.NO_KEYS,
   stimulus: function() {
-
-    // Get all response trials
-    var trials = jsPsych.data.get().filter({trial_part: 'trial'});
-    let n_trials = trials.count();
-
-    // Count syntax and physics congruent
-    var syntax_congruent = trials.filter({syntax_congruent: true});
-    var physics_congruent = trials.filter({physics_congruent: true});
-
-    // Get percentages
-    var syntax_pct = Math.round(syntax_congruent.count() / 
-      n_trials * 100);
-    var physics_pct = Math.round(physics_congruent.count() / 
-      n_trials * 100);
-
-    // Get mean rt
-    var rt = Math.round(trials.select('rt').mean());
-    let s = `<p>Your average response time was ${rt}ms.</p>`
 
     // if (conf.mode == "expt") {
     //   s += `<p>Your responses were ${syntax_pct}% consistent with syntax, 
     //         and ${physics_pct}% consistent with physics.</p>`
     // }
     
-    s = "<p>Press any key to complete the experiment. Thank you!</p>";
+    s = `
+    <div class='instructions-container'>
+      <h2 class='instructions-header'>
+        Complete
+      </h2>
+
+      <p class='instructions'>
+        Thank you for completing the experiment.
+      </p>
+
+      <p class='instructions'>
+        Your completion code is:
+      </p>
+
+      <div class='code-container'>
+      
+        <div id='code'>${conf.key}</div>
+
+        <div class='code-copy' title="Copy code" onclick="copyToClipboard()">
+          <img src="/static/pronouns/content_copy-24px.svg">
+          </img>
+        </div>
+
+        <div id='copy-confirm' class='hidden'>
+          Code copied to clipboard!
+        </div>
+
+      </div>
+
+      <p class='instructions'> 
+          Copy and paste the code into the Mechanical Turk HIT window.
+          You can then close this window.
+      </p>
+    </div>`;
 
     return s;
 
@@ -759,9 +897,9 @@ if (conf.mode == "physics_norm") {
 }
 
 // Create jsPsych timeline
-var timeline = [start_fullscreen, welcome, instructions, example, example_2,
-                trial_procedure, demographics, post_test, debrief_block,
-                end_fullscreen]
+var timeline = [welcome, consent, start_fullscreen, instructions, example, example_2,
+                trial_procedure, end_trials, demographics, post_test, debrief_block,
+                end_fullscreen];
 
 // Launch jsPsych
 window.onload = function() {
@@ -769,8 +907,8 @@ window.onload = function() {
     timeline: timeline,
     experiment_width: 800,
     display_element: "expt-container",
-    on_finish: function() {
-        saveResults();
-      }
+    // on_finish: function() {
+    //     saveResults();
+    //   }
   });
 };

@@ -235,7 +235,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid #00000054;
     font-family: 'Open Sans', sans-serif;
-    padding:5px;
+    padding:10px;
     text-indent: 5px
 }
 
@@ -316,6 +316,10 @@ p.question {
     display: flex;
     flex-direction: column;
 }
+/*
+.response:hover {
+    box-shadow: 0 0 2px 1px #00000026, 0 0 7px 3px #00000033;
+}*/
 
 .trial-container {
     width: 80%;
@@ -344,3 +348,56 @@ p.question {
     justify-content: center;
     padding-bottom: 10px;
 }
+
+/* MTurk Code */
+
+.code-container {
+    display: flex;
+    width: 470px;
+    margin: auto;
+    border: 1px solid #00000088;
+    /* padding: 5px 15px; */
+    border-radius: 8px;
+    justify-content: space-between;
+    position:relative;
+}
+
+.code-copy {
+    display: flex;
+    padding: 5px 8px;
+    background: #00000022;
+    border-left: 1px solid #00000088;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+    border-radius: 0 8px 8px 0px;
+}
+
+div#code {
+    padding: 5px 10px;
+}
+
+.code-copy:hover {
+    background: #00000044;
+}
+
+.code-copy:active {
+    box-shadow: inset 0px 0 7px 2px #00000045;
+}
+
+div#copy-confirm {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    background: #000000c4;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+div#copy-confirm.show {
+    opacity:1;
+}
+

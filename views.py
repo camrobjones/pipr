@@ -9,12 +9,18 @@ import os
 import random
 import json
 import requests
+import secrets
+import re
+import csv
 
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.utils import timezone as tz
 from django.conf import settings
+from django.contrib.auth.decorators import user_passes_test
 import pandas as pd
+
+from pronouns.models import Participant, Trial, Stimulus, Language
 
 """
 Constants
@@ -24,6 +30,9 @@ Constants
 # General parameters
 RESULTS_DIR = 'pronouns/data/results/'  # Store responses
 FILLER_RATIO = 2  # Ratio of Fillers:Experimental Items
+
+# Conditions
+CONDITIONS = ["expt", "syntax_norm", "physics_norm"]
 
 # CSV column names
 ID_COLS = ["sent_id", "order", "item_id", "item_type"]
@@ -37,6 +46,7 @@ MODE_COLUMNS = {
 
 RECAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 
+LANGUAGE_REGEX = "language_([0-9])+"
 
 random.seed()
 
@@ -133,6 +143,67 @@ def get_catch(condition):
     return catch_trials.to_dict(orient="records")
 
 
+def ua_data(request):
+    """Store ppt ua_data"""
+    post = json.loads(request.body.decode('utf-8'))
+
+    print(post)
+
+    key = post['key']
+
+    ppt = Participant.objects.get(key=key)
+    ppt.ua_header = post.get('ua_header', "")
+    ppt.screen_width = post.get('width', "")
+    ppt.screen_height = post.get('height', "")
+    ppt.save()
+
+    return JsonResponse({"success": True})
+
+
+def cycle_condition(cond):
+    """Cycle through conditions"""
+    if cond < 2:
+        return cond + 1
+    else:
+        return 0
+
+
+def get_condition():
+    """Generate condition"""
+    last = Participant.objects.last()
+
+    if last is not None:
+        return cycle_condition(last.condition)
+    return 0
+
+
+def init_ppt(request):
+    """Create new ppt"""
+
+    # Get params
+    mode = request.GET.get('mode')
+
+    # Create key
+    key = secrets.token_hex(16)
+
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR', "")
+
+    # condition
+    if mode is not None:
+        condition = CONDITIONS.index(mode)
+    else:
+        condition = get_condition()
+
+    ppt = Participant.objects.create(
+        key=key, ip_address=ip, condition=condition)
+
+    return ppt
+
+
 def home(request):
     """Control panel for launching the experiment"""
     return render(request, 'pronouns/home.html')
@@ -149,8 +220,11 @@ def expt(request):
 
     # Parse GET data
     limit = request.GET.get('n')
-    mode = request.GET.get('mode', 'expt')
-    fillers = request.GET.get('fillers')
+    fillers = request.GET.get('fillers', True)
+
+    # Create ppt
+    ppt = init_ppt(request)
+    mode = CONDITIONS[ppt.condition]
 
     # Get experimental items
     items = get_stimuli(mode=mode, limit=limit)
@@ -165,11 +239,16 @@ def expt(request):
         items += filler_data
 
     # Create view context
-    conf = {"mode": mode}
+    conf = {"mode": mode, "key": ppt.key}
     context = {"items": items, "conf": conf}
 
     # Create new key for new expt attempt
     request.session.cycle_key()
+
+    # Store session key
+    ppt.session_key = request.session.session_key
+
+    ppt.save()
 
     # Return view
     return render(request, 'pronouns/expt.html', context)
@@ -190,22 +269,84 @@ def save_results(request):
 
     The POST is written to JSON as-is.
     """
-    # Generate filename
+
+    # Get posted data
     session_key = request.session.session_key
+    post = json.loads(request.body.decode('utf-8'))
+    key = post.get('key', session_key)
+
+    # Generate filename
     timestamp = tz.now().strftime("%Y-%m-%d-%H-%M-%S")
-    filename = f"{timestamp}-{session_key}.json"
+    filename = f"{timestamp}-{key}.json"
     filepath = os.path.join(RESULTS_DIR, filename)
 
     # Check RESULTS_DIR exists
     if not os.path.isdir(RESULTS_DIR):
         os.mkdir(RESULTS_DIR)
 
-    # Get posted data
-    post = json.loads(request.body.decode('utf-8'))
-
     # Write file
     with open(filepath, 'w') as f:
         json.dump(post, f, indent=4)
+
+    # Retreieve ppt
+    ppt = Participant.objects.get(key=key)
+
+    # store results
+    data = post['results']
+
+    # Get trials
+    trials = [item for item in data if item.get('trial_part') == "trial"]
+
+    for trial_data in trials:
+        stimulus, created = Stimulus.objects.get_or_create(
+            item_id=trial_data.get('item_id'),
+            item_type=trial_data.get('item_type'),
+            stimulus=trial_data.get('stimulus')
+        )
+        trial = Trial.objects.create(
+            participant=ppt,
+            stimulus=stimulus,
+            reaction_time=trial_data.get('rt'),
+            key_press=trial_data.get('key_press'),
+            response=trial_data.get('response'),
+            trial_index=trial_data.get('trial_index'),
+            reversed_flag=trial_data.get('reversed', False),
+            condition=ppt.condition
+        )
+        trial.save()
+
+    demo = [item for item in data if item.get('trial_part') == "demographics"]
+
+    demo = demo[0]
+    demo_data = json.loads(demo.get('responses', "{}"))
+    ppt.birth_year = demo_data.get('demographics_year') or None
+    ppt.gender = demo_data.get('demographics_gender')
+
+    # Get matches
+    lang_matches = [re.match(LANGUAGE_REGEX, l) for l in demo_data]
+    lang_indexes = [l.groups()[0] for l in lang_matches if l]
+
+    for idx in lang_indexes:
+        language = Language.objects.create(
+            participant=ppt,
+            index=int(idx),
+            language=demo_data.get(f"language_{idx}", ""),
+            proficiency=demo_data.get(f"language_proficiency_{idx}", ""),
+            learned=demo_data.get(f"language_learned_{idx}", ""),
+            active=demo_data.get(f"language_active_{idx}", ""),
+            proportion=demo_data.get(f"language_proportion_{idx}", "")
+        )
+
+    # Store feedback
+    feedback = [item for item in data if item.get('trial_part') == "post_test"]
+    feedback = feedback[0]
+    feedback_data = json.loads(feedback.get('responses', "{}"))
+    ppt.purpose = feedback_data.get('feedback_1', "")
+    ppt.feedback = feedback_data.get('feedback_2', "")
+
+    ppt.end_time = tz.now()
+
+    ppt.save()
 
     # Notify User
     return JsonResponse({"success": True})
@@ -216,6 +357,7 @@ def validate_captcha(request):
 
     post = json.loads(request.body.decode('utf-8'))
 
+    key = post['key']
     token = post.get('token')
 
     print(token)
@@ -233,4 +375,69 @@ def validate_captcha(request):
 
     response_data = json.loads(content)
     print(response_data)
+
+    score = response_data.get('score')
+    ppt = Participant.objects.get(key=key)
+    ppt.captcha_score = score
+    ppt.save()
+
     return JsonResponse(response_data)
+
+
+def is_admin(user):
+    return user.is_superuser
+
+
+def trial_data():
+    """Get data on all trials"""
+    data_list = []
+
+    for trial in Trial.objects.all():
+
+        data = trial.__dict__
+        data['item_id'] = trial.stimulus.item_id
+        data['item_type'] = trial.stimulus.item_type
+        data.pop('_state')
+
+        data_list.append(data)
+
+    df = pd.DataFrame(data_list)
+    df = df.sort_values('id').reset_index(drop=True)
+    return df
+
+
+def ppt_data():
+    """Get data on all participants"""
+    data_list = []
+
+    for ppt in Participant.objects.all():
+
+        data = ppt.__dict__
+        data.pop('_state')
+
+        data_list.append(data)
+
+    df = pd.DataFrame(data_list)
+    df = df.sort_values('id').reset_index(drop=True)
+    return df
+
+
+@user_passes_test(is_admin)
+def download_data(request, model):
+    """Download csv of model data"""
+    if model == "trial":
+        data = trial_data()
+    elif model == "participant":
+        data = ppt_data()
+    else:
+        raise ValueError(
+            "'model' must be 'trial' or 'participant', not %r" % model)
+
+    fname = f'pipr_{model}_{tz.now():%Y-%m-%d-%H-%M-%S}.csv'
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f'attachment; filename="{fname}"'
+
+    data.to_csv(response)
+
+    return response

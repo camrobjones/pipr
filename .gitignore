@@ -2,3 +2,4 @@ data/results/
 todo.txt
 notes.txt
 __pycache__/
+*.DS_Store
