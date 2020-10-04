@@ -237,6 +237,9 @@ var consent = {
               Please review the consent form below and check the box if
               you agree to participate.
               </p>
+
+              <a target="_blank" href="/static/pronouns/consent_form.pdf">Open in a new tab</a>
+              
               <div id='consent-container'>
                 <iframe src="/static/pronouns/consent_form.pdf#view=FitH&zoom=FitH"
                 width="100%", height="800px"></iframe>
