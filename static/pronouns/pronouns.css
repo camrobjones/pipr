@@ -5,6 +5,10 @@
 body {
     margin:0;
     font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size:16px;
+}
+
+@media (min-height: 1200px) {
 }
 
 /* --- Header Bar --- */
@@ -25,7 +29,7 @@ h1#top-bar-title {
     color: white;
     font-family: 'Open Sans', 'Arial', sans-serif;
     margin: 0 20px 0 30px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 400;
     min-width: 350px;
     white-space: nowrap;
@@ -34,7 +38,7 @@ h1#top-bar-title {
 
 @media (max-width: 600px) {
   h1#top-bar-title {
-    font-size: 1rem;
+    font-size: 1em;
     min-width: 250px;
   }
 }
@@ -130,7 +134,7 @@ input#limit {
     margin-right: 0;
     width: 40px;
     padding: 7px 5px;
-    font-size: 1rem;
+    font-size: 1em;
     border-radius: 5px;
     border: 1px solid #00000088;
     margin-top: 5px;
@@ -167,13 +171,13 @@ div.question {
     color: #000000cc;
     padding: 5px;
     margin-bottom: 10px;
-    font-size:1rem;
+    font-size:1em;
     line-height: 1.6em;
 }
 
 h3.question-title {
     margin-bottom: 0.5em;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: 600;
     color: #000000d1;
 }
@@ -181,7 +185,7 @@ h3.question-title {
 div.question input[type="number"], select {
     width: 135px;
     padding: 10px 5px;
-    font-size: 1.1rem;
+    font-size: 1.1em;
     border-radius: 5px;
     border: 1px solid #0000003b;
     margin-top: 5px;
@@ -194,7 +198,7 @@ select {
 
 .form-row {
     display: flex;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .col {
@@ -245,13 +249,13 @@ div#expt-container {
     min-height: calc(100vh - 92px);
     width: 95vw;
     margin:0 auto;
-    font-size:1.4rem;
+    font-size:1.4em;
     margin-bottom:20px;
 }
 
 @media (max-width: 600px) {
   div#expt-container {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 }
 
