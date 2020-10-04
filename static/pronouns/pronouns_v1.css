@@ -425,6 +425,13 @@ p.question {
     padding-bottom: 10px;
 }
 
+/* Consent */
+
+#consent-container {
+    max-width:100%;
+    overflow-x:scroll;
+}
+
 /* MTurk Code */
 
 .code-container {

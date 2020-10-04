@@ -50,6 +50,12 @@ function saveResults() {
     });
 }
 
+// Scroll to top
+function scrollTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 
 function ua_data() {
     let data = {};
@@ -214,7 +220,10 @@ var welcome = {
               </p>
             </div>`,
   on_finish: updateProgress,
-  on_load: ex_captcha,
+  on_load: function() {
+    ex_captcha();
+    scrollTop();
+  }
 };
 
 
@@ -228,15 +237,18 @@ var consent = {
               Please review the consent form below and check the box if
               you agree to participate.
               </p>
-              <iframe src="/static/pronouns/consent_form.pdf#view=FitH"
-              width="100%", height="800px"></iframe>
+              <div id='consent-container'>
+                <iframe src="/static/pronouns/consent_form.pdf#view=FitH&zoom=FitH"
+                width="100%", height="800px"></iframe>
+              </div>
 
               <div class='input-group'>
                   <label for='fillers'>I agree</label>
                   <input type='checkbox' name='consent' id='consent' required>
               </div>
             </div>`,
-  on_finish: updateProgress
+  on_finish: updateProgress,
+  on_load: scrollTop
 };
 
 // Instructions
@@ -274,6 +286,7 @@ var instructions = {
     </p>
   </div>`,
   post_trial_gap: 500,
+  on_load: scrollTop,
   on_finish: function() {
     updateProgress();
     send_ua_data();
@@ -314,6 +327,7 @@ var phys_instructions = {
     </p>
   </div>`,
   post_trial_gap: 500,
+  on_load: scrollTop,
   on_finish: function() {
     updateProgress();
     send_ua_data();
@@ -381,6 +395,7 @@ var example = {
 
   </div>`,
   on_finish: updateProgress,
+  on_load: scrollTop,
   post_trial_gap: 500,
 };
 
@@ -452,6 +467,7 @@ var example_2 = {
 
   </div>`,
   post_trial_gap: 500,
+  on_load: scrollTop,
   on_finish: updateProgress,
 };
 
@@ -518,6 +534,7 @@ var phys_example = {
 
   </div>`,
   post_trial_gap: 500,
+  on_load: scrollTop,
   on_finish: updateProgress,
 };
 
@@ -590,6 +607,7 @@ var phys_example_2 = {
 
   </div>`,
   post_trial_gap: 500,
+  on_load: scrollTop,
   on_finish: updateProgress,
 };
 
@@ -910,8 +928,21 @@ if (isTouch) {
                   debrief_block];
 }
 
+// Prevent back
+history.pushState(null, document.title, location.href);
+window.addEventListener('popstate', function (event)
+{
+  goBack = confirm("Are you sure you want to go back? Your progress will be lost.")
+  if (goBack) {
+    window.history.back();
+  } else {
+    history.pushState(null, document.title, location.href);
+  }
+});
+
 // Launch jsPsych
 window.onload = function() {
+
   jsPsych.init({
     timeline: timeline,
     experiment_width: 800,
