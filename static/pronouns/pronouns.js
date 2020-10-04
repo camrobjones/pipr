@@ -46,7 +46,7 @@ function saveResults() {
   data.key = conf.key;
   axios.post(url, data, {headers: headers})
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
     });
 }
 
@@ -67,7 +67,7 @@ function send_ua_data() {
   let headers = {"X-CSRFToken": csrftoken};
   axios.post(url, data, {headers: headers})
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
     });
 }
 
@@ -123,7 +123,7 @@ function validate_captcha(token) {
   };
   axios.post(url, data, {headers: headers})
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
       if (response.data.score > 0.2) {
         close_captcha()
         // jsPsych.finishTrial(response.data)

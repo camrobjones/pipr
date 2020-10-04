@@ -182,7 +182,7 @@ def ua_data(request):
     """Store ppt ua_data"""
     post = json.loads(request.body.decode('utf-8'))
 
-    print(post)
+    # print(post)
 
     key = post['key']
 
@@ -399,21 +399,21 @@ def validate_captcha(request):
     key = post['key']
     token = post.get('token')
 
-    print(token)
+    # print(token)
 
     data = {"response": token,
             "secret": settings.CAPTCHA_SECRET_KEY}
 
-    print(data)
+    # print(data)
 
     response = requests.post(RECAPTCHA_URL, data=data)
 
-    print(response)
+    # print(response)
     content = response.content
-    print(response.content)
+    # print(response.content)
 
     response_data = json.loads(content)
-    print(response_data)
+    # print(response_data)
 
     score = response_data.get('score')
     ppt = Participant.objects.get(key=key)
