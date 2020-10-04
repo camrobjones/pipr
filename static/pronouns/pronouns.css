@@ -8,9 +8,6 @@ body {
     font-size:16px;
 }
 
-@media (min-height: 1200px) {
-}
-
 /* --- Header Bar --- */
 
 header.top-bar {
@@ -38,8 +35,12 @@ h1#top-bar-title {
 
 @media (max-width: 600px) {
   h1#top-bar-title {
-    font-size: 1em;
-    min-width: 250px;
+    font-size: 4vw;
+    min-width: 40%;
+  }
+
+  div#progress-label {
+    font-size:4vw;
   }
 }
 
@@ -165,19 +166,23 @@ button#submit:hover, .btn:hover {
 
 /* Demographics */
 
+form#jspsych-survey-html-form {
+    min-height: calc(90vh - 92px);
+}
+
 div.question {
     /* display: flex; */
     text-align: left;
     color: #000000cc;
     padding: 5px;
     margin-bottom: 10px;
-    font-size:1em;
-    line-height: 1.6em;
+    font-size:0.8em;
+    line-height: 1.2em;
 }
 
 h3.question-title {
     margin-bottom: 0.5em;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     color: #000000d1;
 }
@@ -198,7 +203,8 @@ select {
 
 .form-row {
     display: flex;
-    font-size: 1em;
+    font-size: 0.8em;
+    width: 777px;
 }
 
 .col {
@@ -206,8 +212,6 @@ select {
 }
 
 .radio-option {
-    /* padding: 0px; */
-    /* height: 30px; */
     display: flex;
     align-items: center;
     height: 2em;
@@ -218,7 +222,35 @@ input[type="radio" i] {
 }
 
 div#language-box-container {
-    width: 800px;
+    overflow-x: scroll;
+    padding: 10px;
+    border: 1px solid #00000033;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        font-size: 0.7em;
+        line-height: 1em;
+        width: 360px;
+    }
+
+    div#language-box-container {
+        
+    }
+
+    div.question input[type="number"], select {
+    width: 60px;
+    padding: 3px 3px;
+    font-size: 0.9em;
+    height: 25px;
+    /* line-height: 1em; */
+    }
+
+    select {
+        text-indent:0;
+    }
+
 }
 
 .col-header {
@@ -230,11 +262,11 @@ div#language-box-container {
 }
 
 button#addLanguageButton {
-    margin: 10px 12px 0px auto;
+    margin: 10px 12px 0 0;
 }
 
 textarea {
-    width: 100%;
+    width: 90%;
     height: 5em;
     border-radius: 5px;
     border: 1px solid #00000054;
@@ -247,7 +279,7 @@ textarea {
 
 div#expt-container {
     min-height: calc(100vh - 92px);
-    width: 95vw;
+    width: 92vw;
     margin:0 auto;
     font-size:1.4em;
     margin-bottom:20px;
@@ -255,7 +287,7 @@ div#expt-container {
 
 @media (max-width: 600px) {
   div#expt-container {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -272,6 +304,13 @@ span.key-demo {
     font-weight: 600;
 }
 
+@media (max-width: 600px) {
+  span.key-demo {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 p.instructions {
     text-align: justify;
 }
@@ -281,7 +320,7 @@ p.instructions {
 }
 
 .instructions-container {
-    height: calc(90vh - 92px);
+    min-height: calc(90vh - 92px);
     max-width:800px;
     margin:auto;
 }
@@ -316,9 +355,22 @@ p.question {
     margin-bottom:0;
 }
 
+@media (max-width: 600px) {
+  p.sent {
+    min-height: 6em;
+    margin:1em;
+  }
+  p.question {
+    min-height: 4em;
+    margin-bottom:0;
+  }
+}
+
+
 .response {
     display: flex;
     flex-direction: column;
+    max-width: 45%
 }
 /*
 .response:hover {
@@ -330,6 +382,15 @@ p.question {
     margin: auto;
     max-width: 800px;
     min-width: 400px;
+}
+
+@media (max-width: 600px) {
+  .trial-container {
+    min-width: 90%;
+    width:90%;
+    margin: auto;
+
+  }
 }
 
 .response-label {font-weight: 600;}
@@ -346,6 +407,17 @@ p.question {
     font-size: 20px;
     font-weight: 500;
 }
+
+@media (max-width: 600px) {
+  .key-reminder {
+    width: 25px;
+    height: 23px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+}
+
+
 
 .key-reminder-container {
     display: flex;
@@ -364,6 +436,13 @@ p.question {
     border-radius: 8px;
     justify-content: space-between;
     position:relative;
+}
+
+@media (max-width: 600px) {
+    .code-container {
+        width: 280px;
+        font-size: 12px;
+    }
 }
 
 .code-copy {

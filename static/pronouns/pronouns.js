@@ -228,7 +228,7 @@ var consent = {
               Please review the consent form below and check the box if
               you agree to participate.
               </p>
-              <iframe src="/static/pronouns/consent_form.pdf"
+              <iframe src="/static/pronouns/consent_form.pdf#view=FitH"
               width="100%", height="800px"></iframe>
 
               <div class='input-group'>
@@ -375,7 +375,7 @@ var example = {
       to indicate that <b>John</b> was jealous.
     </p>
 
-    <p class='instructions' id='continue'>
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>Press ${continueText} to continue<b>
     </p>
 
@@ -446,7 +446,7 @@ var example_2 = {
     <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>The experiment will begin on the next page.</b>
     </p>
-    <p class='instructions'>
+    <p class='instructions' ontouchstart="response(32)">
       <b>Press ${continueText} to begin<b>
     </p>
 
@@ -529,7 +529,7 @@ var phys_example_2 = {
   `
   <div class='instructions-container'>
     <h2 class='instructions-header'>
-      Example
+      Example 2
     </h2>
     <p class='instructions'>
       Here is another example:
@@ -899,10 +899,16 @@ if (conf.mode == "physics_norm") {
   example_2 = phys_example_2;
 }
 
+if (isTouch) {
+  var timeline = [welcome, consent, instructions, example, example_2,
+                  trial_procedure, end_trials, demographics, post_test,
+                  debrief_block];
+} else {
 // Create jsPsych timeline
-var timeline = [welcome, consent, start_fullscreen, instructions, example, example_2,
-                trial_procedure, end_trials, demographics, post_test, end_fullscreen,
-                debrief_block];
+  var timeline = [welcome, consent, start_fullscreen, instructions, example, example_2,
+                  trial_procedure, end_trials, demographics, post_test, end_fullscreen,
+                  debrief_block];
+}
 
 // Launch jsPsych
 window.onload = function() {

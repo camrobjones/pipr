@@ -268,7 +268,7 @@ def expt(request):
     items += get_catch(condition=mode)
 
     # Get fillers if requested
-    if fillers is not None and mode != "physics_norm":
+    if fillers != "false" and mode != "physics_norm":
         n_fillers = FILLER_RATIO * len(items)
         filler_data = get_fillers(n_fillers)
         items += filler_data
