@@ -19,6 +19,8 @@ from django.utils import timezone as tz
 from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
 import pandas as pd
+from nltk import corpus
+import syllables
 
 from pronouns.models import Participant, Trial, Stimulus, Language
 
@@ -49,6 +51,39 @@ RECAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 LANGUAGE_REGEX = "language_([0-9])+"
 
 random.seed()
+
+CMUDICT = corpus.cmudict.dict()
+
+SYLL_MS = 191  # Source: https://doi.org/10.1167/iovs.11-8284
+READING_TIME_BASE = 250  # Thinking time buffer
+
+
+"""
+Helper functions
+----------------
+"""
+
+
+def no_syllables(word):
+    """Get no syllables in word"""
+    pronunciations = CMUDICT.get(word)
+    if pronunciations is not None:
+        sylls = [len(list(y for y in x if y[-1].isdigit())) for x in pronunciations]
+        return max(sylls)
+
+    return syllables.estimate(word)
+
+
+def get_reading_time(text, syll_ms=SYLL_MS):
+    """Get reading time for text in ms, based on const * syllables"""
+    words = re.findall("[a-z]+", text.lower())
+
+    sylls = sum(no_syllables(word) for word in words)
+
+    reading_time = READING_TIME_BASE + sylls * SYLL_MS
+
+    return reading_time
+
 
 """
 Load Data
@@ -237,6 +272,10 @@ def expt(request):
         n_fillers = FILLER_RATIO * len(items)
         filler_data = get_fillers(n_fillers)
         items += filler_data
+
+    # Add reading times
+    for item in items:
+        item['time'] = get_reading_time(item['sent'])
 
     # Create view context
     conf = {"mode": mode, "key": ppt.key}

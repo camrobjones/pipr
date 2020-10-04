@@ -204,11 +204,14 @@ var end_fullscreen = {
 // Welcome
 var welcome = {
   type: "html-keyboard-response",
+  choices: [' '],
   stimulus: `
              <div class='instructions-container'>
               <h2 class='instructions-header'>Welcome</h2>
               <p class='welcome'>Thank you for accepting this HIT.</p>
-              <p class='welcome' ontouchstart="response(13)"><b>Press ${continueText} to continue</b></p>
+              <p class='welcome' ontouchstart="response(32)">
+                <b>Press ${continueText} to continue</b>
+              </p>
             </div>`,
   on_finish: updateProgress,
   on_load: ex_captcha,
@@ -266,7 +269,7 @@ var instructions = {
       and accurately as possible. The experiment will last around 20 minutes.
     </p>
 
-    <p class='instructions' id='continue' ontouchstart="response(13)">
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>Press ${continueText} to continue</b>
     </p>
   </div>`,
@@ -306,7 +309,7 @@ var phys_instructions = {
       and accurately as possible. The experiment will last around 20 minutes.
     </p>
 
-    <p class='instructions' id='continue' ontouchstart="response(13)">
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>Press ${continueText} to continue</b>
     </p>
   </div>`,
@@ -440,7 +443,7 @@ var example_2 = {
       to indicate that <b>the customer</b> didn't know the answer.
     </p>
 
-    <p class='instructions' id='continue' ontouchstart="response(13)">
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>The experiment will begin on the next page.</b>
     </p>
     <p class='instructions'>
@@ -509,7 +512,7 @@ var phys_example = {
       to indicate that <b>the steel ball</b> is more likely to sink.
     </p>
 
-    <p class='instructions' id='continue' ontouchstart="response(13)">
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>Press ${continueText} to continue<b>
     </p>
 
@@ -581,7 +584,7 @@ var phys_example_2 = {
     <p class='instructions' id='continue'>
       <b>The experiment will begin on the next page.</b>
     </p>
-    <p class='instructions' ontouchstart="response(13)">
+    <p class='instructions' ontouchstart="response(32)">
       <b>Press ${continueText} to begin<b>
     </p>
 
@@ -656,7 +659,7 @@ var preview = {
   // Meta data
   type: "html-keyboard-response",
   choices: jsPsych.NO_KEYS,
-  trial_duration: 3000,
+  trial_duration: jsPsych.timelineVariable('time'),
   data: {trial_part: 'preview'},
 
   // Build stimulus
@@ -785,7 +788,7 @@ var end_trials = {
     your thoughts about the experiment.</p>
     </p>
 
-  <p class='instructions' ontouchstart="response(13)" id='next'>
+  <p class='instructions' ontouchstart="response(32)" id='next'>
       <b>Press ${continueText} to begin<b>
     </p>
   `,
@@ -898,8 +901,8 @@ if (conf.mode == "physics_norm") {
 
 // Create jsPsych timeline
 var timeline = [welcome, consent, start_fullscreen, instructions, example, example_2,
-                trial_procedure, end_trials, demographics, post_test, debrief_block,
-                end_fullscreen];
+                trial_procedure, end_trials, demographics, post_test, end_fullscreen,
+                debrief_block];
 
 // Launch jsPsych
 window.onload = function() {
