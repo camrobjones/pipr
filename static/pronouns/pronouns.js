@@ -34,6 +34,10 @@ if (isTouch) {
   var continueText = "here";
 }
 
+/* === Turk === */
+
+var turkInfo = jsPsych.turk.turkInfo();
+
 /* === Util Functions === */
 
 function saveResults() {
@@ -63,6 +67,7 @@ function ua_data() {
     data.width = window.innerWidth;
     data.height = window.innerHeight;
     data.key = conf.key;
+    data.workerID = turkInfo.workerId;
     return data;
 }
 

@@ -13,6 +13,7 @@ class Participant(models.Model):
     ip_address = models.TextField()
     key = models.TextField()  # Generated hex key to track ppt
     session_key = models.TextField()  # Check for multiple sessions
+    workerId = models.TextField(default="")  # Amazon Mechanical Turk Worker Id
 
     # Device
     ua_header = models.TextField(default="")

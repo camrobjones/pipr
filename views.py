@@ -8,21 +8,21 @@ Retrieve item data and render as HTTP Responses
 import os
 import random
 import json
-import requests
-import secrets
 import re
-import csv
 
+import requests
+import pandas as pd
+from nltk import corpus
+import syllables
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.utils import timezone as tz
 from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
-import pandas as pd
-from nltk import corpus
-import syllables
+from django.db.models import Q
 
 from pronouns.models import Participant, Trial, Stimulus, Language
+from pronouns.data.words import wordlist
 
 """
 Constants
@@ -64,6 +64,11 @@ Helper functions
 """
 
 
+def generate_key():
+    """Generate ppt key"""
+    return random.choice(wordlist)
+
+
 def no_syllables(word):
     """Get no syllables in word"""
     pronunciations = CMUDICT.get(word)
@@ -89,8 +94,9 @@ def get_reading_time(text, syll_ms=SYLL_MS):
 Load Data
 ---------
 Helper functions to load and reformat data.
-TODO: refactor and combine
 """
+
+# TODO: refactor and combine
 
 
 def get_stimuli(mode="expt", limit=None):
@@ -190,6 +196,7 @@ def ua_data(request):
     ppt.ua_header = post.get('ua_header', "")
     ppt.screen_width = post.get('width', "")
     ppt.screen_height = post.get('height', "")
+    ppt.workerId = post.get('workerId', "")
     ppt.save()
 
     return JsonResponse({"success": True})
@@ -199,13 +206,22 @@ def cycle_condition(cond):
     """Cycle through conditions"""
     if cond < 2:
         return cond + 1
-    else:
-        return 0
+    return 0
 
 
 def get_condition():
     """Generate condition"""
-    last = Participant.objects.last()
+
+    # Filter out ppts who exited early
+    ppts = Participant.objects.exclude(ua_header="")
+
+    # Filter out ppts who did not finish within 60 mins
+    hour_ago = tz.now() - tz.timedelta(seconds=36000)
+    ppts = ppts.exclude(
+        Q(start_time__lte=hour_ago) & Q(end_time__isnull=True))
+
+    # Select most recent qualifying ppt
+    last = ppts.last()
 
     if last is not None:
         return cycle_condition(last.condition)
@@ -219,7 +235,7 @@ def init_ppt(request):
     mode = request.GET.get('mode')
 
     # Create key
-    key = secrets.token_hex(16)
+    key = generate_key()
 
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
@@ -269,7 +285,7 @@ def expt(request):
 
     # Get fillers if requested
     if fillers != "false" and mode != "physics_norm":
-        n_fillers = FILLER_RATIO * len(items)
+        n_fillers = 45  # FILLER_RATIO * len(items)
         filler_data = get_fillers(n_fillers)
         items += filler_data
 
@@ -477,6 +493,6 @@ def download_data(request, model):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = f'attachment; filename="{fname}"'
 
-    data.to_csv(response)
+    data.to_csv(response, index=False)
 
     return response
