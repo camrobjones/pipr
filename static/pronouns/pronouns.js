@@ -159,7 +159,12 @@ var template = document.querySelector('#demographics');
 /* --- Progress Bar --- */
 
 // Initialise variables
-var total_trials = 8 + stimuli.length;
+if (conf.mode == "physics_norm") {
+  var total_trials = 9 + stimuli.length;
+} else {
+  // Extra post_test trials
+  var total_trials = 14 + stimuli.length;
+}
 var current_trial = 0;
 
 
@@ -188,17 +193,6 @@ function updateProgress() {
 /* === JsPsych Code === */
 
 /* --- Intro Components --- */
-
-// // captcha
-// var captcha = {
-//   type: "html-keyboard-response",
-//   stimulus: `
-//              <div class='instructions-container'>
-//               <h2 class='instructions-header'></h2>
-              
-//             </div>`,
-//   choices: jsPsych.NO_KEYS,
-// };
 
 // Fullscreen
 var start_fullscreen = {
@@ -251,7 +245,7 @@ var consent = {
               </div>
 
               <div class='input-group'>
-                  <label for='fillers'>I agree</label>
+                  <label for='consent'>I agree</label>
                   <input type='checkbox' name='consent' id='consent' required>
               </div>
             </div>`,
@@ -834,23 +828,159 @@ var demographics = {
 };
 
 
-var post_test = {
+var post_test_purpose = {
 
   // Post Test Questionnaire
   type: "survey-html-form",
   html: `<h3 class='title'>Feedback</h3>
 
   <div class='question'>
-    <h3 class='question-title'>What did you think the experiment was about overall?</h3>
+    <h3 class='question-title'>What did you think the experiment was about?</h3>
   
-    <textarea class="form-control feedback" id="feedback_1" name="feedback_1" required></textarea>
+    <textarea class="form-control feedback" id="post_test_purpose" name="post_test_purpose" required></textarea>
 
-  </div>
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_correct = {
+
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
 
   <div class='question'>
-    <h3 class='question-title'>Do you have any other feedback or thoughts on the experiment? (optional)</h3>
+    <h3 class='question-title'>
+      Did you think that any of the questions had more than one correct
+      answer? Why or why not?
+    </h3>
   
-    <textarea class="form-control feedback" id="feedback_2" name="feedback_2"></textarea>
+    <textarea class="form-control feedback" id="post_test_correct"
+    name="post_test_correct" required></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_rule = {
+
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>
+      Did you think there were any general rules guiding your decision
+      about which answer to choose? If so, what were they?
+    </h3>
+  
+    <textarea class="form-control feedback" id="post_test_rule"
+    name="post_test_rule" required></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_pronoun = {
+
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>
+      Did you notice that each question involved deciding what a given
+      pronoun (e.g. "he", "she", "it") referred to?
+    </h3>
+  
+    <textarea class="form-control feedback" id="post_test_pronoun"
+    name="post_test_pronoun" required></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_syntax = {
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>
+      Did you notice that the position of words in the sentence
+      influenced your answers? If so, how?
+    </h3>
+  
+    <textarea class="form-control feedback" id="post_test_syntax"
+    name="post_test_syntax" required></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_semantics = {
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>
+      Did you notice that the meanings of the answers, or the
+      plausibility of each answer in the situation described,
+      influenced your decision? If so, how?
+    </h3>
+  
+    <textarea class="form-control feedback" id="post_test_semantics"
+    name="post_test_semantics" required></textarea>
+
+  </div>`,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'post_test'},
+  on_finish: function() {
+    updateProgress();
+  }
+};
+
+
+var post_test_other = {
+
+  // Post Test Questionnaire
+  type: "survey-html-form",
+  html: `<h3 class='title'>Feedback</h3>
+
+  <div class='question'>
+    <h3 class='question-title'>
+      Do you have any other feedback or thoughts about the experiment?
+      (optional)
+    </h3>
+  
+    <textarea class="form-control feedback" id="post_test_other"
+    name="post_test_other"></textarea>
 
   </div>`,
   choices: jsPsych.NO_KEYS,
@@ -859,7 +989,6 @@ var post_test = {
     saveResults();
     updateProgress();
   }
-  // Randomly sample trial duration
 };
 
 
@@ -916,7 +1045,9 @@ var debrief_block = {
   }
 };
 
-/* --- Setup --- */
+/* === Setup === */
+
+/* --- Create Timeline --- */
 
 // Alter instructions for physics
 if (conf.mode == "physics_norm") {
@@ -925,18 +1056,36 @@ if (conf.mode == "physics_norm") {
   example_2 = phys_example_2;
 }
 
-if (isTouch) {
-  var timeline = [welcome, consent, instructions, example, example_2,
-                  trial_procedure, end_trials, demographics, post_test,
-                  debrief_block];
-} else {
-// Create jsPsych timeline
-  var timeline = [welcome, consent, start_fullscreen, instructions, example, example_2,
-                  trial_procedure, end_trials, demographics, post_test, end_fullscreen,
-                  debrief_block];
+var timeline = [welcome, consent];
+
+// Fullscreen for non-touch
+if (!isTouch) {
+  timeline.push(start_fullscreen);
 }
 
-// Prevent back
+// Main expt timeline for all
+timeline.push(instructions, example, example_2, trial_procedure, 
+              end_trials, demographics, post_test_purpose);
+
+// Extra post test for syntax & expt condition
+if (conf.mode != "physics_norm") {
+  timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
+                post_test_syntax, post_test_semantics);
+}
+
+// post_test_other for all conditions
+timeline.push(post_test_other);
+
+// End fullscreen for non-touch
+if (!isTouch) {
+  timeline.push(end_fullscreen);
+}
+
+// Debrief block for all
+timeline.push(debrief_block);
+
+/* --- Prevent Back --- */
+
 history.pushState(null, document.title, location.href);
 window.addEventListener('popstate', function (event)
 {
@@ -948,15 +1097,12 @@ window.addEventListener('popstate', function (event)
   }
 });
 
-// Launch jsPsych
+/* --- Launch jsPsych --- */
 window.onload = function() {
 
   jsPsych.init({
     timeline: timeline,
     experiment_width: 800,
     display_element: "expt-container",
-    // on_finish: function() {
-    //     saveResults();
-    //   }
   });
 };

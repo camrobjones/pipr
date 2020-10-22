@@ -272,6 +272,7 @@ def expt(request):
     # Parse GET data
     limit = request.GET.get('n')
     fillers = request.GET.get('fillers', True)
+    catch = request.GET.get('catch', True)
 
     # Create ppt
     ppt = init_ppt(request)
@@ -281,7 +282,8 @@ def expt(request):
     items = get_stimuli(mode=mode, limit=limit)
 
     # Get experimental items
-    items += get_catch(condition=mode)
+    if catch != "false":
+        items += get_catch(condition=mode)
 
     # Get fillers if requested
     if fillers != "false" and mode != "physics_norm":
@@ -393,11 +395,12 @@ def save_results(request):
         )
 
     # Store feedback
-    feedback = [item for item in data if item.get('trial_part') == "post_test"]
-    feedback = feedback[0]
-    feedback_data = json.loads(feedback.get('responses', "{}"))
-    ppt.purpose = feedback_data.get('feedback_1', "")
-    ppt.feedback = feedback_data.get('feedback_2', "")
+    feedback = filter(lambda x: x.get('trial_part') == "post_test", data)
+
+    for feedback_item in feedback:
+        feedback_data = json.loads(feedback_item.get('responses', "{}"))
+        for name, response in feedback_data.items():
+            setattr(ppt, name, response)
 
     ppt.end_time = tz.now()
 

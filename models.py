@@ -14,6 +14,7 @@ class Participant(models.Model):
     key = models.TextField()  # Generated hex key to track ppt
     session_key = models.TextField()  # Check for multiple sessions
     workerId = models.TextField(default="")  # Amazon Mechanical Turk Worker Id
+    get_args = models.TextField(default="")  # Get args issued with request
 
     # Device
     ua_header = models.TextField(default="")
@@ -33,8 +34,13 @@ class Participant(models.Model):
     gender = models.CharField(blank=True, null=True, max_length=2)
 
     # Feedback
-    purpose = models.TextField(default="")
-    feedback = models.TextField(default="")
+    post_test_purpose = models.TextField(default="")
+    post_test_correct = models.TextField(default="")
+    post_test_rule = models.TextField(default="")
+    post_test_pronoun = models.TextField(default="")
+    post_test_syntax = models.TextField(default="")
+    post_test_semantics = models.TextField(default="")
+    post_test_other = models.TextField(default="")
 
 
 class Stimulus(models.Model):
