@@ -35,6 +35,12 @@ FILLER_RATIO = 2  # Ratio of Fillers:Experimental Items
 
 # Conditions
 CONDITIONS = ["expt", "syntax_norm", "physics_norm"]
+COND_2_INDEX = {"expt": 0,
+                "e": 0,
+                "syntax_norm": 1,
+                "s": 1,
+                "physics_norm": 2,
+                "p": 2}
 
 # CSV column names
 ID_COLS = ["sent_id", "order", "item_id", "item_type"]
@@ -245,7 +251,7 @@ def init_ppt(request):
 
     # condition
     if mode is not None:
-        condition = CONDITIONS.index(mode)
+        condition = COND_2_INDEX[mode]
     else:
         condition = get_condition()
 
