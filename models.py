@@ -32,6 +32,7 @@ class Participant(models.Model):
     # Demographics
     birth_year = models.IntegerField(blank=True, null=True)
     gender = models.CharField(blank=True, null=True, max_length=2)
+    handedness = models.CharField(blank=True, null=True, max_length=10)
 
     # Feedback
     post_test_purpose = models.TextField(default="")

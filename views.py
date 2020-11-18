@@ -384,6 +384,7 @@ def save_results(request):
     demo_data = json.loads(demo.get('responses', "{}"))
     ppt.birth_year = demo_data.get('demographics_year') or None
     ppt.gender = demo_data.get('demographics_gender')
+    ppt.handedness = demo_data.get('demographics_handedness')
 
     # Get matches
     lang_matches = [re.match(LANGUAGE_REGEX, l) for l in demo_data]

@@ -880,8 +880,7 @@ var post_test_rule = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you think there were any general rules guiding your decision
-      about which answer to choose? If so, what were they?
+      Did you notice using any particular strategies to make your choice?
     </h3>
   
     <textarea class="form-control feedback" id="post_test_rule"
@@ -950,9 +949,8 @@ var post_test_semantics = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you notice that the meanings of the answers, or the
-      plausibility of each answer in the situation described,
-      influenced your decision? If so, how?
+      Did you notice thinking about how the scenarios would 
+      play out in the real world to make your choices?
     </h3>
   
     <textarea class="form-control feedback" id="post_test_semantics"
@@ -975,7 +973,8 @@ var post_test_other = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Do you have any other feedback or thoughts about the experiment?
+      Do you have any other feedback or thoughts about the 
+      experiment?
       (optional)
     </h3>
   
