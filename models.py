@@ -14,7 +14,9 @@ class Participant(models.Model):
     key = models.TextField()  # Generated hex key to track ppt
     session_key = models.TextField()  # Check for multiple sessions
     workerId = models.TextField(default="")  # Amazon Mechanical Turk Worker Id
+    SONA_code = models.TextField(default="")  # SONA participant code
     get_args = models.TextField(default="")  # Get args issued with request
+    notes = models.TextField(default="")  # Get args issued with request
 
     # Device
     ua_header = models.TextField(default="")

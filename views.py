@@ -41,6 +41,7 @@ COND_2_INDEX = {"expt": 0,
                 "s": 1,
                 "physics_norm": 2,
                 "p": 2}
+CONDITION = 2
 
 # CSV column names
 ID_COLS = ["sent_id", "order", "item_id", "item_type"]
@@ -239,6 +240,7 @@ def init_ppt(request):
 
     # Get params
     mode = request.GET.get('mode')
+    sona_code = request.GET.get('code', "")
 
     # Create key
     key = generate_key()
@@ -252,11 +254,15 @@ def init_ppt(request):
     # condition
     if mode is not None:
         condition = COND_2_INDEX[mode]
+    elif CONDITION is not None:
+        condition = CONDITION
     else:
         condition = get_condition()
 
     ppt = Participant.objects.create(
         key=key, ip_address=ip, condition=condition)
+
+    ppt.SONA_code = sona_code
 
     return ppt
 
@@ -410,6 +416,13 @@ def save_results(request):
             setattr(ppt, name, response)
 
     ppt.end_time = tz.now()
+
+    # Grant credit
+    if ppt.SONA_code != "":
+        response = requests.get(
+            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=1973&credit_token=0f5cafc5a8494590ab491efffc8ab35f&survey_code={ppt.SONA_code}")
+        content = response.content.decode()
+        ppt.notes = ppt.notes + f"SONA credit response:\n{content}\n"
 
     ppt.save()
 

@@ -213,7 +213,7 @@ var welcome = {
   stimulus: `
              <div class='instructions-container'>
               <h2 class='instructions-header'>Welcome</h2>
-              <p class='welcome'>Thank you for accepting this HIT.</p>
+              <p class='welcome'>Thank you for participating in this study.</p>
               <p class='welcome' ontouchstart="response(32)">
                 <b>Press ${continueText} to continue</b>
               </p>
@@ -998,11 +998,6 @@ var debrief_block = {
   type: "html-keyboard-response",
   choices: jsPsych.NO_KEYS,
   stimulus: function() {
-
-    // if (conf.mode == "expt") {
-    //   s += `<p>Your responses were ${syntax_pct}% consistent with syntax, 
-    //         and ${physics_pct}% consistent with physics.</p>`
-    // }
     
     s = `
     <div class='instructions-container'>
@@ -1033,10 +1028,16 @@ var debrief_block = {
 
       </div>
 
-      <p class='instructions'> 
-          Copy and paste the code into the Mechanical Turk HIT window.
-          You can then close this window.
+      <p class='instructions'>
+        In order to get credit for your participation, please fill out
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdhjhUpgRIgNM9YSsohySVheCQmtqmfIeuyxHaUnCpOPJS0A/viewform?usp=sf_link"
+        target="_blank">this google form</a>. You will need your completion code.
       </p>
+
+      <p class='instructions'>
+        You can then close this window. Thanks again!
+      </p>
+
     </div>`;
 
     return s;
