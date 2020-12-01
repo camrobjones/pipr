@@ -197,9 +197,9 @@ def ua_data(request):
 
     # print(post)
 
-    key = post['key']
+    ppt_id = post['ppt_id']
 
-    ppt = Participant.objects.get(key=key)
+    ppt = Participant.objects.get(pk=ppt_id)
     ppt.ua_header = post.get('ua_header', "")
     ppt.screen_width = post.get('width', "")
     ppt.screen_height = post.get('height', "")
@@ -308,7 +308,7 @@ def expt(request):
         item['time'] = get_reading_time(item['sent'])
 
     # Create view context
-    conf = {"mode": mode, "key": ppt.key}
+    conf = {"mode": mode, "key": ppt.key, "ppt_id": ppt.id}
     context = {"items": items, "conf": conf}
 
     # Create new key for new expt attempt
@@ -342,11 +342,11 @@ def save_results(request):
     # Get posted data
     session_key = request.session.session_key
     post = json.loads(request.body.decode('utf-8'))
-    key = post.get('key', session_key)
+    ppt_id = post.get('ppt_id', session_key)
 
     # Generate filename
     timestamp = tz.now().strftime("%Y-%m-%d-%H-%M-%S")
-    filename = f"{timestamp}-{key}.json"
+    filename = f"{timestamp}-{ppt_id}.json"
     filepath = os.path.join(RESULTS_DIR, filename)
 
     # Check RESULTS_DIR exists
@@ -358,7 +358,7 @@ def save_results(request):
         json.dump(post, f, indent=4)
 
     # Retreieve ppt
-    ppt = Participant.objects.get(key=key)
+    ppt = Participant.objects.get(pk=ppt_id)
 
     # store results
     data = post['results']
@@ -435,7 +435,7 @@ def validate_captcha(request):
 
     post = json.loads(request.body.decode('utf-8'))
 
-    key = post['key']
+    ppt_id = post['ppt_id']
     token = post.get('token')
 
     # print(token)
@@ -455,7 +455,7 @@ def validate_captcha(request):
     # print(response_data)
 
     score = response_data.get('score')
-    ppt = Participant.objects.get(key=key)
+    ppt = Participant.objects.get(pk=ppt_id)
     ppt.captcha_score = score
     ppt.save()
 

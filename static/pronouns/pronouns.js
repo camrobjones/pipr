@@ -47,7 +47,7 @@ function saveResults() {
   let headers = {"X-CSRFToken": csrftoken};
   let results = jsPsych.data.get().values();
   let data = {results: results};
-  data.key = conf.key;
+  data.ppt_id = conf.ppt_id;
   axios.post(url, data, {headers: headers})
     .then(response => {
       // console.log(response.data);
@@ -66,7 +66,7 @@ function ua_data() {
     data.ua_header = navigator.userAgent;
     data.width = window.innerWidth;
     data.height = window.innerHeight;
-    data.key = conf.key;
+    data.ppt_id = conf.ppt_id;
     data.workerID = turkInfo.workerId;
     return data;
 }
@@ -130,7 +130,7 @@ function validate_captcha(token) {
   let headers = {"X-CSRFToken": csrftoken};
   let data = {
     token: token,
-    key: conf.key
+    ppt_id: conf.ppt_id
   };
   axios.post(url, data, {headers: headers})
     .then(response => {
