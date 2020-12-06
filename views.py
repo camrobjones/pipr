@@ -41,7 +41,7 @@ COND_2_INDEX = {"expt": 0,
                 "s": 1,
                 "physics_norm": 2,
                 "p": 2}
-CONDITION = 1
+CONDITION = 0
 
 # CSV column names
 ID_COLS = ["sent_id", "order", "item_id", "item_type"]
