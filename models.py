@@ -50,7 +50,7 @@ class Stimulus(models.Model):
     """Experimental Stimulus data"""
     item_type = models.CharField(max_length=128)  # Filler, Catch, or Critical
     item_id = models.CharField(max_length=128)  # UID for item
-    stimulus = models.TextField()  # Full text of stimulus
+    question_no = models.CharField(max_length=128)  # No. of Question
 
 
 class Trial(models.Model):

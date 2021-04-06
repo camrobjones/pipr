@@ -348,6 +348,7 @@ h2.instructions-header {
 p.sent {
     min-height: 5em;
     margin:1em;
+    text-align: justify;
 }
 
 p.question {
@@ -370,7 +371,7 @@ p.question {
 .response {
     display: flex;
     flex-direction: column;
-    max-width: 45%
+    width: 45%
 }
 /*
 .response:hover {

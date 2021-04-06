@@ -1,4 +1,4 @@
-{% extends 'pronouns/base.html' %}
+{% extends 'pipr2/base.html' %}
 
 {% block head %}
 
@@ -18,12 +18,12 @@
 {{ conf | json_script:"conf"}}
 
 <!-- HTML Templates -->
-{% include 'pronouns/demographics.html' %}
+{% include 'pipr2/demographics.html' %}
 
 <!-- Local JS -->
-<script src="/static/pronouns/pronouns.js"></script>
+<script src="/static/pipr2/pronouns.js"></script>
 
-<script src="/static/pronouns/demographics.js"></script>
+<script src="/static/pipr2/demographics.js"></script>
 
 
 {% endblock %}

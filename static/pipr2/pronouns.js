@@ -42,7 +42,7 @@ var turkInfo = jsPsych.turk.turkInfo();
 
 function saveResults() {
   // POST user data to server
-  let url = "/pronouns/save_results/";
+  let url = "/pipr2/save_results/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   let results = jsPsych.data.get().values();
@@ -73,7 +73,7 @@ function ua_data() {
 
 function send_ua_data() {
   let data = ua_data();
-  let url = "/pipr/ua_data/";
+  let url = "/pipr2/ua_data/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   axios.post(url, data, {headers: headers})
@@ -118,14 +118,14 @@ function copyToClipboard() {
 
 function close_captcha() {
   let badges = document.getElementsByClassName('grecaptcha-badge');
-  for (badge of badges) {
+  for (let badge of badges) {
     badge.style.visibility = "hidden";
   }
 }
 
 function validate_captcha(token) {
   // console.log(`validate_captcha(${token})`)
-  let url = "/pronouns/validate_captcha/";
+  let url = "/pipr2/validate_captcha/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   let data = {
@@ -136,10 +136,10 @@ function validate_captcha(token) {
     .then(response => {
       // console.log(response.data);
       if (response.data.score > 0.2) {
-        close_captcha()
+        close_captcha();
         // jsPsych.finishTrial(response.data)
       } else {
-        window.location.href = "/pronouns/error"
+        window.location.href = "/pipr2/error";
       }
     });
 }
@@ -159,12 +159,8 @@ var template = document.querySelector('#demographics');
 /* --- Progress Bar --- */
 
 // Initialise variables
-if (conf.mode == "physics_norm") {
-  var total_trials = 9 + stimuli.length;
-} else {
-  // Extra post_test trials
-  var total_trials = 14 + stimuli.length;
-}
+var total_trials = 15 + stimuli.length;
+
 var current_trial = 0;
 
 
@@ -182,11 +178,11 @@ function updateProgress() {
 
   // Update bar
   let bar = document.getElementById('progress-bar');
-  bar.style.width = pc + "%"
+  bar.style.width = pc + "%";
 
   // Update counter
   let label = document.getElementById('progress-label');
-  label.innerText = pc + "%"
+  label.innerText = pc + "%";
 
 }
 
@@ -237,10 +233,10 @@ var consent = {
               you agree to participate.
               </p>
 
-              <a target="_blank" href="/static/pronouns/consent_form.pdf">Open in a new tab</a>
+              <a target="_blank" href="/static/pipr2/consent_form.pdf">Open in a new tab</a>
               
               <div id='consent-container'>
-                <iframe src="/static/pronouns/consent_form.pdf#view=FitH&zoom=FitH"
+                <iframe src="/static/pipr2/consent_form.pdf#view=FitH&zoom=FitH"
                 width="100%", height="800px"></iframe>
               </div>
 
@@ -265,13 +261,23 @@ var instructions = {
     </h2>
     <p class='instructions'>
       In this experiment, you will be asked to read short 
-      passages describing situations and then answer a question 
+      passages that describe various situations and then answer questions 
       about what happened.
     </p>
 
     <p class='instructions'>
-      Each passage will appear for a few seconds to give you time to read it.
-      Then a question will appear, with two possible answers.
+      Each passage will appear on the screen to give you an opportunity
+      to read it. Once you have finished reading the passage, press the spacebar
+      (or tap <b>continue</b> if you are using a touchscreen) to advance to the next screen.
+      Please read each passage only once 
+      at your normal reading speed. Don't try to memorize the passage or
+      go back to re-read it once you have finished.
+    </p>
+
+    <p class='instructions'>
+      Once you have completed the passage, three questions will appear one after another.
+      Each question will have two possible answers, which will appear on the screen
+      below the question.
       Select your answer using the keyboard: use the <span class='key-demo'>f</span>
       key to indicate the choice on the <b>left</b>, and the 
       <span class='key-demo'>j</span> key to indicate the choice on the
@@ -279,7 +285,7 @@ var instructions = {
       answer.
     </p>
     <p class='instructions'>
-      Read each sentence carefully and answer the questions as quickly
+      Read the questions carefully and answer as quickly
       and accurately as possible. The experiment will last around 20 minutes.
     </p>
 
@@ -344,52 +350,24 @@ var example = {
   `
   <div class='instructions-container'>
     <h2 class='instructions-header'>
-      Example
+      Example Passage
     </h2>
     <p class='instructions'>
-      For example, the following might appear:
+      For example, the following passage might appear:
     </p>
 
     <div class='trial-container example'>
-      <p class='sent'>John insulted Mary because he was jealous.</p> 
-      <p class='question'>Who was jealous?</p> 
-      <div class='response-container'> 
-
-        <div class='response np1'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              f
-            </div>
-          </div>
-
-          <div class='response-label'>
-            Mary
-          </div>
-          
-        </div> 
-
-        <div class='response np2'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              j
-            </div>
-          </div>
-          
-          <div class='response-label'>
-            John
-          </div>
-
-        </div> 
-
-      </div>
+      <p class='sent'>
+        John's car had started making a strange noise, so he decided to
+        take it to the mechanic to find out what the problem was. When he
+        arrived at the auto repair store, nobody was available and John had
+        to wait for 15 minutes before a mechanic came to help him. The 
+        mechanic asked John a few questions about the noise and asked if 
+        he could take the car for a short test drive. John agreed, and 
+        when the mechanic returned he told John the problem was with the
+        transmission and it would cost $300 to fix.
+      </p> 
     </div>
-
-    <p class='instructions'>
-      In this example, you would press <span class='key-demo'>j</span>
-      to indicate that <b>John</b> was jealous.
-    </p>
 
     <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>Press ${continueText} to continue<b>
@@ -400,7 +378,6 @@ var example = {
   on_load: scrollTop,
   post_trial_gap: 500,
 };
-
 
 // Example
 var example_2 = {
@@ -410,18 +387,14 @@ var example_2 = {
   `
   <div class='instructions-container'>
     <h2 class='instructions-header'>
-      Example 2
+      Example Question 1
     </h2>
     <p class='instructions'>
-      Here is another example:
+      After completing the passage, the following question might appear:
     </p>
 
-    <div class='trial-container example'>
-      <p class='sent'>
-        The mechanic asked the customer a question, 
-        but he didn't know the answer.
-      </p> 
-      <p class='question'>Who didn't know the answer?</p> 
+    <div class='trial-container example'> 
+      <p class='question'>Why did John take his car to the mechanic?</p> 
       <div class='response-container'> 
 
         <div class='response np1'>
@@ -433,7 +406,7 @@ var example_2 = {
           </div>
 
           <div class='response-label'>
-            The customer
+            The car was making a strange noise
           </div>
           
         </div> 
@@ -447,7 +420,7 @@ var example_2 = {
           </div>
           
           <div class='response-label'>
-            The mechanic
+            The 'check engine' light was on
           </div>
 
         </div> 
@@ -457,77 +430,7 @@ var example_2 = {
 
     <p class='instructions'>
       In this example, you would press <span class='key-demo'>f</span>
-      to indicate that <b>the customer</b> didn't know the answer.
-    </p>
-
-    <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>The experiment will begin on the next page.</b>
-    </p>
-    <p class='instructions' ontouchstart="response(32)">
-      <b>Press ${continueText} to begin<b>
-    </p>
-
-  </div>`,
-  post_trial_gap: 500,
-  on_load: scrollTop,
-  on_finish: updateProgress,
-};
-
-
-// Physics Example
-var phys_example = {
-  type: "html-keyboard-response",
-  choices: [' '],
-  stimulus: 
-  `
-  <div class='instructions-container'>
-    <h2 class='instructions-header'>
-      Example
-    </h2>
-    <p class='instructions'>
-      For example, the following might appear:
-    </p>
-
-    <div class='trial-container example'>
-      <p class='sent'>If a steel ball and a styrofoam ball were
-      placed into a bath of water, which would be more likely to sink?</p> 
-      <p class='question'></p> 
-      <div class='response-container'> 
-
-        <div class='response np1'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              f
-            </div>
-          </div>
-
-          <div class='response-label'>
-            The styrofoam ball
-          </div>
-          
-        </div> 
-
-        <div class='response np2'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              j
-            </div>
-          </div>
-          
-          <div class='response-label'>
-            The steel ball
-          </div>
-
-        </div> 
-
-      </div>
-    </div>
-
-    <p class='instructions'>
-      In this example, you would press <span class='key-demo'>j</span>
-      to indicate that <b>the steel ball</b> is more likely to sink.
+      to indicate that <b>The car was making a strange noise</b>.
     </p>
 
     <p class='instructions' id='continue' ontouchstart="response(32)">
@@ -540,27 +443,23 @@ var phys_example = {
   on_finish: updateProgress,
 };
 
-// Physics Example
-var phys_example_2 = {
+
+// Example
+var example_3 = {
   type: "html-keyboard-response",
   choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
     <h2 class='instructions-header'>
-      Example 2
+      Example Question 2
     </h2>
     <p class='instructions'>
-      Here is another example:
+      Here is another example question:
     </p>
 
-    <div class='trial-container example'>
-      <p class='sent'>
-        If an apple and a leaf are dropped from a tall builiding
-        at the same time, which is more likely to reach the ground
-        first?
-      </p> 
-      <p class='question'></p> 
+    <div class='trial-container example'> 
+      <p class='question'>How much would the damage cost to repair?</p> 
       <div class='response-container'> 
 
         <div class='response np1'>
@@ -572,7 +471,7 @@ var phys_example_2 = {
           </div>
 
           <div class='response-label'>
-            The leaf
+            $100
           </div>
           
         </div> 
@@ -586,7 +485,7 @@ var phys_example_2 = {
           </div>
           
           <div class='response-label'>
-            The apple
+            $300
           </div>
 
         </div> 
@@ -596,11 +495,10 @@ var phys_example_2 = {
 
     <p class='instructions'>
       In this example, you would press <span class='key-demo'>j</span>
-      to indicate that <b>the apple</b> is more likely to reach the ground
-      first.
+      to indicate that the repair would cost <b>$300</b>.
     </p>
 
-    <p class='instructions' id='continue'>
+    <p class='instructions' id='continue' ontouchstart="response(32)">
       <b>The experiment will begin on the next page.</b>
     </p>
     <p class='instructions' ontouchstart="response(32)">
@@ -632,13 +530,27 @@ var fixation = {
 
 // Trial component functions
 
-function getTVData(data) {
+function getTVData(data, q_no) {
   // Add data from item to jsPsych data
   data.sent_id = jsPsych.timelineVariable('sent_id')();
-  data.item_type = jsPsych.timelineVariable('item_type')();
   data.item_id = jsPsych.timelineVariable('item_id')();
   data.order = jsPsych.timelineVariable('order')();
-  data.reversed = jsPsych.timelineVariable('reversed')();
+
+  // Get question-level data
+  let questions = jsPsych.timelineVariable('questions')();
+  let question = questions[q_no];
+  data.critical = question.critical;
+
+  if (question.critical) {
+    data.item_type = "critical";
+  } else {
+    data.item_type = "filler";
+  }
+
+  data.question_no = question.question_no;
+
+  data.reversed = question.reversed;
+   
 }
 
 function mapKeyCodes(data) {
@@ -672,44 +584,44 @@ function getPreferenceData(data) {
   data.physics_congruent = data.response == data.expt_physics_pref
 }
 
+// Data counter
+var i = -1;
+
 // Preview
 var preview = {
   // Show sentence before question/responses
 
   // Meta data
   type: "html-keyboard-response",
-  choices: jsPsych.NO_KEYS,
-  trial_duration: jsPsych.timelineVariable('time'),
-  data: {trial_part: 'preview'},
+  choices: [' '],
+  // trial_duration: jsPsych.timelineVariable('time'),
+  data: {trial_part: 'preview',
+         item_id: jsPsych.timelineVariable('item_id')},
 
   // Build stimulus
   stimulus: function() {
 
     // Get trial variables
-    let sent = jsPsych.timelineVariable('sent')();
-    let question = "";
-    let np1 = "";
-    let np2 = "";
+    let passage = jsPsych.timelineVariable('passage')();
 
     // Build trial template
     let s = `
       <div class='trial-container'>
-        <p class='sent'>${sent}</p> 
-        <p class='question'>${question}</p> 
-        <div class='response-container'> 
+        <p class='sent'>${passage}</p>
 
-          <div class='np1'>${np1}</div> 
-          <div class='np2'>${np2}</div>
-
-        </div>
+        <p class='instructions' id='continue' ontouchstart="response(32)">
+          <b>Press ${continueText} to continue</b>
+        </p>
       </div>`;
 
     return s;
   }
 };
 
-// Trial
-var trial = {
+// Questions
+// Stupid solution but I can't figure out how to access nested
+// timeline variables
+var q1 = {
 
   // Meta data
   type: "html-keyboard-response",
@@ -720,11 +632,13 @@ var trial = {
   stimulus: function() {
 
     // Get trial variables
-    let sent = jsPsych.timelineVariable('sent')();
-    let question = jsPsych.timelineVariable('question')();
-    let np1 = jsPsych.timelineVariable('NP1')();
-    let np2 = jsPsych.timelineVariable('NP2')();
-    let reversed = jsPsych.timelineVariable('reversed')();
+    let questions = jsPsych.timelineVariable('questions')();
+    let question = questions[0];
+    let prompt = question.prompt;
+    let responses = question.responses;
+    let np1 = responses[0];
+    let np2 = responses[1];
+    let reversed = question.reversed;
 
     // Randomize button order
     if (reversed) {
@@ -735,8 +649,7 @@ var trial = {
     // Build trial template
     let s = `
       <div class='trial-container'>
-        <p class='sent'>${sent}</p> 
-        <p class='question'>${question}</p> 
+        <p class='question'>${prompt}</p> 
         <div class='response-container'> 
 
           <div class='response np1' ontouchstart='response(70)'>
@@ -775,17 +688,162 @@ var trial = {
 
   // Store data
   on_finish: function(data) {
-    getTVData(data);
+    getTVData(data, 0);
+    mapKeyCodes(data);
+    // getPreferenceData(data);
+  }
+};
+
+var q2 = {
+
+  // Meta data
+  type: "html-keyboard-response",
+  choices: ['f', 'j'],
+  data: {trial_part: 'trial'},
+
+  // Build stimulus
+  stimulus: function() {
+
+    // Get trial variables
+    let questions = jsPsych.timelineVariable('questions')();
+    let question = questions[1];
+    let prompt = question.prompt;
+    let responses = question.responses;
+    let np1 = responses[0];
+    let np2 = responses[1];
+    let reversed = question.reversed;
+
+    // Randomize button order
+    if (reversed) {
+      [np1, np2] = [np2, np1];
+      // this.data.reversed = true;
+    }
+
+    // Build trial template
+    let s = `
+      <div class='trial-container'>
+        <p class='question'>${prompt}</p> 
+        <div class='response-container'> 
+
+          <div class='response np1' ontouchstart='response(70)'>
+
+            <div class='key-reminder-container'>
+              <div class='key-reminder'>
+                f
+              </div>
+            </div>
+
+            <div class='response-label'>
+              ${np1}
+            </div>
+            
+          </div> 
+
+          <div class='response np2' ontouchstart='response(74)'>
+
+            <div class='key-reminder-container'>
+              <div class='key-reminder'>
+                j
+              </div>
+            </div>
+            
+            <div class='response-label'>
+              ${np2}
+            </div>
+
+          </div> 
+
+        </div>
+      </div>`;
+
+    return s;
+  },
+
+  // Store data
+  on_finish: function(data) {
+    getTVData(data, 1);
+    mapKeyCodes(data);
+    // getPreferenceData(data);
+  }
+};
+
+var q3 = {
+
+  // Meta data
+  type: "html-keyboard-response",
+  choices: ['f', 'j'],
+  data: {trial_part: 'trial'},
+
+  // Build stimulus
+  stimulus: function() {
+
+    // Get trial variables
+    let questions = jsPsych.timelineVariable('questions')();
+    let question = questions[2];
+    let prompt = question.prompt;
+    let responses = question.responses;
+    let np1 = responses[0];
+    let np2 = responses[1];
+    let reversed = question.reversed;
+
+    // Randomize button order
+    if (reversed) {
+      [np1, np2] = [np2, np1];
+      // this.data.reversed = true;
+    }
+
+    // Build trial template
+    let s = `
+      <div class='trial-container'>
+        <p class='question'>${prompt}</p> 
+        <div class='response-container'> 
+
+          <div class='response np1' ontouchstart='response(70)'>
+
+            <div class='key-reminder-container'>
+              <div class='key-reminder'>
+                f
+              </div>
+            </div>
+
+            <div class='response-label'>
+              ${np1}
+            </div>
+            
+          </div> 
+
+          <div class='response np2' ontouchstart='response(74)'>
+
+            <div class='key-reminder-container'>
+              <div class='key-reminder'>
+                j
+              </div>
+            </div>
+            
+            <div class='response-label'>
+              ${np2}
+            </div>
+
+          </div> 
+
+        </div>
+      </div>`;
+
+    return s;
+  },
+
+  // Store data
+  on_finish: function(data) {
+    getTVData(data, 2);
     mapKeyCodes(data);
     updateProgress();
     // getPreferenceData(data);
   }
 };
 
-
 // Combine fixation, preview, and trial into one component
 var trial_procedure = {
-  timeline: [fixation, preview, trial],
+  timeline: [fixation, preview, q1, q2, q3],
   timeline_variables: stimuli,
   randomize_order: true,
 };
@@ -903,7 +961,7 @@ var post_test_pronoun = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you notice that each question involved deciding what a given
+      Did you notice that some questions involved deciding what a given
       pronoun (e.g. "he", "she", "it") referred to?
     </h3>
   
@@ -1018,7 +1076,7 @@ var debrief_block = {
         <div id='code'>${conf.key}</div>
 
         <div class='code-copy' title="Copy code" onclick="copyToClipboard()">
-          <img src="/static/pronouns/content_copy-24px.svg">
+          <img src="/static/pipr2/content_copy-24px.svg">
           </img>
         </div>
 
@@ -1049,13 +1107,6 @@ var debrief_block = {
 
 /* --- Create Timeline --- */
 
-// Alter instructions for physics
-if (conf.mode == "physics_norm") {
-  instructions = phys_instructions;
-  example = phys_example;
-  example_2 = phys_example_2;
-}
-
 var timeline = [welcome, consent];
 
 // Fullscreen for non-touch
@@ -1064,17 +1115,13 @@ if (!isTouch) {
 }
 
 // Main expt timeline for all
-timeline.push(instructions, example, example_2, trial_procedure, 
+timeline.push(instructions, example, example_2, example_3, trial_procedure, 
               end_trials, demographics, post_test_purpose);
 
 // Extra post test for syntax & expt condition
-if (conf.mode != "physics_norm") {
-  timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
-                post_test_syntax, post_test_semantics);
-}
 
-// post_test_other for all conditions
-timeline.push(post_test_other);
+timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
+              post_test_syntax, post_test_semantics, post_test_other);
 
 // End fullscreen for non-touch
 if (!isTouch) {
@@ -1089,7 +1136,7 @@ timeline.push(debrief_block);
 history.pushState(null, document.title, location.href);
 window.addEventListener('popstate', function (event)
 {
-  goBack = confirm("Are you sure you want to go back? Your progress will be lost.")
+  goBack = confirm("Are you sure you want to go back? Your progress will be lost.");
   if (goBack) {
     window.history.back();
   } else {

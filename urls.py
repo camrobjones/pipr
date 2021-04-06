@@ -1,7 +1,7 @@
 """Pronouns URLs"""
 from django.urls import path
 
-from pronouns import views
+from pipr2 import views
 
 
 urlpatterns = [

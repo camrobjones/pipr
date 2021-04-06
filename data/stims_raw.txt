@@ -1,0 +1,361 @@
+1. When the steel plate fell on the glass plate, it broke.
+
+Intro:  John was shopping for antiques. He was trying to decide between a beautiful hand-blown glass plate and an intricately decorated steel plate. John leaned forward to examine the plates on the shelf.
+Setup: He briefly lost his balance and knocked into the shelf which caused the plates to fall to the floor.
+Critical: When the {steel} plate fell on the {glass} plate, it broke.
+Continuation: The store attendant came rushing over, shouting at John for being so careless. John apologised profusely and promised to pay for the damages. The attendant cleaned up the mess, and told John he owed $100. John counted out the money and left the store before he could cause any more damage. 
+
+Questions:
+
+CQ1: What was John shopping for? [Antiques / Tableware]
+CQC: What broke? [The steel plate/ The glass plate]
+CQ3: How much did John have to pay in damages? [$100/ $50]
+
+2. When the steel sword collided with the glass sword, it broke.
+Intro: Alice had spent several years working in Japan, and during that time had begun collecting ornate swords. One day, she was showing the collection to her friend, Erin. They each picked up one of the swords: Alice’s was made of steel while Erin’s was made of glass. 
+Setup: They hit the swords together in mock combat.
+Critical: When the {steel} sword collided with the {glass} sword, it broke.
+Continuation: Erin looked mortified about what had happened, but Alice simply laughed and said “I had too many swords anyway.”
+
+Questions:
+
+CQ1: Where had Alice started her sword collection? [Japan / China]
+CQC: What broke? [The steel sword / The glass sword]
+CQ3: What did Alice say to reassure Erin? [The sword had been cheap / She had too many swords]
+3. When the baseball collided with the bat, it broke in two.
+Intro: Tyler was playing baseball for his High School team. His team was in the lead, but only by a small margin. It was Tyler’s turn to bat and he could feel the pressure mounting. He walked up to the plate and rested his bat on his shoulder. The pitcher hurled the ball.
+Setup: Tyler concentrated hard, tensed his muscles, and swung confidently. 
+Critical: When the {baseball} collided with the {bat}, it broke in two.
+Continuation: It took Tyler several seconds to process what had happened. The umpire called for play to stop, while Tyler’s coach ran over to check if he was okay.
+
+Questions:
+
+CQ1: Was Tyler’s team in the lead? [Yes / No]
+CQC: What broke in two? [The baseball / The bat]
+CQ3: Who ran over to check Tyler was okay? [The umpire / Tyler’s coach]
+4. The pig was running alongside the cheetah, but then it sped up and pulled ahead.
+
+Intro: Anna and her family were spending the day at the zoo. One of the surprising things about the zoo they were visiting was that lots of the animals were in mixed enclosures. The anteaters were living with the chimpanzees and the flamingos were in with the rhinos. Anna stopped to watch a pig and a cheetah, which were making their way across a shared enclosure.
+Setup: The enclosure was very large and there was plenty of space for the animals to move around inside.
+Critical:  The {pig} was running alongside the {cheetah}, but then it sped up and pulled ahead.
+Continuation: Just then, Anna’s sister pulled her away to look at the koalas, which were playing with the wallabies.
+
+Questions:
+
+CQ1: What type of animal shared an enclosure with the chimpanzees? [Anteaters / Wallabies]
+CQC: What sped up and pulled ahead? [The pig / The cheetah]
+CQ3: What did Anna’s sister want to go and see? [The koalas / The flamingos]
+5. The car was going alongside the bicycle but then it sped up and pulled ahead.
+Intro: Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him.
+Setup: He stepped back in alarm and watched the vehicles pass.
+Critical: The {car} was going alongside the {bicycle} but then it sped up and pulled ahead.
+Continuation: After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.
+
+Questions:
+
+CQC: What sped up and pulled ahead? [The car / The bicycle]
+CQ2: What did Larry order? [A cappuccino / An espresso]
+CQ3: Where did Larry take a seat? [Outside/ Inside]
+6. Hannah put the brick next to the feather, but the wind blew it away.
+
+Intro: Hannah was out for a walk in the forest after a stressful day. She liked to take her mind off her problems by collecting interesting objects she found on her travels. She had found a brick that someone had painted purple, and a feather from a bird she didn’t recognise.
+Setup: She took the objects out and placed them on the ground to admire them.
+Critical: Hannah put the {brick} next to the {feather}, but the wind blew it away.
+Continuation: She stared miserably out into the distance. She wanted to go back and collect something else but she had to get back before dark. She picked up her bag and started to head home.
+
+Questions:
+
+CQ1: Where was Hannah out walking? [The forest / The city]
+CQC: What did the wind blow away? [The brick / The feather]
+CQ3: Why did Hannah have to go home? [It was getting dark / She was tired]
+
+7. Alyssa packed the can of tomatoes in the same bag as the lime, and on her walk home from the store it got crushed.
+
+Intro: Alyssa’s friend Adam was coming over for dinner, and she had decided to make a potato curry. She had first learned the recipe from her mother, and it never failed to impress. She made a list of everything she needed: potatoes, rice, a lime, and a can of chopped tomatoes. She then went down to the store to pick everything up.
+Setup: She was running late by the time she got to the checkout and she packed away the items in a rush.
+Critical: Alyssa packed the {can of tomatoes} in the same bag as the {lime}, and on her walk home from the store it got crushed.
+Continuation: As she was unpacking, she also realized that she had forgotten to buy chili peppers. Embarrassed, she sent a text to Adam to ask if he could pick some up on his way over.
+
+Questions:
+
+CQ1: From whom did Alyssa learn the potato curry recipe? [Her mother / Her aunt]
+CQC: What got crushed? [The can of tomatoes / The lime]
+CQ3: What did Alyssa forget? [The rice / The chili peppers]
+
+8. Sam put the concrete box next to the styrofoam box, but the wind blew it away.
+
+Intro: Sam was working on a building site. His job was to accept deliveries of materials, unpack them, and update the inventory. That morning, they had received two boxes which would be used in different parts of the building. One of the boxes was made of concrete and the other was made of styrofoam.
+Setup: He decided to put both of the boxes away at the edge of the site.
+Critical: Sam put the {concrete} box next to the {styrofoam} box, but the wind blew it away.
+Continuation: He quickly ran to tell his supervisor what had happened. The supervisor was furious, and told Sam he would take the cost of redelivery out of his wages.
+
+Questions:
+
+CQ1: What was Sam’s job? [To put up scaffolding / To accept deliveries]
+CQC: What did the wind blow away? [The concrete box / The styrofoam box]
+CQ3: What was Sam’s punishment? [To pay for redelivery / He was fired]
+
+9. When Chloe threw the rock at the egg, it cracked.
+
+Intro: Chloe was a mischievous young girl who lived on a farm with her parents. Her parents had just told her that she was grounded for a whole week, and she was throwing a tantrum. She marched out of the door and down to the chicken coop, where she saw a large rock and a loose egg lying on the floor.
+Setup: As she approached, the chickens fled, clucking loudly.
+Critical: When Chloe threw the {rock} at the {egg}, it cracked.
+Continuation: Chloe’s parents stormed out of the house after her. When they found the mess she had made, they told her she would have to wash the dishes every night that week too.
+
+Questions:
+
+CQ1: Why was Chloe upset? [She failed an exam / She was grounded]
+CQC: What cracked? [The rock / The egg]
+CQ3: What was Chloe’s punishment for making a mess? [Washing the dishes / No dessert]
+
+10. Gabriel put the plate in the oven with the bread to warm up, but after a couple of minutes it was burned to a crisp.
+
+Intro: Gabriel was having a couple of friends over to watch a film. They were starting to get hungry so he decided to warm up some bread to serve with hummus. He preheated the oven, and took out a plate on which to heat the bread.
+Setup: While the oven heated up, he got the hummus out of the fridge and put it in a serving bowl.
+Critical: Gabriel put the {plate} in the oven with the {bread} to warm up, but after a couple of minutes it was burned to a crisp.
+Continuation: Gabriel couldn’t help but laugh. He turned the oven off and went to the living room to set up the projector.
+
+Questions:
+
+CQ1: What were Gabriel and his friends watching? [A film / A football game]
+CQC: What was burned to a crisp? [The plate / The bread]
+CQ3: What did Gabriel have to set up? [ The projector / The sound system]
+
+
+11. When Ryan left his key in the bag with his laptop, it came out with scratches all over it.
+
+Intro: Ryan was having a terrible day. He came out of his meeting late and had to rush home to meet a friend for dinner. He went to pack up his things: his phone, his key, and his laptop. But then his day started going all wrong. When Ryan reached for his phone, he knocked over his coffee and it spilled on his jacket.
+Setup: When he went to turn off his computer, one of the programs had an error and he couldn’t close it.
+Critical: When Ryan left his {key} in the bag with his {laptop}, it came out with scratches all over it.
+Continuation: When he eventually got home, he was exhausted. Luckily his friend suggested that they order food in rather than cooking, and Ryan enjoyed the rest of his evening.
+
+Questions:
+
+CQ1: Why was Ryan running late? [His meeting overran / He lost his wallet]
+CQ2: What did Ryan spill his coffee on? [His jacket / His trousers]
+CQC: What came out with scratches all over it? [The key/ The laptop]
+12. The bowling ball collided with the soccer ball, which was flying in the opposite direction. It was knocked completely off course.
+
+Intro: Alex and Jared were messing around in the games room of their house. The room had a dart board, a miniature bowling alley, and an assortment of different sports equipment. They were standing at opposite ends of the room throwing different items at each other. At the same moment, Alex threw a bowling ball at Jared, while Jared threw a soccer ball back.
+Setup: The balls flew through the air toward one another.
+Critical: The {bowling} ball collided with the {soccer} ball, which was flying in the opposite direction. It was knocked completely off course.
+Continuation: When the balls landed on the ground they made an almighty crash. The boys’ father, alarmed at the noise, appeared in the room to investigate what was going on.
+
+Questions:
+
+CQ1: What was in the games room? [A dart board / A snooker table]
+CQC: What was knocked off course? [The bowling ball / The soccer ball]
+CQ3: Who came in to investigate the noise? [ The boys’ father / The boys’ sister]
+
+13. When the vase fell on the rock, it broke.
+
+Intro: Jennifer was admiring the collection of marvellous objects on her bookshelf. There was a small marble bust of Socrates, a hand-painted porcelain vase, and a piece of igneous rock from Mount Etna. Suddenly, she began to feel a rumbling all around the room: it was an earthquake!
+Setup: She looked on in horror as objects began to fall from shelf to shelf.
+Critical: When the {vase} fell on the {rock}, it broke.
+Continuation: After a few seconds, the rumbling subsided. She darted about the house to check if anything else had been damaged. She found her bedroom lamp had fallen over, but fortunately it still seemed to be working.
+
+Questions:
+
+CQ1: Who did Jennifer have a marble bust of? [Socrates / Aristotle]
+CQC: What broke? [The vase / The rock]
+CQ3: What had fallen over? [ A lamp / A wardrobe]
+14. Sofia placed the teacup next to the wine bottle, but it fell over when a passerby bumped into the table.
+
+Intro: Sofia was hosting a small party in her apartment for her birthday. She went to the kitchen to pour herself a glass of wine, but couldn’t find any glasses, so she had to use a teacup instead. She wandered back to the living room, bringing the wine bottle with her.
+Setup: She spotted a group of friends sat at the dining table, and went over to join them.
+Critical: Sofia placed the {teacup} next to the {wine bottle}, but it fell over when a passerby bumped into the table.
+Continuation: She shouted at the passerby, who had walked away unabashed. When she explained what had happened, he apologized sheepishly.
+
+Questions:
+
+CQ1: What was the occasion of the party ? [Sofia’s birthday / Sofia’s engagement]
+CQ2: Where was the dining table ? [In the living room / In the kitchen]
+CQC: What fell over? [ The teacup / The wine bottle]
+15. Lily put the cheese in the oven with the bread to warm up, but by the time she came back it had melted.
+Intro: Lily was cooking dinner for her friends. For a starter, they were having a selection of cheeses and homemade bread; the main course was a whole roast duck; and for dessert she had prepared a lemon pie.
+Setup: She was dashing back and forth between the kitchen and the dining room to keep her guests entertained while she prepared the food.
+Critical: Lily put the {cheese} in the oven with the {bread} to warm up, but by the time she came back it had melted.
+Continuation: Although she was upset that the starter didn’t go to plan, the rest of the meal went off without a hitch. The guests were very impressed with the lemon pie in particular.
+
+Questions:
+
+CQ1: Who was Lily cooking for? [Her parents / Her friends]
+CQ2: What was the main course? [Roast duck / Spaghetti bolognese]
+CQC: What melted? [ The cheese / The bread]
+
+16. Ethan put the steel box next to the cardboard box in the moving van and after an hour's drive on the bumpy road, it got crushed.
+
+Intro: It was moving day. Ethan had been wanting to move for months, because the yard in his current place was too small. All that was left to pack was a pair of boxes. One of the boxes was made of cardboard, and the other was made of steel.
+Setup: The furniture was already packed into the moving van and there wasn’t much space left.
+Critical: Ethan put the {steel} box next to the {cardboard} box in the moving van and after an hour's drive on the bumpy road, it got crushed.
+Continuation: He checked the rest of his belongings carefully as he unpacked the van, and found that nothing else had been damaged. Ethan tipped the van driver $40 and thanked him for all of his help.
+
+Questions:
+
+CQ1: Why did Ethan want to move? [His yard was too small / To live in a nicer area]
+CQC: What got crushed? [The steel box / The cardboard box]
+CQ3: How much did Ethan tip the van driver? [ $40 / $20]
+17. Jayden heated the cookie along with the marshmallow over the campfire, but it melted before he had a chance to eat it.
+Intro: Jayden was on a camping trip with the cub scouts. They had finished setting up their camp and were sitting around the campfire, singing songs and eating sweet treats. Jayden had picked up a marshmallow and a cookie from the selection of treats.
+Setup: A counsellor helped him attach the treats to the end of a skewer.
+Critical: Jayden heated the {cookie} along with the {marshmallow} over the campfire, but it melted before he had a chance to eat it.
+Continuation: Just then, the group started singing “She’ll be Coming Round the Mountain”. It was one of Jayden’s favourites, and he sang along loudly.
+
+Questions:
+
+CQ1: Who was Jayden camping with? [The cub scouts / His parents]
+CQC: What melted? [The cookie / The marshmallow]
+CQ3: What song did Jayden start singing? [ She’ll be Coming Round the Mountain / Kumbaya]
+18. Daniel packed the fork into his lunchbox along with the napkin. On his walk to work, he could hear it rattling around inside.
+Intro: Daniel had slept through his alarm and was in a rush to get to work. Fortunately, when he got downstairs, he realized that his wife had already prepared his lunch. She had even left a fork and a napkin on the table next to his lunchbox to remind him to take them.
+Setup: He was incredibly grateful, given how late he was running.
+Critical: Daniel packed the {fork} into his lunchbox along with the {napkin}. On his walk to work, he could hear it rattling around inside.
+Continuation: He arrived a few minutes late for his morning meeting with his line manager. Daniel was very rarely late, and so his manager was surprised, but not upset.
+
+Questions:
+
+CQ1: Why was Daniel running late? [He slept in / He lost his glasses]
+CQ2: Who had prepared Daniel’s lunch? [His wife / His housemate]
+CQC: What could Daniel hear rattling? [The fork / The napkin]
+
+19. The truck lost control and crashed into the oncoming bicycle. All that was left of it was a crushed heap of metal.
+Intro: Matt was trying to cross the street to get to his favorite taco place. There were no traffic lights for some distance on either side. Matt was waiting for the traffic to quiet down and give him an opportunity to dash across. Just when he thought he might have a chance, he saw a truck coming toward him from the left, and a bicycle approaching from the right.
+Setup: Matt gave a glum sigh and  watched the vehicles as they sped toward one another.
+Critical: The {truck} lost control and crashed into the oncoming {bicycle}. All that was left of it was a crushed heap of metal.
+Continuation: Adrenaline rushed to Matt’s head as he tried to process what was going on. Before he could react, another pedestrian was already rushing over to check if everyone was okay. Fortunately nobody had been hurt.
+
+Questions:
+
+CQ1: What was Matt trying to visit across the street? [A taco restaurant / A sushi restaurant]
+CQC: What got crushed? [The truck / The bicycle]
+CQ3: Who ran over to check if anyone was hurt? [Another pedestrian / Matt]
+20. Chris placed the book next to the soccer ball on the grassy hill, but it rolled away down the slope.
+
+Intro: Chris walked out to the park to meet his friends. He had brought a soccer ball for them to play with when they arrived. He also had a book with him to read while he waited.
+Setup: He spotted a nice place to sit, on a grassy hill with a great view of the rest of the park.
+Critical: Chris placed the {book} next to the {soccer ball} on the grassy hill, but it rolled away down the slope.
+Continuation: Just then, his friends arrived: Helen and Jonathan. They waved enthusiastically at Chris and ran over to greet him.
+
+Questions:
+
+CQ1: Where was Chris meeting his friends? [A park / A forest]
+CQC: What rolled away? [The book / The soccer ball]
+CQ3: What were Chris’s friends called? [Helen and Jonathan / Elaine and Justin]
+
+21. Mary tried to pack the apple, along with the melon, into the jar, but it wouldn't fit.
+Intro: Mary was planning to hike up to a local waterfall, and wanted to make sure she didn’t get hungry. So she packed a bag to take with her. She decided to bring a flask of coffee, a cheese sandwich, a melon, and an apple.
+Setup: She wanted to put the fruit into a jar so that it wouldn’t get crushed on the journey.
+Critical:  Mary tried to pack the {apple}, along with the {melon}, into the jar, but it wouldn't fit.
+Continuation: She wasn’t too concerned as she already had plenty of food. As she set off, the sun was just beginning to rise over the distant hills. It was going to be a wonderful day.
+
+Questions:
+
+CQ1: Where was Mary going for a hike? [A waterfall / A mountain]
+CQ2: What sort of sandwich did Mary pack? [Cheese / Tuna]
+CQC: What wouldn’t fit? [The apple / The melon]
+22. Sarah tried to climb up the wall, with one hand on the window ledge and the other on the drainpipe, but it gave way.
+
+Intro: Sarah was standing outside her apartment building, looking up at an open window. She had left her keys inside, and was going to try to climb up to the window. She started planning her route. She would have to pull herself up using a drainpipe on one side and a window ledge on the other.
+Setup: Her apartment was only on the second floor: even if she fell she was sure she would be okay.
+Critical: Sarah tried to climb up the wall, with one hand on the {window ledge} and the other on the {drainpipe}, but it gave way.
+Continuation: She lost her balance and fell to the ground. Luckily she landed on her feet, and the fall wasn’t too hard. She brushed herself off. She felt silly for being so foolish, but she was glad she was okay.
+
+Questions:
+
+CQ1: Where were Sarah’s keys? [Inside her apartment / At her office]
+CQ2: What floor was Sarah’s apartment on? [ The second floor / The fourth floor]
+CQC: What gave way? [The window ledge / The drainpipe]
+
+23. When the peach collided with the coconut, it was smashed to pieces.
+
+Intro: Toby and Olivia were having a food fight. They raced out of the kitchen and into the yard, each carrying as much fruit as they could. Toby crouched behind a low wall, while Olivia hid behind the shed. At the exact same moment, Toby threw a coconut at Olivia and she threw a peach back.
+Setup: The pieces of fruit flew through the air toward one another.
+Critical: When the {peach} collided with the {coconut}, it was smashed to pieces.
+Continuation: While Olivia was still admiring the dramatic collision, Toby caught her on her shoulder with a volley of grapes.
+
+Questions:
+
+CQ1: Where were Toby and Olivia? [In the kitchen / In the yard]
+CQ2: Where was Toby hiding? [Behind the shed / Behind a low wall]
+CQC: What was smashed to pieces? [The peach / The coconut]
+24. When the rock collided with the ornament, it shattered.
+
+Intro: Jack stood up, furious. He began shouting obscenities and threats at Adam. He reached out and grabbed an ornament from the table next to him, and prepared to throw it at Adam. Adam picked up a rock from the floor and threatened to throw it back.
+Setup: Each man threw his object at the same moment, and they flew towards each other across the room.
+Critical: When the {rock} collided with the {ornament}, it shattered.
+Continuation: Adam ran out of the room before Jack could cause any more damage. 
+
+Questions:
+
+CQ1: Who began shouting obscenities? [Jack / Adam]
+CQC: What shattered? [The rock/ the ornament]
+CQ3: Who ran out of the room? [Adam / Jack]
+
+25. Ben packed his shirt in the same suitcase as his mug. When he took it out it was broken.
+Intro: Ben was preparing to go away for a conference. He had picked out a shirt to wear for his presentation, and a coffee mug in case his hotel room didn’t have one. 
+Setup: He checked the time and realized he had to catch the bus to the convention center in just 15 minutes.
+Critical: Ben packed his {shirt} in the same suitcase as his {mug}. When he took it out it was broken.
+Continuation: He decided not to unpack the rest of his belongings until later, and went down to the hotel foyer to meet the other attendees. He spotted one of his colleagues, Flora, and went over to join her.
+
+Questions:
+
+CQC: What was broken? [The shirt / The mug]
+CQ2: Where did Ben go when he arrived? [The foyer / The bar]
+CQ3: Who did Ben meet? [Flora / Amy]
+26. Charlotte packed her shirt in the same suitcase as her book. When she took it out, it was creased.
+
+Intro: Charlotte was going away on a weekend trip to Cabo. She had decided to bring a couple of summer dresses to wear while she was there, a shirt and a pair of jeans for the flight home, and a book to read on the beach.
+Setup: She was going to meet her friend, Laura, at the hotel when she arrived.
+Critical: Charlotte packed her {shirt} in the same suitcase as her {book}. When she took it out, it was creased.
+Continuation: She left her bag in her hotel room and went out for a walk along the beach. The late evening sun cast a gorgeous light on the white stone of the houses.
+
+Questions:
+
+CQ1: Where was Charlotte going away to? [Cabo / Miami]
+CQ2: Who was Charlotte planning to meet? [Her friend / Her colleague]
+CQC: What was creased? [The shirt / The book]
+27. Noah put his keys away in his pocket with his coins, but on his walk home they made a hole in the lining.
+Intro: Noah was out at the arcade with his friends. It was starting to get late and he was playing tennis early the next day. He decided it was time to leave. He made sure to collect all of his belongings: his phone, his coins, and his keys.
+Setup: He said farewell to his friends and started to head home.
+Critical: Noah put his {keys} away in his pocket with his {coins}, but on his walk home they made a hole in the lining.
+Continuation: He was annoyed when he found the hole. He resolved to mend it before he went out the next day.
+
+Questions:
+
+CQ1: What was Noah planning to play the following day? [Tennis / Golf]
+CQC: What made a hole in the lining? [The keys / The coins]
+CQ3: What did Noah resolve to do the next day? [Mend the hole / Buy new pants]
+28. When the racquet collided with the tennis ball, it bounced back and hit Josh in the face.
+Intro: Josh and Paula were playing tennis at their local club. Paula was about to serve, and Josh was completely unprepared, looking down at his phone. Paula began her wind-up and tossed the ball in the air. Josh looked up and was startled. He hurried to get the racquet in front of his body. 
+Setup: Paula smashed a serve directly at him as he tried to shield himself.
+Critical: When the {racquet} collided with the {tennis ball}, it bounced back and hit Josh in the face.
+Continuation: Josh clutched at his nose and groaned in pain. Paula rushed over to check that he was okay. 
+
+Questions:
+
+CQ1: Where were they playing tennis? [ a local club / Josh’s garden]
+CQC: What hit Josh in the face? [the racquet / the tennis ball]
+CQ3: What did Josh hurt? [his nose / his eye]
+29. Natalie regretted putting the chocolate bar in her pocket with her phone: when she took it out, it had melted.
+Intro: It was lunchtime, and Natalie decided to get out of the office for an hour and eat in the park. She picked up her lunch and put her phone and a chocolate bar away in her pocket. The park was busy with other people milling around and enjoying the weather.
+Setup: She found a spot to sit down and began to eat her lunch.
+Critical: Natalie regretted putting {the chocolate bar} in her pocket with {her phone}: when she took it out, it had melted. 
+Continuation: She was quite taken aback and upset. When she finished eating, she spotted a stand selling hotdogs and soda. She was feeling incredibly thirsty and she bought a lemonade, which she drank on her way back to the office.
+
+Questions:
+
+CQ1: Where did Natalie go to eat her lunch? [The park / The cantine]
+CQC: What melted? [The chocolate bar / The phone]
+CQ3: What did Natalie buy? [A hotdog / A lemonade]
+30. Alice stuffed a banana in her pocket with her wallet. When she took it out, it was squashed.
+
+Intro: Alice was running late for a hair appointment. As she was looking for her wallet, she spotted a bunch of bananas on the kitchen table.
+Setup: She hadn’t had time to eat lunch, and she was starting to get hungry.
+Critical: Alice stuffed {a banana} in her pocket with {her wallet}. When she took it out, it was squashed.
+Continuation: She slumped into a chair in the waiting room, feeling annoyed. Fortunately, she was only a few minutes late for her appointment, and the previous customer was just getting ready to pay. 
+
+Questions:
+
+CQ1: What sort of appointment was Alice on her way to? [A hair appointment / A doctor’s appointment]
+CQC: What got squashed? [The banana / The chocolate bar]
+CQ3: When did Alice arrive? [A few minutes early / A few minutes late]

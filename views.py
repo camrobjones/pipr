@@ -21,38 +21,19 @@ from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
 from django.db.models import Q
 
-from pronouns.models import Participant, Trial, Stimulus, Language
-from pronouns.data.words import wordlist
+from pipr2.models import Participant, Trial, Stimulus, Language
+from pipr2.data.words import wordlist
 
 """
 Constants
 ---------
 """
 
+MODULE_NAME = "pipr2"
+
 # General parameters
-RESULTS_DIR = 'pronouns/data/results/'  # Store responses
+RESULTS_DIR = MODULE_NAME + '/data/results/'  # Store responses
 FILLER_RATIO = 2  # Ratio of Fillers:Experimental Items
-
-# Conditions
-CONDITIONS = ["expt", "syntax_norm", "physics_norm"]
-COND_2_INDEX = {"expt": 0,
-                "e": 0,
-                "syntax_norm": 1,
-                "s": 1,
-                "physics_norm": 2,
-                "p": 2}
-
-CONDITION = 1
-
-# CSV column names
-ID_COLS = ["sent_id", "order", "item_id", "item_type"]
-CONTENT_COLS = ["sent", "question", "NP1", "NP2"]
-MODE_COLUMNS = {
-    "expt": [f"expt_{col}" for col in CONTENT_COLS],
-    "syntax_norm": [f"syntax_{col}" for col in CONTENT_COLS],
-    "physics_norm": ["physics_sent", "physics_question",
-                     "expt_NP1", "expt_NP2"],
-}
 
 RECAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 
@@ -63,6 +44,8 @@ random.seed()
 CMUDICT = corpus.cmudict.dict()
 
 SYLL_MS = 191  # Source: https://doi.org/10.1167/iovs.11-8284
+
+SYLL_MS = 30  # Source: https://doi.org/10.1167/iovs.11-8284
 READING_TIME_BASE = 250  # Thinking time buffer
 
 
@@ -104,92 +87,31 @@ Load Data
 Helper functions to load and reformat data.
 """
 
-# TODO: refactor and combine
 
+def get_stimuli(limit=None):
+    """Load stimuli json and return dict of stims"""
+    with open(MODULE_NAME + "/data/stimuli.json") as f:
+        data = json.load(f)
 
-def get_stimuli(mode="expt", limit=None):
-    """Loads stimuli csv and returns dict of data needed for mode
+    out = []
+    for pair in data:
 
-    Args:
-        mode (str, optional): {"expt", "syntax_norm", "physics_norm"}
-        limit (int, optional): Max number of experimental stimuli
+        # Choose one of two orders
+        item = random.choice(pair)
 
-    Returns:
-        list of dict: Records-style data for jsPsych
-    """
+        # Randomize order of responses
+        for question in item['questions']:
+            question["reversed"] = random.random() > 0.5
 
-    # Load csv
-    stimuli_df = pd.read_csv('pronouns/data/stimuli.csv')
+        # Randomize order of questions
+        random.shuffle(item['questions'])
 
-    # Sample sent_ids
-    sent_ids = set(stimuli_df.sent_id)
-    if limit is not None and int(limit) < len(sent_ids):
-        sent_ids = random.sample(sent_ids, k=int(limit))
+        out.append(item)
 
-    # Choose one order (A or B) for each sent_id
-    orders = [random.choice(["A", "B"]) for i in range(len(sent_ids))]
+    if limit is not None:
+        out = random.choices(out, k=limit)
 
-    # Generate item_ids
-    stimuli_ids = [f"{a}_{b}" for a, b in zip(sent_ids, orders)]
-
-    # Get rows from df
-    stimuli_df = stimuli_df[stimuli_df.item_id.isin(stimuli_ids)]
-
-    # clean columns and na
-    stimuli_df = stimuli_df[ID_COLS + MODE_COLUMNS[mode]].fillna("")
-    stimuli_df.columns = ID_COLS + CONTENT_COLS
-
-    # Randomize NP1/NP2 order
-    stimuli_df['reversed'] = random.choices([True, False], k=len(stimuli_df))
-
-    return stimuli_df.to_dict(orient='records')
-
-
-def get_fillers(n_fillers):
-    """Get filler items and return a dict of data
-
-    Args:
-        n_fillers (int): Number of fillers to return
-
-    Returns:
-        list of dict: Records-style data for jsPsych
-    """
-
-    # Load data
-    filler_df = pd.read_csv('pronouns/data/fillers.csv')
-    # TODO: filler_df.groupby('sent_id').sample(k=1)
-
-    # Get sample of sent_ids
-    unique_ids = set(filler_df.sent_id)
-    n_fillers = min(n_fillers, len(unique_ids))
-    sent_ids = random.sample(unique_ids, k=n_fillers)
-
-    # Randomly select bias for each sent_id
-    biases = random.choices(["NP1", "NP2"], k=len(sent_ids))
-    filler_ids = [f"{a}_{b}" for a, b in zip(sent_ids, biases)]
-
-    # Get data for ids
-    filler_sample = filler_df[filler_df.item_id.isin(filler_ids)].fillna("")
-
-    # Randomize NP1/NP2 order
-    filler_sample['reversed'] = random.choices([True, False],
-                                               k=len(filler_sample))
-
-    return filler_sample.to_dict(orient='records')
-
-
-def get_catch(condition):
-    """Get catch trials"""
-    catch_df = pd.read_csv('pronouns/data/catch.csv')
-
-    if condition == "physics_norm":
-        trial_type = "physics"
-    else:
-        trial_type = "experimental"
-
-    catch_trials = catch_df[catch_df.trial_type == trial_type].fillna("")
-
-    return catch_trials.to_dict(orient="records")
+    return out
 
 
 def ua_data(request):
@@ -210,37 +132,10 @@ def ua_data(request):
     return JsonResponse({"success": True})
 
 
-def cycle_condition(cond):
-    """Cycle through conditions"""
-    if cond < 2:
-        return cond + 1
-    return 0
-
-
-def get_condition():
-    """Generate condition"""
-
-    # Filter out ppts who exited early
-    ppts = Participant.objects.exclude(ua_header="")
-
-    # Filter out ppts who did not finish within 60 mins
-    hour_ago = tz.now() - tz.timedelta(seconds=36000)
-    ppts = ppts.exclude(
-        Q(start_time__lte=hour_ago) & Q(end_time__isnull=True))
-
-    # Select most recent qualifying ppt
-    last = ppts.last()
-
-    if last is not None:
-        return cycle_condition(last.condition)
-    return 0
-
-
 def init_ppt(request):
     """Create new ppt"""
 
     # Get params
-    mode = request.GET.get('mode')
     sona_code = request.GET.get('code', "")
 
     # Create key
@@ -252,16 +147,8 @@ def init_ppt(request):
     else:
         ip = request.META.get('REMOTE_ADDR', "")
 
-    # condition
-    if mode is not None:
-        condition = COND_2_INDEX[mode]
-    elif CONDITION is not None:
-        condition = CONDITION
-    else:
-        condition = get_condition()
-
     ppt = Participant.objects.create(
-        key=key, ip_address=ip, condition=condition)
+        key=key, ip_address=ip, condition=1)
 
     ppt.SONA_code = sona_code
 
@@ -270,7 +157,7 @@ def init_ppt(request):
 
 def home(request):
     """Control panel for launching the experiment"""
-    return render(request, 'pronouns/home.html')
+    return render(request, MODULE_NAME + '/home.html')
 
 
 def expt(request):
@@ -283,33 +170,22 @@ def expt(request):
     """
 
     # Parse GET data
-    limit = request.GET.get('n')
-    fillers = request.GET.get('fillers', True)
-    catch = request.GET.get('catch', True)
+    limit = request.GET.get('n') or None
+    limit = int(limit) if limit else None
 
     # Create ppt
     ppt = init_ppt(request)
-    mode = CONDITIONS[ppt.condition]
 
     # Get experimental items
-    items = get_stimuli(mode=mode, limit=limit)
-
-    # Get experimental items
-    if catch != "false":
-        items += get_catch(condition=mode)
-
-    # Get fillers if requested
-    if fillers != "false" and mode != "physics_norm":
-        n_fillers = 45  # FILLER_RATIO * len(items)
-        filler_data = get_fillers(n_fillers)
-        items += filler_data
+    items = get_stimuli(limit=limit)
 
     # Add reading times
+    # TODO: Move to json script
     for item in items:
-        item['time'] = get_reading_time(item['sent'])
+        item['time'] = get_reading_time(item['passage'])
 
     # Create view context
-    conf = {"mode": mode, "key": ppt.key, "ppt_id": ppt.id}
+    conf = {"key": ppt.key, "ppt_id": ppt.id}
     context = {"items": items, "conf": conf}
 
     # Create new key for new expt attempt
@@ -321,12 +197,12 @@ def expt(request):
     ppt.save()
 
     # Return view
-    return render(request, 'pronouns/expt.html', context)
+    return render(request, MODULE_NAME + '/expt.html', context)
 
 
 def error(request):
     """Control panel for launching the experiment"""
-    return render(request, 'pronouns/error.html')
+    return render(request, MODULE_NAME + '/error.html')
 
 
 """
@@ -364,6 +240,26 @@ def save_results(request):
     # store results
     data = post['results']
 
+    # Passage reading times
+
+    # Get trials
+    passages = [item for item in data if item.get('trial_part') == "preview"]
+
+    for passage_data in passages:
+        stimulus, created = Stimulus.objects.get_or_create(
+            item_id=passage_data.get('item_id'),
+            item_type="passage",
+            question_no="passage"
+        )
+        trial = Trial.objects.create(
+            participant=ppt,
+            stimulus=stimulus,
+            reaction_time=passage_data.get('rt'),
+            trial_index=passage_data.get('trial_index'),
+            condition=ppt.condition
+        )
+        trial.save()
+
     # Get trials
     trials = [item for item in data if item.get('trial_part') == "trial"]
 
@@ -371,7 +267,7 @@ def save_results(request):
         stimulus, created = Stimulus.objects.get_or_create(
             item_id=trial_data.get('item_id'),
             item_type=trial_data.get('item_type'),
-            stimulus=trial_data.get('stimulus')
+            question_no=trial_data.get('question_no')
         )
         trial = Trial.objects.create(
             participant=ppt,
@@ -476,6 +372,7 @@ def trial_data():
         data = trial.__dict__
         data['item_id'] = trial.stimulus.item_id
         data['item_type'] = trial.stimulus.item_type
+        data['question_no'] = trial.stimulus.question_no
         data.pop('_state')
 
         data_list.append(data)

@@ -1,9 +1,9 @@
 
-# PIPR Experiment 1
+# PIPR Experiment 2
 
 Web interface for PIPR experiment using django/jsPsych.
 
-Hosted at https://camrobjones.com/pronouns/.
+Hosted at https://camrobjones.com/pipr2/.
 
 ## Overview
 
@@ -15,19 +15,4 @@ User responses are sent back at the end of the experiment and saved as a JSON in
 
 ## Todo
 
-### Stimuli
-
-    - Create more stimuli
-    - Improve lower quality stimuli
-        - Some experimental stimuli don't work in the norming formats.
-
-### DB
-
-    - Create schema to store:
-        - Stimuli
-        - Particicpants
-        - Participant Responses
-
 ## Updates
-
-- Added CAPTCHA v3 protection
