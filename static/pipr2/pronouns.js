@@ -30,8 +30,23 @@ const isTouch = window.mobileAndTabletCheck();
 // }
 
 var continueText = "the spacebar";
+var continueText2 = "the spacebar";
+var f = "f";
+var j = "j";
+
 if (isTouch) {
   var continueText = "here";
+  var continueText2 = "continue";
+  var f = "A";
+  var j = "B";
+}
+
+var responseText = `Select your answer using the keyboard: use the <span class='key-demo'>f</span>
+      key to indicate the choice on the <b>left</b>, and the 
+      <span class='key-demo'>j</span> key to indicate the choice on the
+      <b>right</b>.`;
+if (isTouch) {
+  var responseText = "Tap the selected answer to indicate your response.";
 }
 
 /* === Turk === */
@@ -267,22 +282,18 @@ var instructions = {
 
     <p class='instructions'>
       Each passage will appear on the screen to give you an opportunity
-      to read it. Once you have finished reading the passage, press the spacebar
-      (or tap <b>continue</b> if you are using a touchscreen) to advance to the next screen.
+      to read it. Once you have finished reading the passage, press
+      ${continueText2}
+      to advance to the next screen.
       Please read each passage only once 
-      at your normal reading speed. Don't try to memorize the passage or
-      go back to re-read it once you have finished.
+      at your normal reading speed.
     </p>
 
     <p class='instructions'>
-      Once you have completed the passage, three questions will appear one after another.
+      After each passage, you will be asked three questions.
       Each question will have two possible answers, which will appear on the screen
       below the question.
-      Select your answer using the keyboard: use the <span class='key-demo'>f</span>
-      key to indicate the choice on the <b>left</b>, and the 
-      <span class='key-demo'>j</span> key to indicate the choice on the
-      <b>right</b>. If you are using a touchscreen, you can simply tap your selected
-      answer.
+      ${responseText}
     </p>
     <p class='instructions'>
       Read the questions carefully and answer as quickly
@@ -299,47 +310,6 @@ var instructions = {
     updateProgress();
     send_ua_data();
     },
-};
-
-// Physics Instructions
-var phys_instructions = {
-  type: "html-keyboard-response",
-  choices: [' '],
-  stimulus: 
-  `
-  <div class='instructions-container'>
-    <h2 class='instructions-header'>
-      Instructions
-    </h2>
-    <p class='instructions'>
-      In this experiment, you will be asked questions about hypothetical
-      situations involving common objects.
-    </p>
-
-    <p class='instructions'>
-      Each question will appear for a few seconds to give you time to read it.
-      Then two possible answers will appear below it. Select your
-      answer using the keyboard: use the <span class='key-demo'>f</span>
-      key to indicate the choice on the <b>left</b>, and the 
-      <span class='key-demo'>j</span> key to indicate the choice on the
-      <b>right</b>. If you are using a touchscreen, you can simply tap your selected
-      answer.
-    </p>
-    <p class='instructions'>
-      Read each question carefully and answer as quickly
-      and accurately as possible. The experiment will last around 20 minutes.
-    </p>
-
-    <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>Press ${continueText} to continue</b>
-    </p>
-  </div>`,
-  post_trial_gap: 500,
-  on_load: scrollTop,
-  on_finish: function() {
-    updateProgress();
-    send_ua_data();
-  }
 };
 
 // Example
@@ -401,7 +371,7 @@ var example_2 = {
 
           <div class='key-reminder-container'>
             <div class='key-reminder'>
-              f
+              ${f}
             </div>
           </div>
 
@@ -415,7 +385,7 @@ var example_2 = {
 
           <div class='key-reminder-container'>
             <div class='key-reminder'>
-              j
+              ${j}
             </div>
           </div>
           
@@ -429,7 +399,7 @@ var example_2 = {
     </div>
 
     <p class='instructions'>
-      In this example, you would press <span class='key-demo'>f</span>
+      In this example, you would press <span class='key-demo'>${f}</span>
       to indicate that <b>The car was making a strange noise</b>.
     </p>
 
@@ -466,7 +436,7 @@ var example_3 = {
 
           <div class='key-reminder-container'>
             <div class='key-reminder'>
-              f
+              ${f}
             </div>
           </div>
 
@@ -480,7 +450,7 @@ var example_3 = {
 
           <div class='key-reminder-container'>
             <div class='key-reminder'>
-              j
+              ${j}
             </div>
           </div>
           
@@ -494,7 +464,7 @@ var example_3 = {
     </div>
 
     <p class='instructions'>
-      In this example, you would press <span class='key-demo'>j</span>
+      In this example, you would press <span class='key-demo'>${j}</span>
       to indicate that the repair would cost <b>$300</b>.
     </p>
 
@@ -656,7 +626,7 @@ var q1 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                f
+                ${f}
               </div>
             </div>
 
@@ -670,7 +640,7 @@ var q1 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                j
+                ${j}
               </div>
             </div>
             
@@ -729,7 +699,7 @@ var q2 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                f
+                ${f}
               </div>
             </div>
 
@@ -743,7 +713,7 @@ var q2 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                j
+                ${j}
               </div>
             </div>
             
@@ -802,7 +772,7 @@ var q3 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                f
+                ${f}
               </div>
             </div>
 
@@ -816,7 +786,7 @@ var q3 = {
 
             <div class='key-reminder-container'>
               <div class='key-reminder'>
-                j
+                ${j}
               </div>
             </div>
             
@@ -938,7 +908,7 @@ var post_test_rule = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you notice using any particular strategies to make your choice?
+      Did you notice using any particular strategies to make your choices?
     </h3>
   
     <textarea class="form-control feedback" id="post_test_rule"
