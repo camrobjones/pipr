@@ -317,7 +317,7 @@ def save_results(request):
     # Grant credit
     if ppt.SONA_code != "":
         response = requests.get(
-            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=1973&credit_token=bb358887ebaf4f199f934440e18b427b&survey_code={ppt.SONA_code}")
+            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2073&credit_token=bb358887ebaf4f199f934440e18b427b&survey_code={ppt.SONA_code}")
         content = response.content.decode()
         ppt.notes = ppt.notes + f"SONA credit response:\n{content}\n"
 
