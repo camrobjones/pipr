@@ -31,7 +31,7 @@ Continuation: It took Tyler several seconds to process what had happened. The um
 Questions:
 
 CQ1: Was Tyler’s team in the lead? [Yes / No]
-CQC: What broke in two? [The baseball / The bat]
+CQC: What broke? [The baseball / The bat]
 CQ3: Who ran over to check Tyler was okay? [The umpire / Tyler’s coach]
 4. The pig was running alongside the cheetah, but then it sped up and pulled ahead.
 
@@ -48,12 +48,12 @@ CQ3: What did Anna’s sister want to go and see? [The koalas / The flamingos]
 5. The car was going alongside the bicycle but then it sped up and pulled ahead.
 Intro: Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him.
 Setup: He stepped back in alarm and watched the vehicles pass.
-Critical: The {car} was going alongside the {bicycle} but then it sped up and pulled ahead.
+Critical: The {bicycle} was going alongside the {car} but then it sped up and pulled ahead.
 Continuation: After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.
 
 Questions:
 
-CQC: What sped up and pulled ahead? [The car / The bicycle]
+CQC: What sped up and pulled ahead? [The bicycle / The car]
 CQ2: What did Larry order? [A cappuccino / An espresso]
 CQ3: Where did Larry take a seat? [Outside/ Inside]
 6. Hannah put the brick next to the feather, but the wind blew it away.
@@ -118,7 +118,7 @@ Continuation: Gabriel couldn’t help but laugh. He turned the oven off and went
 Questions:
 
 CQ1: What were Gabriel and his friends watching? [A film / A football game]
-CQC: What was burned to a crisp? [The plate / The bread]
+CQC: What was burned? [The plate / The bread]
 CQ3: What did Gabriel have to set up? [ The projector / The sound system]
 
 
@@ -264,7 +264,7 @@ Questions:
 
 CQ1: Where were Sarah’s keys? [Inside her apartment / At her office]
 CQ2: What floor was Sarah’s apartment on? [ The second floor / The fourth floor]
-CQC: What gave way? [The window ledge / The drainpipe]
+CQC: What gave way? [The drainpipe / The window ledge]
 
 23. When the peach collided with the coconut, it was smashed to pieces.
 
@@ -333,9 +333,9 @@ Continuation: Josh clutched at his nose and groaned in pain. Paula rushed over t
 
 Questions:
 
-CQ1: Where were they playing tennis? [ a local club / Josh’s garden]
-CQC: What hit Josh in the face? [the racquet / the tennis ball]
-CQ3: What did Josh hurt? [his nose / his eye]
+CQ1: Where were they playing tennis? [A local club / Josh’s garden]
+CQC: What hit Josh in the face? [The racquet / The tennis ball]
+CQ3: What did Josh hurt? [His nose / His eye]
 29. Natalie regretted putting the chocolate bar in her pocket with her phone: when she took it out, it had melted.
 Intro: It was lunchtime, and Natalie decided to get out of the office for an hour and eat in the park. She picked up her lunch and put her phone and a chocolate bar away in her pocket. The park was busy with other people milling around and enjoying the weather.
 Setup: She found a spot to sit down and began to eat her lunch.
@@ -357,5 +357,5 @@ Continuation: She slumped into a chair in the waiting room, feeling annoyed. For
 Questions:
 
 CQ1: What sort of appointment was Alice on her way to? [A hair appointment / A doctor’s appointment]
-CQC: What got squashed? [The banana / The chocolate bar]
+CQC: What was squashed? [The banana / The wallet]
 CQ3: When did Alice arrive? [A few minutes early / A few minutes late]

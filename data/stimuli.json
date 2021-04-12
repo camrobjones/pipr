@@ -161,7 +161,7 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What broke in two?",
+                    "prompt": "What broke?",
                     "responses": [
                         "The baseball",
                         "The bat"
@@ -196,7 +196,7 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What broke in two?",
+                    "prompt": "What broke?",
                     "responses": [
                         "The bat",
                         "The baseball"
@@ -292,14 +292,14 @@
             "sent_id": 5,
             "order": "A",
             "item_id": "5_A",
-            "passage": "Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him. He stepped back in alarm and watched the vehicles pass. The car was going alongside the bicycle but then it sped up and pulled ahead. After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.",
+            "passage": "Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him. He stepped back in alarm and watched the vehicles pass. The bicycle was going alongside the car but then it sped up and pulled ahead. After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.",
             "questions": [
                 {
                     "question_no": "C",
                     "prompt": "What sped up and pulled ahead?",
                     "responses": [
-                        "The car",
-                        "The bicycle"
+                        "The bicycle",
+                        "The car"
                     ],
                     "critical": 1
                 },
@@ -327,14 +327,14 @@
             "sent_id": 5,
             "order": "B",
             "item_id": "5_B",
-            "passage": "Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him. He stepped back in alarm and watched the vehicles pass. The bicycle was going alongside the car but then it sped up and pulled ahead. After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.",
+            "passage": "Larry was waiting to cross the street to get to his favorite coffee shop. He was about to step out into the street when he saw a car and a bicycle coming toward him. He stepped back in alarm and watched the vehicles pass. The car was going alongside the bicycle but then it sped up and pulled ahead. After the traffic had cleared, Larry crossed and went into the cafe. He ordered a cappuccino and took a seat outside.",
             "questions": [
                 {
                     "question_no": "C",
                     "prompt": "What sped up and pulled ahead?",
                     "responses": [
-                        "The bicycle",
-                        "The car"
+                        "The car",
+                        "The bicycle"
                     ],
                     "critical": 1
                 },
@@ -665,7 +665,7 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What was burned to a crisp?",
+                    "prompt": "What was burned?",
                     "responses": [
                         "The plate",
                         "The bread"
@@ -700,7 +700,7 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What was burned to a crisp?",
+                    "prompt": "What was burned?",
                     "responses": [
                         "The bread",
                         "The plate"
@@ -1540,8 +1540,8 @@
                     "question_no": "C",
                     "prompt": "What gave way?",
                     "responses": [
-                        "The window ledge",
-                        "The drainpipe"
+                        "The drainpipe",
+                        "The window ledge"
                     ],
                     "critical": 1
                 }
@@ -1575,8 +1575,8 @@
                     "question_no": "C",
                     "prompt": "What gave way?",
                     "responses": [
-                        "The drainpipe",
-                        "The window ledge"
+                        "The window ledge",
+                        "The drainpipe"
                     ],
                     "critical": 1
                 }
@@ -1954,7 +1954,7 @@
                     "question_no": "1",
                     "prompt": "Where were they playing tennis?",
                     "responses": [
-                        " a local club",
+                        "A local club",
                         "Josh\u2019s garden"
                     ],
                     "critical": 0
@@ -1963,8 +1963,8 @@
                     "question_no": "C",
                     "prompt": "What hit Josh in the face?",
                     "responses": [
-                        "the racquet",
-                        "the tennis ball"
+                        "The racquet",
+                        "The tennis ball"
                     ],
                     "critical": 1
                 },
@@ -1972,8 +1972,8 @@
                     "question_no": "3",
                     "prompt": "What did Josh hurt?",
                     "responses": [
-                        "his nose",
-                        "his eye"
+                        "His nose",
+                        "His eye"
                     ],
                     "critical": 0
                 }
@@ -1989,7 +1989,7 @@
                     "question_no": "1",
                     "prompt": "Where were they playing tennis?",
                     "responses": [
-                        " a local club",
+                        "A local club",
                         "Josh\u2019s garden"
                     ],
                     "critical": 0
@@ -1998,8 +1998,8 @@
                     "question_no": "C",
                     "prompt": "What hit Josh in the face?",
                     "responses": [
-                        "the tennis ball",
-                        "the racquet"
+                        "The tennis ball",
+                        "The racquet"
                     ],
                     "critical": 1
                 },
@@ -2007,8 +2007,8 @@
                     "question_no": "3",
                     "prompt": "What did Josh hurt?",
                     "responses": [
-                        "his nose",
-                        "his eye"
+                        "His nose",
+                        "His eye"
                     ],
                     "critical": 0
                 }
@@ -2105,10 +2105,10 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What got squashed?",
+                    "prompt": "What was squashed?",
                     "responses": [
                         "The banana",
-                        "The chocolate bar"
+                        "The wallet"
                     ],
                     "critical": 1
                 },
@@ -2140,9 +2140,9 @@
                 },
                 {
                     "question_no": "C",
-                    "prompt": "What got squashed?",
+                    "prompt": "What was squashed?",
                     "responses": [
-                        "The chocolate bar",
+                        "The wallet",
                         "The banana"
                     ],
                     "critical": 1
