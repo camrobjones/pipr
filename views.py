@@ -398,6 +398,22 @@ def ppt_data():
     return df
 
 
+def lang_data():
+    """Get language data"""
+    data_list = []
+
+    for language in Language.objects.all():
+
+        data = language.__dict__
+        data.pop('_state')
+
+        data_list.append(data)
+
+    df = pd.DataFrame(data_list)
+    df = df.sort_values('id').reset_index(drop=True)
+    return df
+
+
 @user_passes_test(is_admin)
 def download_data(request, model):
     """Download csv of model data"""
@@ -405,6 +421,8 @@ def download_data(request, model):
         data = trial_data()
     elif model == "participant":
         data = ppt_data()
+    elif model == "language":
+        data = lang_data()
     else:
         raise ValueError(
             "'model' must be 'trial' or 'participant', not %r" % model)

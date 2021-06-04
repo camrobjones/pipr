@@ -21,7 +21,7 @@ Questions:
 
 CQ1: Where had Alice started her sword collection? [Japan / China]
 CQC: What broke? [The steel sword / The glass sword]
-CQ3: What did Alice say to reassure Erin? [The sword had been cheap / She had too many swords]
+CQ3: What did Alice say to reassure Erin? [She had too many swords / The sword had been cheap]
 3. When the baseball collided with the bat, it broke in two.
 Intro: Tyler was playing baseball for his High School team. His team was in the lead, but only by a small margin. It was Tyler’s turn to bat and he could feel the pressure mounting. He walked up to the plate and rested his bat on his shoulder. The pitcher hurled the ball.
 Setup: Tyler concentrated hard, tensed his muscles, and swung confidently. 
@@ -32,7 +32,7 @@ Questions:
 
 CQ1: Was Tyler’s team in the lead? [Yes / No]
 CQC: What broke? [The baseball / The bat]
-CQ3: Who ran over to check Tyler was okay? [The umpire / Tyler’s coach]
+CQ3: Who ran over to check Tyler was okay? [Tyler’s coach / The umpire]
 4. The pig was running alongside the cheetah, but then it sped up and pulled ahead.
 
 Intro: Anna and her family were spending the day at the zoo. One of the surprising things about the zoo they were visiting was that lots of the animals were in mixed enclosures. The anteaters were living with the chimpanzees and the flamingos were in with the rhinos. Anna stopped to watch a pig and a cheetah, which were making their way across a shared enclosure.
@@ -80,7 +80,7 @@ Questions:
 
 CQ1: From whom did Alyssa learn the potato curry recipe? [Her mother / Her aunt]
 CQC: What got crushed? [The can of tomatoes / The lime]
-CQ3: What did Alyssa forget? [The rice / The chili peppers]
+CQ3: What did Alyssa forget? [The chili peppers / The rice]
 
 8. Sam put the concrete box next to the styrofoam box, but the wind blew it away.
 
@@ -91,7 +91,7 @@ Continuation: He quickly ran to tell his supervisor what had happened. The super
 
 Questions:
 
-CQ1: What was Sam’s job? [To put up scaffolding / To accept deliveries]
+CQ1: What was Sam’s job? [To accept deliveries / To put up scaffolding]
 CQC: What did the wind blow away? [The concrete box / The styrofoam box]
 CQ3: What was Sam’s punishment? [To pay for redelivery / He was fired]
 
@@ -104,7 +104,7 @@ Continuation: Chloe’s parents stormed out of the house after her. When they fo
 
 Questions:
 
-CQ1: Why was Chloe upset? [She failed an exam / She was grounded]
+CQ1: Why was Chloe upset? [She was grounded / She failed an exam]
 CQC: What cracked? [The rock / The egg]
 CQ3: What was Chloe’s punishment for making a mess? [Washing the dishes / No dessert]
 
@@ -179,7 +179,7 @@ Continuation: Although she was upset that the starter didn’t go to plan, the r
 
 Questions:
 
-CQ1: Who was Lily cooking for? [Her parents / Her friends]
+CQ1: Who was Lily cooking for? [Her friends / Her parents]
 CQ2: What was the main course? [Roast duck / Spaghetti bolognese]
 CQC: What melted? [ The cheese / The bread]
 
@@ -275,8 +275,8 @@ Continuation: While Olivia was still admiring the dramatic collision, Toby caugh
 
 Questions:
 
-CQ1: Where were Toby and Olivia? [In the kitchen / In the yard]
-CQ2: Where was Toby hiding? [Behind the shed / Behind a low wall]
+CQ1: Where were Toby and Olivia? [In the yard / In the kitchen]
+CQ2: Where was Toby hiding? [Behind a low wall / Behind the shed]
 CQC: What was smashed to pieces? [The peach / The coconut]
 24. When the rock collided with the ornament, it shattered.
 
@@ -346,7 +346,7 @@ Questions:
 
 CQ1: Where did Natalie go to eat her lunch? [The park / The cantine]
 CQC: What melted? [The chocolate bar / The phone]
-CQ3: What did Natalie buy? [A hotdog / A lemonade]
+CQ3: What did Natalie buy? [A lemonade / A hotdog]
 30. Alice stuffed a banana in her pocket with her wallet. When she took it out, it was squashed.
 
 Intro: Alice was running late for a hair appointment. As she was looking for her wallet, she spotted a bunch of bananas on the kitchen table.
@@ -358,4 +358,4 @@ Questions:
 
 CQ1: What sort of appointment was Alice on her way to? [A hair appointment / A doctor’s appointment]
 CQC: What was squashed? [The banana / The wallet]
-CQ3: When did Alice arrive? [A few minutes early / A few minutes late]
+CQ3: When did Alice arrive? [A few minutes late / A few minutes early]
