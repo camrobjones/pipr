@@ -57,7 +57,7 @@ var turkInfo = jsPsych.turk.turkInfo();
 
 function saveResults() {
   // POST user data to server
-  let url = "/pipr2/save_results/";
+  let url = "/pipr3/save_results/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   let results = jsPsych.data.get().values();
@@ -65,7 +65,7 @@ function saveResults() {
   data.ppt_id = conf.ppt_id;
   axios.post(url, data, {headers: headers})
     .then(response => {
-      // console.log(response.data);
+      console.log(response.data);
     });
 }
 
@@ -88,7 +88,7 @@ function ua_data() {
 
 function send_ua_data() {
   let data = ua_data();
-  let url = "/pipr2/ua_data/";
+  let url = "/pipr3/ua_data/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   axios.post(url, data, {headers: headers})
@@ -140,7 +140,7 @@ function close_captcha() {
 
 function validate_captcha(token) {
   // console.log(`validate_captcha(${token})`)
-  let url = "/pipr2/validate_captcha/";
+  let url = "/pipr3/validate_captcha/";
   let csrftoken = Cookies.get('csrftoken');
   let headers = {"X-CSRFToken": csrftoken};
   let data = {
@@ -154,7 +154,7 @@ function validate_captcha(token) {
         close_captcha();
         // jsPsych.finishTrial(response.data)
       } else {
-        window.location.href = "/pipr2/error";
+        window.location.href = "/pipr3/error";
       }
     });
 }
@@ -248,10 +248,10 @@ var consent = {
               you agree to participate.
               </p>
 
-              <a target="_blank" href="/static/pipr2/consent_form.pdf">Open in a new tab</a>
+              <a target="_blank" href="/static/pipr3/consent_form.pdf">Open in a new tab</a>
               
               <div id='consent-container'>
-                <iframe src="/static/pipr2/consent_form.pdf#view=FitH&zoom=FitH"
+                <iframe src="/static/pipr3/consent_form.pdf#view=FitH&zoom=FitH"
                 width="100%", height="800px"></iframe>
               </div>
 
@@ -276,32 +276,36 @@ var instructions = {
     </h2>
     <p class='instructions'>
       In this experiment, you will be asked to read short 
-      passages that describe various situations and then answer questions 
-      about what happened.
+      passages on the screen. Each passage has been broken up into
+      small groups of words. You can reveal the next group of words
+      by repeatedly pressing the space bar. Your task is to silently
+      read each passage by reading each group of words and pressing
+      the space bar until you finish the passage. Please read each
+      passage only once at your normal reading speed.
     </p>
 
     <p class='instructions'>
-      Each passage will appear on the screen to give you an opportunity
-      to read it. Once you have finished reading the passage, press
-      ${continueText2}
-      to advance to the next screen.
-      Please read each passage only once 
-      at your normal reading speed.
+      After some of the passages, a statement will appear on the screen.
+      You will then have to indicate whether the statment is true or false.
+      You can do this using the 'true' and 'false' buttons on the screen.
+      Therefore it is important that you read each passage carefully and
+      understand what it describes.
     </p>
 
     <p class='instructions'>
-      After each passage, you will be asked three questions.
-      Each question will have two possible answers, which will appear on the screen
-      below the question.
-      ${responseText}
+      First you will complete two practice passages. These are not part 
+      of the actual experiment. Before you read each passage, you will
+      see a small cross in the top left of the screen where the first
+      group of words will appear. Fix your eyes on this cross and press
+      the spacebar to begin reading.
     </p>
+
     <p class='instructions'>
-      Read the questions carefully and answer as quickly
-      and accurately as possible. The experiment will last around 20 minutes.
+      The experiment will last around 20 minutes.
     </p>
 
     <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>Press ${continueText} to continue</b>
+      <b>Press the spacebar to continue</b>
     </p>
   </div>`,
   post_trial_gap: 500,
@@ -312,191 +316,35 @@ var instructions = {
     },
 };
 
-// Example
-var example = {
+
+// Post Practice
+var post_practice = {
   type: "html-keyboard-response",
   choices: [' '],
   stimulus: 
   `
   <div class='instructions-container'>
     <h2 class='instructions-header'>
-      Example Passage
+      End of practice
     </h2>
     <p class='instructions'>
-      For example, the following passage might appear:
+      That concludes the practice part of the exercise.
     </p>
-
-    <div class='trial-container example'>
-      <p class='sent'>
-        John's car had started making a strange noise, so he decided to
-        take it to the mechanic to find out what the problem was. When he
-        arrived at the auto repair store, nobody was available and John had
-        to wait for 15 minutes before a mechanic came to help him. The 
-        mechanic asked John a few questions about the noise and asked if 
-        he could take the car for a short test drive. John agreed, and 
-        when the mechanic returned he told John the problem was with the
-        transmission and it would cost $300 to fix.
-      </p> 
-    </div>
-
-    <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>Press ${continueText} to continue<b>
-    </p>
-
-  </div>`,
-  on_finish: updateProgress,
-  on_load: scrollTop,
-  post_trial_gap: 500,
-};
-
-// Example
-var example_2 = {
-  type: "html-keyboard-response",
-  choices: [' '],
-  stimulus: 
-  `
-  <div class='instructions-container'>
-    <h2 class='instructions-header'>
-      Example Question 1
-    </h2>
-    <p class='instructions'>
-      After completing the passage, the following question might appear:
-    </p>
-
-    <div class='trial-container example'> 
-      <p class='question'>Why did John take his car to the mechanic?</p> 
-      <div class='response-container'> 
-
-        <div class='response np1'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              ${f}
-            </div>
-          </div>
-
-          <div class='response-label'>
-            The car was making a strange noise
-          </div>
-          
-        </div> 
-
-        <div class='response np2'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              ${j}
-            </div>
-          </div>
-          
-          <div class='response-label'>
-            The 'check engine' light was on
-          </div>
-
-        </div> 
-
-      </div>
-    </div>
 
     <p class='instructions'>
-      In this example, you would press <span class='key-demo'>${f}</span>
-      to indicate that <b>The car was making a strange noise</b>.
-    </p>
-
-    <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>Press ${continueText} to continue<b>
+      Press the spacebar to continue to the main experiment.
     </p>
 
   </div>`,
   post_trial_gap: 500,
   on_load: scrollTop,
-  on_finish: updateProgress,
+  on_finish: function() {
+    updateProgress();
+    },
 };
 
-
-// Example
-var example_3 = {
-  type: "html-keyboard-response",
-  choices: [' '],
-  stimulus: 
-  `
-  <div class='instructions-container'>
-    <h2 class='instructions-header'>
-      Example Question 2
-    </h2>
-    <p class='instructions'>
-      Here is another example question:
-    </p>
-
-    <div class='trial-container example'> 
-      <p class='question'>How much would the damage cost to repair?</p> 
-      <div class='response-container'> 
-
-        <div class='response np1'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              ${f}
-            </div>
-          </div>
-
-          <div class='response-label'>
-            $100
-          </div>
-          
-        </div> 
-
-        <div class='response np2'>
-
-          <div class='key-reminder-container'>
-            <div class='key-reminder'>
-              ${j}
-            </div>
-          </div>
-          
-          <div class='response-label'>
-            $300
-          </div>
-
-        </div> 
-
-      </div>
-    </div>
-
-    <p class='instructions'>
-      In this example, you would press <span class='key-demo'>${j}</span>
-      to indicate that the repair would cost <b>$300</b>.
-    </p>
-
-    <p class='instructions' id='continue' ontouchstart="response(32)">
-      <b>The experiment will begin on the next page.</b>
-    </p>
-    <p class='instructions' ontouchstart="response(32)">
-      <b>Press ${continueText} to begin<b>
-    </p>
-
-  </div>`,
-  post_trial_gap: 500,
-  on_load: scrollTop,
-  on_finish: updateProgress,
-};
 
 /* --- Test Components --- */
-
-var fixation = {
-
-  // Fixation Trial
-  type: "html-keyboard-response",
-  stimulus: "<div class='fixation-cross'>+</div>",
-  choices: jsPsych.NO_KEYS,
-  data: {trial_part: 'fixation'},
-
-  // Randomly sample trial duration
-  trial_duration: function(){
-    return jsPsych.randomization.sampleWithoutReplacement(
-        [750, 1000, 1250, 1500], 1)[0];
-  }
-};
 
 // Trial component functions
 
@@ -812,11 +660,6 @@ var q3 = {
 };
 
 // Combine fixation, preview, and trial into one component
-var trial_procedure = {
-  timeline: [fixation, preview, q1, q2, q3],
-  timeline_variables: stimuli,
-  randomize_order: true,
-};
 
 
 // End Trials
@@ -828,7 +671,7 @@ var end_trials = {
         Trials Complete
       </h2>
     <p class='instructions'>
-      Thank you. You have completed all of the comprehension questions.
+      Thank you. You have completed all of the passages.
     </p>
 
     <p class='instructions'>
@@ -837,7 +680,7 @@ var end_trials = {
     </p>
 
   <p class='instructions' ontouchstart="response(32)" id='next'>
-      <b>Press ${continueText} to begin<b>
+      <b>Press ${continueText} to continue<b>
     </p>
   `,
   on_finish: updateProgress
@@ -1046,7 +889,7 @@ var debrief_block = {
         <div id='code'>${conf.key}</div>
 
         <div class='code-copy' title="Copy code" onclick="copyToClipboard()">
-          <img src="/static/pipr2/content_copy-24px.svg">
+          <img src="/static/pipr3/content_copy-24px.svg">
           </img>
         </div>
 
@@ -1073,30 +916,140 @@ var debrief_block = {
   }
 };
 
+/* ==== SPR ==== */
+
+function addStimulus(timeline, trial_info, trial_part) {
+    if (typeof(trial_info.stimulus) !== "string") {
+        console.error("trial_info.stimulus ain't no string...");
+    }
+
+    let fix_type = "FIX_CROSS";
+
+    let fixcross = {
+        type : 'spr-moving-window',
+        stimulus : '+',
+        background_color : "rgb(250, 250, 250)", // light gray
+        choices : FIX_CHOICES,
+        font_family : "Roboto Mono",
+        font_size : 26,
+        width : MIN_WIDTH,
+        height : MIN_HEIGHT,
+        trial_duration : FIX_DUR,
+        data : {
+            id : trial_info.id,
+            item_type : fix_type,
+            uil_save : false,
+            trial_part: trial_part
+        }
+    };
+
+    let present_text = {
+        type : 'spr-moving-window',
+        stimulus : trial_info.stimulus,
+        background_color : "rgb(250, 250, 250)", // light gray
+        font_color : "rgb(0, 0, 0)", // black
+        font_family : "Open Sans",
+        font_size : 26,
+        width : MIN_WIDTH,
+        height : MIN_HEIGHT,
+        post_trial_gap : ISI,
+        grouping_string : GROUPING_STRING,
+        data : {
+            id : trial_info.id,
+            item_type : trial_info.item_type,
+            continuation : trial_info.continuation,
+            item_id : trial_info.item_id,
+            order : trial_info.order,
+            sent_id : trial_info.sent_id,
+            unambiguous: trial_info.unambiguous,
+            trial_part: trial_part,
+            uil_save : true
+        }
+    }
+
+    timeline.push(fixcross);
+    timeline.push(present_text);
+}
+
+/**
+ * Add a question to a jsPsych timeline.
+ */
+
+function addQuestion(timeline, trial_info, trial_part)
+{
+    if (typeof(trial_info.question) !== "string") {
+        console.error("trial_info.question ain't no string...");
+    }
+    if (typeof(trial_info.qanswer) !== "string") {
+        console.error("trial_info.qanswer ain't no string...");
+    }
+
+    let question = {
+        type : 'html-button-response',
+        stimulus : trial_info.question,
+        choices : G_QUESTION_CHOICES,
+        data : {
+            id : trial_info.id,
+            item_type : trial_info.item_type,
+            expected_answer : trial_info.qanswer,
+            uil_save : true,
+            trial_part: trial_part
+        },
+        on_finish: function (data) {
+            let choice = G_QUESTION_CHOICES[data.button_pressed];
+            data.answer = choice;
+            data.correct = choice == data.expected_answer;
+        }
+    };
+
+    timeline.push(question);
+}
+
+function addStimuliToTimeline(timeline, stimuli, trial_part) {
+    stimuli.forEach (
+        stim_info => {
+            addStimulus(timeline, stim_info, trial_part);
+            if (stim_info.question !== "") {
+                addQuestion(timeline, stim_info, trial_part);
+            }
+        }
+    );
+}
+
 /* === Setup === */
 
 /* --- Create Timeline --- */
 
+var timeline = [];
+
+let list_1 = {list_name : "list1", table : stimuli}.table;
+
 var timeline = [welcome, consent];
 
 // Fullscreen for non-touch
-if (!isTouch) {
-  timeline.push(start_fullscreen);
-}
+timeline.push(start_fullscreen);
 
 // Main expt timeline for all
-timeline.push(instructions, example, example_2, example_3, trial_procedure, 
-              end_trials, demographics, post_test_purpose);
+timeline.push(instructions);
+
+// Add trial procedure
+addStimuliToTimeline(timeline, PRACTICE_ITEMS, "practice");
+
+timeline.push(post_practice);
+
+// Add trial procedure
+addStimuliToTimeline(timeline, list_1, "trial");
+
+timeline.push(end_trials, demographics, post_test_purpose);
 
 // Extra post test for syntax & expt condition
 
-timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
-              post_test_syntax, post_test_semantics, post_test_other);
+// timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
+              // post_test_syntax, post_test_semantics, post_test_other);
+timeline.push(post_test_other);
 
 // End fullscreen for non-touch
-if (!isTouch) {
-  timeline.push(end_fullscreen);
-}
+timeline.push(end_fullscreen);
 
 // Debrief block for all
 timeline.push(debrief_block);
@@ -1119,7 +1072,7 @@ window.onload = function() {
 
   jsPsych.init({
     timeline: timeline,
-    experiment_width: 800,
+    experiment_width: 950,
     display_element: "expt-container",
   });
 };

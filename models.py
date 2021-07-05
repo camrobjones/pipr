@@ -50,7 +50,11 @@ class Stimulus(models.Model):
     """Experimental Stimulus data"""
     item_type = models.CharField(max_length=128)  # Filler, Catch, or Critical
     item_id = models.CharField(max_length=128)  # UID for item
-    question_no = models.CharField(max_length=128)  # No. of Question
+    
+    sent_id = models.IntegerField()
+    continuation = models.CharField(max_length=10)  # NP1 or NP2
+    order = models.CharField(max_length=10)  # A or B
+    unambiguous = models.IntegerField()  # 0 or 1
 
 
 class Trial(models.Model):
@@ -63,12 +67,33 @@ class Trial(models.Model):
         Stimulus,
         on_delete=models.RESTRICT
     )
-    reaction_time = models.FloatField()  # RT in ms
-    key_press = models.IntegerField(blank=True, null=True)  # Response code
-    response = models.TextField(blank=True, null=True)  # Decoded response
-    condition = models.IntegerField(blank=True, null=True)  # Decoded response
-    trial_index = models.IntegerField(blank=True, null=True)  # Index for ppt
-    reversed_flag = models.BooleanField(default=False)  # L-R reversed
+
+    # Critical region times (ms)
+    rt_crit_p3 = models.FloatField(default=-1)
+    rt_crit_p2 = models.FloatField(default=-1)
+    rt_crit_p1 = models.FloatField(default=-1)
+    rt_crit = models.FloatField(default=-1)
+    rt_crit_sp1 = models.FloatField(default=-1)
+    rt_crit_sp2 = models.FloatField(default=-1)
+
+    # Continuation region times (ms)
+    rt_cont_p3 = models.FloatField(default=-1)
+    rt_cont_p2 = models.FloatField(default=-1)
+    rt_cont_p1 = models.FloatField(default=-1)
+    rt_cont = models.FloatField(default=-1)
+    rt_cont_sp1 = models.FloatField(default=-1)
+    rt_cont_sp2 = models.FloatField(default=-1)
+
+    # Whole reading time (ms)
+    passage_reading_time = models.FloatField(default=-1)
+
+    # Comprehension Question
+    answer = models.CharField(max_length=10, default="")
+    expected_answer = models.CharField(max_length=10, default="")
+    answer_rt = models.FloatField(default=-1)
+
+    # Index for ppt
+    trial_index = models.IntegerField(blank=True, null=True)
 
 
 class Language(models.Model):

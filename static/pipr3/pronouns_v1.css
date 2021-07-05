@@ -277,10 +277,14 @@ textarea {
 
 /* --- Experiment: Main content --- */
 
+#jspsych-content {
+    max-width: 950px;
+    width: 95%;
+    overflow: hidden;
+}
+
 div#expt-container {
     min-height: calc(100vh - 92px);
-    width: 92vw;
-    margin:0 auto;
     font-size:1.4em;
     margin-bottom:20px;
 }

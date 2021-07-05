@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PronounsConfig(AppConfig):
-    name = 'pipr2'
+    name = 'pipr3'

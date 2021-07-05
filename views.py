@@ -19,17 +19,16 @@ from django.http import JsonResponse, HttpResponse
 from django.utils import timezone as tz
 from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
-from django.db.models import Q
 
-from pipr2.models import Participant, Trial, Stimulus, Language
-from pipr2.data.words import wordlist
+from pipr3.models import Participant, Trial, Stimulus, Language
+from pipr3.data.words import wordlist
 
 """
 Constants
 ---------
 """
 
-MODULE_NAME = "pipr2"
+MODULE_NAME = "pipr3"
 
 # General parameters
 RESULTS_DIR = MODULE_NAME + '/data/results/'  # Store responses
@@ -88,28 +87,34 @@ Helper functions to load and reformat data.
 """
 
 
-def get_stimuli(limit=None):
+def get_stimuli(limit=None, cond=None):
     """Load stimuli json and return dict of stims"""
     with open(MODULE_NAME + "/data/stimuli.json") as f:
         data = json.load(f)
 
     out = []
-    for pair in data:
+    for versions in data:
 
         # Choose one of two orders
-        item = random.choice(pair)
+        item = random.choice(versions)
 
         # Randomize order of responses
-        for question in item['questions']:
-            question["reversed"] = random.random() > 0.5
+        # item["question"]["reversed"] = random.random() > 0.5
 
-        # Randomize order of questions
-        random.shuffle(item['questions'])
+        # Modify to fit UiM format
+        item["stimulus"] = item.pop("passage")
+        item["item_type"] = "ACTIVE"
+
+        # Randomly present q 1/3 time
+        if random.random() > 2/3:
+            item["question"] = ""
+            item["qanswer"] = ""
 
         out.append(item)
 
-    if limit is not None:
-        out = random.choices(out, k=limit)
+    # Shuffle & limit
+    limit = limit or len(out)
+    out = random.sample(out, k=limit)
 
     return out
 
@@ -179,11 +184,6 @@ def expt(request):
     # Get experimental items
     items = get_stimuli(limit=limit)
 
-    # Add reading times
-    # TODO: Move to json script
-    for item in items:
-        item['time'] = get_reading_time(item['passage'])
-
     # Create view context
     conf = {"key": ppt.key, "ppt_id": ppt.id}
     context = {"items": items, "conf": conf}
@@ -240,44 +240,68 @@ def save_results(request):
     # store results
     data = post['results']
 
-    # Passage reading times
-
     # Get trials
-    passages = [item for item in data if item.get('trial_part') == "preview"]
+    trials = [t for t in data if t.get("trial_part") == "trial"]
 
-    for passage_data in passages:
+    # Group trial data by trial
+    fixation_indices = [idx for idx, el in enumerate(trials)
+                        if el["item_type"] == "FIX_CROSS"]
+    slice_ends = fixation_indices[1:] + [len(trials)]
+    trials = [trials[fixation_indices[i]:slice_ends[i]]
+              for i in range(len(fixation_indices))]
+
+    for trial in trials:
+        
+        # Split trial data into parts
+        if len(trial) == 3:
+            fixation, passage, question = trial
+        else:
+            # No question data
+            fixation, passage = trial
+            question = {}
+
+        # Passage reading time
+        pass_te = passage.get("time_elapsed")
+        fix_te = fixation.get("time_elapsed")
+        reading_time = pass_te - fix_te
+
         stimulus, created = Stimulus.objects.get_or_create(
-            item_id=passage_data.get('item_id'),
+            item_id=passage.get('item_id'),
             item_type="passage",
-            question_no="passage"
+            sent_id=passage.get("sent_id"),
+            continuation=passage.get('continuation'),
+            order=passage.get('order'),
+            unambiguous=passage.get('unambiguous')
         )
+
         trial = Trial.objects.create(
             participant=ppt,
             stimulus=stimulus,
-            reaction_time=passage_data.get('rt'),
-            trial_index=passage_data.get('trial_index'),
-            condition=ppt.condition
-        )
-        trial.save()
+            trial_index=fixation.get('trial_index'),
 
-    # Get trials
-    trials = [item for item in data if item.get('trial_part') == "trial"]
+            # SPR times
+            rt_crit_p3=passage.get("rt1"),
+            rt_crit_p2=passage.get("rt2"),
+            rt_crit_p1=passage.get("rt3"),
+            rt_crit=passage.get("rt4"),
+            rt_crit_sp1=passage.get("rt5"),
+            rt_crit_sp2=passage.get("rt6"),
 
-    for trial_data in trials:
-        stimulus, created = Stimulus.objects.get_or_create(
-            item_id=trial_data.get('item_id'),
-            item_type=trial_data.get('item_type'),
-            question_no=trial_data.get('question_no')
-        )
-        trial = Trial.objects.create(
-            participant=ppt,
-            stimulus=stimulus,
-            reaction_time=trial_data.get('rt'),
-            key_press=trial_data.get('key_press'),
-            response=trial_data.get('response'),
-            trial_index=trial_data.get('trial_index'),
-            reversed_flag=trial_data.get('reversed', False),
-            condition=ppt.condition
+            # Continuation region times (ms)
+            rt_cont_p3=passage.get("rt7"),
+            rt_cont_p2=passage.get("rt8"),
+            rt_cont_p1=passage.get("rt9"),
+            rt_cont=passage.get("rt10"),
+            rt_cont_sp1=passage.get("rt11"),
+            rt_cont_sp2=passage.get("rt12"),
+
+            # Whole reading time (ms)
+            passage_reading_time=reading_time,
+
+            # Comprehension Question
+            answer=question.get("answer", ""),
+            expected_answer=question.get("expected_answer", ""),
+            answer_rt=question.get("rt", -1)
         )
         trial.save()
 
@@ -371,8 +395,10 @@ def trial_data():
 
         data = trial.__dict__
         data['item_id'] = trial.stimulus.item_id
-        data['item_type'] = trial.stimulus.item_type
-        data['question_no'] = trial.stimulus.question_no
+        data['sent_id'] = trial.stimulus.sent_id
+        data['continuation'] = trial.stimulus.continuation
+        data['order'] = trial.stimulus.order
+        data['unambiguous'] = trial.stimulus.unambiguous
         data.pop('_state')
 
         data_list.append(data)
