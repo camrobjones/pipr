@@ -193,7 +193,7 @@ Intro: Lily was cooking / dinner for / her friends. / For a starter, / they were
 Setup: She was dashing / back and forth / between the kitchen / and the dining room / to keep / her guests / entertained while / she prepared / the food. /
 Critical: Lily put / {the cheese} / in the oven / with {the bread} / to warm up, / #but by / #the time / #she came back / #{it} had melted. /
 Critical Spillover: #Lily  quickly took / #everything out / of the oven / and placed it / on the counter. /
-Continuation: #She inspected / #the [cheese/bread] / #and saw that / #it hadn’t melted / #in the oven. /
+Continuation: She inspected / #the food / #and saw that / #the [cheese/bread] / #hadn’t melted / #in the oven. /
 Continuation Spillover: #She started / getting cutlery / out of / the drawer / to set / the table / for her guests.
 
 Questions:
@@ -215,11 +215,11 @@ Questions:
 Q: Ethan tipped the van driver $40.
 A: True
 17. Jayden heated the cookie along with the marshmallow over the campfire, but it melted before he had a chance to eat it.
-Intro: Jayden was / camping with / the cub scouts. / They were /  sitting around / the campfire, / eating sweet treats. / Jayden had / picked up / a marshmallow / and a cookie. /
+Intro: Jayden was / camping with / the cub scouts. / They were /  sitting around / the campfire, / eating sweet treats / and singing songs. / Jayden had / picked up / a marshmallow / and a cookie / from the selection / of treats. /
 Setup: A counsellor / helped him / attach the treats / to the end / of a skewer. /
 Critical: Jayden heated / {the cookie} / #along with / #{the marshmallow} / #over the campfire, / #but {it} melted / #before he had / #a chance / to eat it. /
-Critical Spillover: Jayden felt embarrassed, / but the counsellor / #consoled him. /
-Continuation: #Jayden quickly / #ate the [cookie/marshmallow], / #which hadn’t melted / #over the fire. /
+Critical Spillover: Jayden felt embarrassed, / but the counsellor / consoled him. /
+Continuation: #Jayden was / #glad that / #the [cookie/marshmallow], / #hadn’t melted / #over the fire. /
 Continuation Spillover: #Just then, / the group / started singing / “She’ll be Coming / Round the Mountain”.
 
 Questions:

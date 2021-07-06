@@ -1267,7 +1267,7 @@
             "continuation": "NP1",
             "unambiguous": 0,
             "item_id": "15_A_NP1_amb",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the cheese /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the cheese /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1278,7 +1278,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "15_A_NP1_un",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#the bread had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the cheese /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#the bread had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the cheese /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1289,7 +1289,7 @@
             "continuation": "NP2",
             "unambiguous": 0,
             "item_id": "15_A_NP2_amb",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the bread /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the bread /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1300,7 +1300,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "15_A_NP2_un",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#the cheese had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the bread /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the cheese \n/in the oven /with the bread /to warm up, /#but by /#the time \n/#she came back /#the cheese had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the bread /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1311,7 +1311,7 @@
             "continuation": "NP1",
             "unambiguous": 0,
             "item_id": "15_B_NP1_amb",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the bread /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the bread /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1322,7 +1322,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "15_B_NP1_un",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#the cheese had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the bread /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#the cheese had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the bread /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1333,7 +1333,7 @@
             "continuation": "NP2",
             "unambiguous": 0,
             "item_id": "15_B_NP2_amb",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the cheese /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#it had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the cheese /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         },
@@ -1344,7 +1344,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "15_B_NP2_un",
-            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#the bread had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/#She inspected /#the cheese /#and saw that /#it hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
+            "stimulus": "Lily was cooking /dinner for /her friends. /For a starter, \n/they were having /a selection /of cheeses /and homemade bread; \n/the main course /was a whole /roast duck; /and for dessert \n/she had prepared /a lemon pie. /She was dashing /back and forth \n/between the kitchen /and the dining room /to keep /her guests \n/entertained while /she prepared /the food. /Lily put /the bread \n/in the oven /with the cheese /to warm up, /#but by /#the time \n/#she came back /#the bread had melted. /#Lily  quickly took \n/#everything out /of the oven /and placed it /on the counter. \n/She inspected /#the food /#and saw that /#the cheese /#hadn\u2019t melted \n/#in the oven. /#She started /getting cutlery /out of /the drawer \n/to set /the table /for her guests. ",
             "question": "Lily was making spaghetti bolognese as a main course.",
             "qanswer": "False"
         }
@@ -1447,7 +1447,7 @@
             "continuation": "NP1",
             "unambiguous": 0,
             "item_id": "17_A_NP1_amb",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated /the cookie \n/#along with /#the marshmallow /#over the campfire, \n/#but it melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the cookie, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the cookie /#along with /#the marshmallow \n/#over the campfire, /#but it melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the cookie, /#hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1458,7 +1458,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "17_A_NP1_un",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated /the cookie \n/#along with /#the marshmallow /#over the campfire, \n/#but the marshmallow melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the cookie, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the cookie /#along with /#the marshmallow \n/#over the campfire, /#but the marshmallow melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the cookie, /#hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1469,7 +1469,7 @@
             "continuation": "NP2",
             "unambiguous": 0,
             "item_id": "17_A_NP2_amb",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated /the cookie \n/#along with /#the marshmallow /#over the campfire, \n/#but it melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the marshmallow, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the cookie /#along with /#the marshmallow \n/#over the campfire, /#but it melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the marshmallow, \n/#hadn\u2019t melted /#over the fire. /#Just then, /the group \n/started singing /\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1480,7 +1480,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "17_A_NP2_un",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated /the cookie \n/#along with /#the marshmallow /#over the campfire, \n/#but the cookie melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the marshmallow, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the cookie /#along with /#the marshmallow \n/#over the campfire, /#but the cookie melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the marshmallow, \n/#hadn\u2019t melted /#over the fire. /#Just then, /the group \n/started singing /\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1491,7 +1491,7 @@
             "continuation": "NP1",
             "unambiguous": 0,
             "item_id": "17_B_NP1_amb",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated \n/the marshmallow /#along with /#the cookie /#over the campfire, \n/#but it melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the marshmallow, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the marshmallow /#along with /#the cookie \n/#over the campfire, /#but it melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the marshmallow, \n/#hadn\u2019t melted /#over the fire. /#Just then, /the group \n/started singing /\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1502,7 +1502,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "17_B_NP1_un",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated \n/the marshmallow /#along with /#the cookie /#over the campfire, \n/#but the cookie melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the marshmallow, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the marshmallow /#along with /#the cookie \n/#over the campfire, /#but the cookie melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the marshmallow, \n/#hadn\u2019t melted /#over the fire. /#Just then, /the group \n/started singing /\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1513,7 +1513,7 @@
             "continuation": "NP2",
             "unambiguous": 0,
             "item_id": "17_B_NP2_amb",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated \n/the marshmallow /#along with /#the cookie /#over the campfire, \n/#but it melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the cookie, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the marshmallow /#along with /#the cookie \n/#over the campfire, /#but it melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the cookie, /#hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         },
@@ -1524,7 +1524,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "17_B_NP2_un",
-            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats. /Jayden had /picked up \n/a marshmallow /and a cookie. /A counsellor /helped him \n/attach the treats /to the end /of a skewer. /Jayden heated \n/the marshmallow /#along with /#the cookie /#over the campfire, \n/#but the marshmallow melted /#before he had /#a chance /to eat it. \n/Jayden felt embarrassed, /but the counsellor /#consoled him. \n/#Jayden quickly /#ate the cookie, /#which hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
+            "stimulus": "Jayden was /camping with /the cub scouts. /They were /sitting around \n/the campfire, /eating sweet treats /and singing songs. /Jayden had \n/picked up /a marshmallow /and a cookie /from the selection /of treats. \n/A counsellor /helped him /attach the treats /to the end /of a skewer. \n/Jayden heated /the marshmallow /#along with /#the cookie \n/#over the campfire, /#but the marshmallow melted /#before he had \n/#a chance /to eat it. /Jayden felt embarrassed, /but the counsellor \n/consoled him. /#Jayden was /#glad that /#the cookie, /#hadn\u2019t melted \n/#over the fire. /#Just then, /the group /started singing \n/\u201cShe\u2019ll be Coming /Round the Mountain\u201d. ",
             "question": "Jayden camping with his parents.",
             "qanswer": "False"
         }
