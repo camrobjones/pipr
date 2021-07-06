@@ -10,7 +10,7 @@ Continuation Spillover: #John apologised / profusely and / promised to pay / for
 Questions: 
 
 Q: John was shopping for antiques.
-A: true
+A: True
 
 2. When the steel sword collided with the glass sword, it broke.
 Intro: Alice had / started collecting / ornate swords / while she / was living / in Japan. / One day,/  she was showing / the collection / to her friend, / Erin. / They each / picked up one / of the swords: / Alice’s was / made of steel / while Erin’s was/  made of glass. / 
@@ -23,7 +23,7 @@ Continuation Spillover: Erin was / very grateful / to have / such a / carefree a
 Questions:
 
 Q: Alice had started her sword collection in China.
-A: false
+A: False
 3. When the baseball collided with the bat, it broke in two.
 Intro: Tyler was / playing baseball / for his / High School team. / His team / was in / the lead, / but only by / a small margin. / It was / Tyler’s turn / to bat. / He walked up / to the plate / and rested / his bat / on his shoulder. / The pitcher / hurled the ball. /
 Setup: Tyler concentrated hard, / tensed his muscles, / and swung confidently. /
@@ -35,7 +35,7 @@ Continuation Spillover: #Tyler’s coach / ran over / to check if / he was okay.
 Questions:
 
 Q: The umpire ran over to check he was okay.
-A: false
+A: False
 4. The pig was running alongside the cheetah, but then it sped up and pulled ahead.
 
 Intro: Anna and / her family / were at / the zoo. / Lots of / the animals / were in / mixed enclosures. / The anteaters / were living with / the chimpanzees / and the flamingos / were in with / the rhinos. / Anna stopped / to watch / a pig and / a cheetah, / which were / making their / way across / a shared enclosure. /
@@ -48,7 +48,7 @@ Continuation Spillover: #Just then, / Anna’s sister / pulled her away / to loo
 Questions:
 
 Q: The anteaters shared an enclosure with the chimpanzees.
-A: true
+A: True
 
 5. The car was going alongside the bicycle but then it sped up and pulled ahead.
 Intro: Larry was waiting / to cross / the street / to get to / his favorite / coffee shop. / He was / about to / step out into / the street / when he saw / a car / and a bicycle / coming toward him. /
@@ -61,7 +61,7 @@ Continuation Spillover: #Larry crossed / the road, / went into / the cafe, / and
 Questions:
 
 Q: Larry ordered a espresso.
-A: false
+A: False
 6. Hannah put the brick next to the feather, but the wind blew it away.
 
 Intro: Hannah was out / for a walk / in the forest / after a / stressful day. / She liked to / take her mind / off her problems / by collecting / interesting objects / she found / on her travels. / She had found / a brick / that someone / had painted purple, / and a feather / from a bird / she didn’t recognise. /
@@ -74,7 +74,7 @@ Continuation Spillover: #It was starting / to get dark / and she needed / to be 
 Questions:
 
 Q: Hannah was out walking in the forest.
-A: true
+A: True
 
 7. Alyssa packed the can of tomatoes in the same bag as the lime, and on her walk home from the store it got crushed.
 
@@ -88,7 +88,7 @@ Continuation Spillover: #Alyssa washed / her hands / and started / to prepare / 
 Questions:
 
 Q: Alyssa was making a potato salad.
-A: false
+A: False
 
 8. Sam put the concrete box next to the styrofoam box, but the wind blew it away.
 
@@ -102,7 +102,7 @@ Continuation Spillover: #Sam apologized / and said / he would be / more careful 
 Questions:
 
 Q: Sam’s job was to accept deliveries.
-A: true
+A: True
 9. When Chloe threw the rock at the egg, it cracked.
 
 Intro: Chloe lived / on a farm / with her parents. / Her parents / had just / told her / that she / was grounded / for a week, / and she / was throwing / a tantrum. / She marched / out of / the door / and down to / the chicken coop, / where she saw / a large rock / and a loose egg / lying on / the floor. /
@@ -115,7 +115,7 @@ Continuation Spillover: #When her / parents arrived, / they told Chloe / that sh
 Questions:
 
 Q: Chloe’s punishment was to not be allowed dessert.
-A: false
+A: False
 
 10. Gabriel put the plate in the oven with the bread to warm up, but after a couple of minutes it was burned to a crisp.
 
@@ -129,7 +129,7 @@ Continuation Spillover: #He turned / the oven off / and went to / the living roo
 Questions:
 
 Q: Gabriel went to go and set up the projector.
-A: true
+A: True
 
 
 11. When Ryan left his key in the bag with his laptop, it came out with scratches all over it.
@@ -144,7 +144,7 @@ Continuation Spillover: #Ryan was / relieved that / his friend suggested / order
 Questions:
 
 Q: Ryan spilt his coffee on his pants.
-A: false
+A: False
 
 12. The bowling ball collided with the soccer ball, which was flying in the opposite direction. It was knocked completely off course.
 
@@ -158,7 +158,7 @@ Continuation Spillover: #When the balls / landed on / the ground / they made / a
 Questions:
 
 Q: The games room contained a dart board.
-A: true
+A: True
 
 13. When the vase fell on the rock, it broke.
 
@@ -172,7 +172,7 @@ Continuation Spillover: #A tall lamp / had also / fallen over, / but it / was st
 Questions:
 
 Q: Jennifer had a marble bust of Aristotle.
-A: false
+A: False
 14. Sofia placed the teacup next to the wine bottle, but it fell over when a passerby bumped into the table.
 
 Intro: Sofia was hosting / a small party / in her apartment / for her birthday. / She went to / the kitchen / to pour herself / a glass / of wine, / but couldn’t find / any glasses, / so she had / to use / a teacup instead. / She wandered / back to / the living room, / bringing the wine bottle / with her. /
@@ -185,7 +185,7 @@ Continuation Spillover: #She went back / through to / the kitchen / to dispose o
 Questions:
 
 Q: The party was for Sofia’s birthday.
-A: true
+A: True
 
 15. Lily put the cheese in the oven with the bread to warm up, but by the time she came back it had melted.
 
@@ -199,7 +199,7 @@ Continuation Spillover: #She started / getting cutlery / out of / the drawer / t
 Questions:
 
 Q: Lily was making spaghetti bolognese as a main course.
-A: false
+A: False
 
 16. Ethan put the steel box next to the cardboard box in the moving van and after an hour's drive on the bumpy road, it got crushed.
 
@@ -213,7 +213,7 @@ Continuation Spillover: #Ethan tipped / the van driver / $40 and / thanked him /
 Questions:
 
 Q: Ethan tipped the van driver $40.
-A: true
+A: True
 17. Jayden heated the cookie along with the marshmallow over the campfire, but it melted before he had a chance to eat it.
 Intro: Jayden was / camping with / the cub scouts. / They were /  sitting around / the campfire, / eating sweet treats. / Jayden had / picked up / a marshmallow / and a cookie. /
 Setup: A counsellor / helped him / attach the treats / to the end / of a skewer. /
@@ -225,7 +225,7 @@ Continuation Spillover: #Just then, / the group / started singing / “She’ll 
 Questions:
 
 Q: Jayden camping with his parents.
-A: false
+A: False
 18. Daniel packed the fork into his lunchbox along with the napkin. On his walk to work, he could hear it rattling around inside.
 Intro: Daniel had slept / through his alarm / and was / in a rush / to get to work. / Fortunately, / his wife / had already / prepared his lunch. / She had even / left a fork / and a napkin / on the table / next to / his lunchbox. /
 Setup: He was / incredibly grateful, / given how late / he was running. /
@@ -237,7 +237,7 @@ Continuation Spillover: #He put / the box / back in / his bag / and hurried away
 Questions:
 
 Q: Daniel’s wife had prepared his lunch.
-A: true
+A: True
 19. The truck lost control and crashed into the oncoming bicycle. All that was left of it was a crushed heap of metal.
 Intro: Matt was trying / to cross / the street / to get to / his favorite / taco place. / He was waiting / for the traffic / to quiet down / and give him / an opportunity / to dash across. / Just when / he thought / he might / have a chance, / he saw / a truck / coming toward him / from the left, / and a bicycle / approaching from / the right. /
 Setup: Matt gave / a glum sigh / and watched / the vehicles / as they sped / toward each other. /
@@ -249,7 +249,7 @@ Continuation Spillover: #Fortunately, / nobody had / been hurt.
 Questions:
 
 Q: Matt was trying to visit his favorite sushi restaurant.
-A: false
+A: False
 20. Chris placed the book next to the soccer ball on the grassy hill, but it rolled away down the slope.
 
 Intro: Chris walked / out to / the park / to meet / his friends. / He had brought / a soccer ball / for them / to play with / when they arrived. / He also had / a book / with him / to read / while he waited. /
@@ -262,7 +262,7 @@ Continuation Spillover: #He got up / and walked over / to greet / his friends.
 Questions:
 
 Q: Chris was meeting his friends in a park.
-A: true
+A: True
 
 21. Mary tried to pack the apple, along with the melon, into the jar, but it wouldn't fit.
 Intro: Mary was planning / to hike  / up to / a local waterfall, / and wanted / to make sure / she didn’t / get hungry. / So she packed / a bag / to take / with her. / She decided / to bring / a flask / of coffee, / a cheese sandwich, / a melon, / and an apple. /
@@ -275,7 +275,7 @@ Continuation Spillover: #As she / set off, / the sun / was just beginning / to r
 Questions:
 
 Q: Mary was planning to hike up to a local waterfall.
-A: true
+A: True
 22. Sarah tried to climb up the wall, with one hand on the window ledge and the other on the drainpipe, but it gave way.
 
 Intro: Sarah had left / her keys inside, / her apartment / and was / going to / try to / climb up / to an /open window. / She would / have to / pull herself / up using / a drainpipe / on one / side and / a window ledge / on the other. /
@@ -288,7 +288,7 @@ Continuation Spillover: #She wedged / her foot / on a / protruding brick, / and 
 Questions:
 
 Q: Sarah’s apartment was on the fourth floor.
-A: false
+A: False
 
 23. When the peach collided with the coconut, it was smashed to pieces.
 
@@ -302,7 +302,7 @@ Continuation Spillover: #He looked up / and saw Olivia / preparing to / splatter
 Questions:
 
 Q: Toby was hiding behind a low wall.
-A: true
+A: True
 
 24. When the rock collided with the ornament, it shattered.
 
@@ -316,7 +316,7 @@ Continuation Spillover: #Adam ran / out of / the room / before Jack / could thro
 Questions:
 
 Q: Jack ran out of the room.
-A: false
+A: False
 25. Ben packed his shirt in the same suitcase as his mug. When he took it out it was broken.
 Intro: Ben was preparing / to go away / for a conference. / He had picked / out a shirt / to wear / for his presentation, / and a coffee mug / in case / his hotel room / didn’t have one. / 
 Setup: He checked / the time / and realized / he had / to catch / the bus / to the  /convention center / in just / 15 minutes. /
@@ -328,7 +328,7 @@ Continuation Spillover:  #Ben went down / to the hotel foyer / to meet / the oth
 Questions:
 
 Q: Ben went down to the foyer after he unpacked.
-A: true
+A: True
 
 26. Charlotte packed her shirt in the same suitcase as her book. When she took it out, it was creased.
 
@@ -342,7 +342,7 @@ Continuation Spillover:  #After an hour, / she went downstairs / to meet Laura /
 Questions:
 
 Q: Charlotte was going away to Miami.
-A: false
+A: False
 27. Noah put his keys away in his pocket with his coins, but on his walk home they made a hole in the lining.
 Intro: Noah was out / at the arcade / with his friends. / It was starting / to get late / and he was / playing tennis / early the next day. / He decided / it was time / to leave. / He made sure / to collect / all of / his belongings: / his phone, / his coins, / and his keys. /
 Setup: He said farewell / to his friends / and started / to head home. /
@@ -354,7 +354,7 @@ Continuation Spillover:  #He resolved / to mend / his pants / before he / went o
 Questions:
 
 Q: Noah resolved to mend his pants the next day.
-A: false
+A: False
 
 28. When the racquet collided with the tennis ball, it bounced back and hit Josh in the face.
 Intro: Josh and Paula / were playing tennis. / Paula was / about to serve, / and Josh was / completely unprepared, / looking down / at his phone. / Paula began / her wind-up / and tossed / the ball / in the air. / Josh looked up / and was startled. / He hurried / to get / the racquet / in front / of his body. / 
@@ -367,7 +367,7 @@ Continuation Spillover:  Paula felt bad / and rushed over / to check that / Josh
 Questions:
 
 Q: Josh hurt his eye.
-A: false
+A: False
 
 29. Natalie regretted putting the chocolate bar in her pocket with her phone: when she took it out, it had melted.
 Intro: It was lunchtime, / and Natalie decided / to get out / of the office / for an hour / and eat / in the park. / She picked up / her lunch / and put / her phone and / a chocolate bar / away in / her pocket. / The park / was busy / with other people / milling around / and enjoying / the weather. /
@@ -380,7 +380,7 @@ Continuation Spillover:  #She finished eating / her lunch, / and started / walki
 Questions:
 
 Q: Natalie went to the park to eat her lunch.
-A: true
+A: True
 30. Alice stuffed a banana in her pocket with her wallet. When she took it out, it was squashed.
 
 Intro: Alice was / running late for / a hair appointment. / As she / was looking for / her wallet, / she spotted / a banana / on the / kitchen table. /
@@ -393,4 +393,4 @@ Continuation Spillover: #Just then, / the hairdresser / called her over / and as
 Questions:
 
 Q: Alice on her way to a doctor’s appointment.
-A: false
+A: False

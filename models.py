@@ -35,14 +35,14 @@ class Participant(models.Model):
     birth_year = models.IntegerField(blank=True, null=True)
     gender = models.CharField(blank=True, null=True, max_length=2)
     handedness = models.CharField(blank=True, null=True, max_length=10)
+    conditions = models.CharField(blank=True, null=True, max_length=10)
+    vision = models.CharField(blank=True, null=True, max_length=10)
 
     # Feedback
     post_test_purpose = models.TextField(default="")
-    post_test_correct = models.TextField(default="")
-    post_test_rule = models.TextField(default="")
+    post_test_inconsistent = models.TextField(default="")
     post_test_pronoun = models.TextField(default="")
-    post_test_syntax = models.TextField(default="")
-    post_test_semantics = models.TextField(default="")
+    post_test_example = models.TextField(default="")
     post_test_other = models.TextField(default="")
 
 

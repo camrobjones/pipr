@@ -94,23 +94,19 @@
 
             <h3 class='question-title'>Have you ever been diagnosed with any of the following conditions?</h3>
 
+            <p class='question-subtitle'>Dyslexia, austism spectrum disorder, attention deficit hyperactivity disorder</p>
+
             
             <div class='radio-option'>
-                <input type='checkbox' name='demographics_conditions' id='adhd'
-                value="adhd"/>
-                <label for='adhd'>Attention deficit hyperactivity disorder</label>
+                <input type='radio' name='demographics_conditions' id='demographics_conditions_yes'
+                value="yes"/>
+                <label for='demographics_conditions_yes'>Yes</label>
             </div>
 
             <div class='radio-option'>
-                <input type='checkbox' name='demographics_conditions' id='dyslexia'
-                value="dyslexia"/>
-                <label for='dyslexia'>Dyslexia</label>
-            </div>
-
-            <div class='radio-option'>
-                <input type='checkbox' name='demographics_conditions' id='asd'
-                value="asd"/>
-                <label for='asd'>Autism spectrum disorder</label>
+                <input type='radio' name='demographics_conditions' id='demographics_conditions_no'
+                value="no"/>
+                <label for='demographics_conditions_yes'>No</label>
             </div>
 
         </div>
@@ -121,9 +117,15 @@
 
             
             <div class='radio-option'>
-                <input type='checkbox' name='demographics_vision' id='vision'
-                value="vision"/>
-                <label for='vision'>Yes</label>
+                <input type='radio' name='demographics_vision' id='demographics_vision_yes'
+                value="yes"/>
+                <label for='demographics_vision_yes'>Yes</label>
+            </div>
+
+            <div class='radio-option'>
+                <input type='radio' name='demographics_vision' id='demographics_vision_no'
+                value="no"/>
+                <label for='demographics_vision_yes'>No</label>
             </div>
 
         </div>

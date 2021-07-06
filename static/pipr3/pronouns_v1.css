@@ -221,6 +221,10 @@ input[type="radio" i] {
     margin: 3px 7px 3px 3px;
 }
 
+input[type="checkbox" i] {
+    margin: 3px 7px 3px 3px;
+}
+
 div#language-box-container {
     overflow-x: scroll;
     padding: 10px;

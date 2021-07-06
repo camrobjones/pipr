@@ -174,7 +174,9 @@ var template = document.querySelector('#demographics');
 /* --- Progress Bar --- */
 
 // Initialise variables
-var total_trials = 15 + stimuli.length;
+var total_trials = 13 + stimuli.length;
+
+// welcome, consent, instr, p1, p2, eop, stimuli, end_trials, demo, post * 5
 
 var current_trial = 0;
 
@@ -719,7 +721,7 @@ var post_test_purpose = {
 };
 
 
-var post_test_correct = {
+var post_test_inconsistent = {
 
   // Post Test Questionnaire
   type: "survey-html-form",
@@ -727,35 +729,13 @@ var post_test_correct = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you think that any of the questions had more than one correct
-      answer? Why or why not?
+      Did you think that any of the passages contained information that was
+      potentially inconsistent or contradictory? If so, what sort of 
+      examples did you notice and how did you resolve the inconsistency.
     </h3>
   
-    <textarea class="form-control feedback" id="post_test_correct"
-    name="post_test_correct" required></textarea>
-
-  </div>`,
-  choices: jsPsych.NO_KEYS,
-  data: {trial_part: 'post_test'},
-  on_finish: function() {
-    updateProgress();
-  }
-};
-
-
-var post_test_rule = {
-
-  // Post Test Questionnaire
-  type: "survey-html-form",
-  html: `<h3 class='title'>Feedback</h3>
-
-  <div class='question'>
-    <h3 class='question-title'>
-      Did you notice using any particular strategies to make your choices?
-    </h3>
-  
-    <textarea class="form-control feedback" id="post_test_rule"
-    name="post_test_rule" required></textarea>
+    <textarea class="form-control feedback" id="post_test_inconsistent"
+    name="post_test_inconsistent" required></textarea>
 
   </div>`,
   choices: jsPsych.NO_KEYS,
@@ -774,8 +754,9 @@ var post_test_pronoun = {
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you notice that some questions involved deciding what a given
-      pronoun (e.g. "he", "she", "it") referred to?
+      Did you notice that some of the passages contained
+      pronouns (e.g. "he", "she", "it") that could be interpreted
+      in more than one way?
     </h3>
   
     <textarea class="form-control feedback" id="post_test_pronoun"
@@ -790,42 +771,28 @@ var post_test_pronoun = {
 };
 
 
-var post_test_syntax = {
+var post_test_example = {
   // Post Test Questionnaire
   type: "survey-html-form",
   html: `<h3 class='title'>Feedback</h3>
 
   <div class='question'>
     <h3 class='question-title'>
-      Did you notice that the position of words in the sentence
-      influenced your answers? If so, how?
+      Some of the passages contained sections like the following:
     </h3>
-  
-    <textarea class="form-control feedback" id="post_test_syntax"
-    name="post_test_syntax" required></textarea>
 
-  </div>`,
-  choices: jsPsych.NO_KEYS,
-  data: {trial_part: 'post_test'},
-  on_finish: function() {
-    updateProgress();
-  }
-};
+    <p class='question-subtitle'>
+      When the glass plate fell on the steel plate, it broke. ... 
+      Fortunately the glass plate was completely unharmed on the floor
+    </p>
 
-
-var post_test_semantics = {
-  // Post Test Questionnaire
-  type: "survey-html-form",
-  html: `<h3 class='title'>Feedback</h3>
-
-  <div class='question'>
     <h3 class='question-title'>
-      Did you notice thinking about how the scenarios would 
-      play out in the real world to make your choices?
+      Does this passage seem inconsistent to you? How did you understand  
+      what had happened in passages like this?
     </h3>
-  
-    <textarea class="form-control feedback" id="post_test_semantics"
-    name="post_test_semantics" required></textarea>
+
+    <textarea class="form-control feedback" id="post_test_example"
+    name="post_test_example" required></textarea>
 
   </div>`,
   choices: jsPsych.NO_KEYS,
@@ -932,8 +899,8 @@ function addStimulus(timeline, trial_info, trial_part) {
         choices : FIX_CHOICES,
         font_family : "Roboto Mono",
         font_size : 26,
-        width : MIN_WIDTH,
-        height : MIN_HEIGHT,
+        width : 950,
+        height : 600,
         trial_duration : FIX_DUR,
         data : {
             id : trial_info.id,
@@ -950,8 +917,8 @@ function addStimulus(timeline, trial_info, trial_part) {
         font_color : "rgb(0, 0, 0)", // black
         font_family : "Open Sans",
         font_size : 26,
-        width : MIN_WIDTH,
-        height : MIN_HEIGHT,
+        width : 950,
+        height : 600,
         post_trial_gap : ISI,
         grouping_string : GROUPING_STRING,
         data : {
@@ -964,7 +931,8 @@ function addStimulus(timeline, trial_info, trial_part) {
             unambiguous: trial_info.unambiguous,
             trial_part: trial_part,
             uil_save : true
-        }
+        },
+        on_finish: updateProgress
     }
 
     timeline.push(fixcross);
@@ -1040,13 +1008,10 @@ timeline.push(post_practice);
 // Add trial procedure
 addStimuliToTimeline(timeline, list_1, "trial");
 
-timeline.push(end_trials, demographics, post_test_purpose);
-
-// Extra post test for syntax & expt condition
-
-// timeline.push(post_test_correct, post_test_rule, post_test_pronoun,
-              // post_test_syntax, post_test_semantics, post_test_other);
-timeline.push(post_test_other);
+// Post-test questions
+timeline.push(end_trials, demographics, post_test_purpose,
+              post_test_inconsistent, post_test_pronoun,
+              post_test_example, post_test_other);
 
 // End fullscreen for non-touch
 timeline.push(end_fullscreen);
@@ -1070,9 +1035,31 @@ window.addEventListener('popstate', function (event)
 /* --- Launch jsPsych --- */
 window.onload = function() {
 
-  jsPsych.init({
-    timeline: timeline,
-    experiment_width: 950,
-    display_element: "expt-container",
-  });
+  if (! isTouch) {
+
+    jsPsych.init({
+      timeline: timeline,
+      experiment_width: 950,
+      display_element: "expt-container",
+      exclusions: {
+                    min_width : MIN_WIDTH,
+                    min_height : MIN_HEIGHT
+                },
+    });
+
+  } else { // or bail out.
+        let paragraph = document.getElementById("expt-container");
+        paragraph.innerHTML = 
+        `
+        <div class='instructions-container'>
+          <h2 class='instructions-header'>
+            Mobile or Tablet detected
+          </h2>
+
+          <p class='instructions'>
+            Please run this experiment on a desktop or laptop computer, not a mobile or tablet.
+          </p>
+        </div>
+      `;
+    }
 };

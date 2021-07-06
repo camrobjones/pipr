@@ -312,6 +312,8 @@ def save_results(request):
     ppt.birth_year = demo_data.get('demographics_year') or None
     ppt.gender = demo_data.get('demographics_gender')
     ppt.handedness = demo_data.get('demographics_handedness')
+    ppt.conditions = demo_data.get('demographics_conditions')
+    ppt.vision = demo_data.get('demographics_vision')
 
     # Get matches
     lang_matches = [re.match(LANGUAGE_REGEX, l) for l in demo_data]
