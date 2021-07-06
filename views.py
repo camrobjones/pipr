@@ -119,7 +119,7 @@ def get_stimuli(limit=None, cond=None):
         item = random.choice(versions)
 
         # Randomly present questions
-        if random.random() < QUESTION_PROP:
+        if random.random() > QUESTION_PROP:
             item["question"] = ""
             item["qanswer"] = ""
 
@@ -143,7 +143,7 @@ def get_stimuli_by_list(list_idx, limit=None):
     for item in stimuli:
 
         # Randomly present questions
-        if random.random() < QUESTION_PROP:
+        if random.random() > QUESTION_PROP:
             item["question"] = ""
             item["qanswer"] = ""
 
