@@ -28,7 +28,7 @@ class Participant(models.Model):
 
     # Experiment
     start_time = models.DateTimeField(auto_now_add=True)
-    condition = models.IntegerField(blank=True, null=True)
+    list_idx = models.IntegerField(blank=True, null=True)
     end_time = models.DateTimeField(blank=True, null=True)
 
     # Demographics

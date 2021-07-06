@@ -47,6 +47,11 @@ SYLL_MS = 191  # Source: https://doi.org/10.1167/iovs.11-8284
 SYLL_MS = 30  # Source: https://doi.org/10.1167/iovs.11-8284
 READING_TIME_BASE = 250  # Thinking time buffer
 
+NO_LISTS = 8
+
+# What % of passages have comp questions
+QUESTION_PROP = 1/3
+
 
 """
 Helper functions
@@ -80,6 +85,21 @@ def get_reading_time(text, syll_ms=SYLL_MS):
     return reading_time
 
 
+def get_list_idx():
+    """Generate list index for new participant"""
+
+    # Get most recent ppt
+    last_ppt = Participant.objects.last()
+
+    # Increment last list idx if it exists
+    if last_ppt:
+        last_idx = last_ppt.list_idx
+
+        return (last_idx + 1) % NO_LISTS
+
+    return 0
+
+
 """
 Load Data
 ---------
@@ -98,15 +118,8 @@ def get_stimuli(limit=None, cond=None):
         # Choose one of two orders
         item = random.choice(versions)
 
-        # Randomize order of responses
-        # item["question"]["reversed"] = random.random() > 0.5
-
-        # Modify to fit UiM format
-        item["stimulus"] = item.pop("passage")
-        item["item_type"] = "ACTIVE"
-
-        # Randomly present q 1/3 time
-        if random.random() > 2/3:
+        # Randomly present questions
+        if random.random() < QUESTION_PROP:
             item["question"] = ""
             item["qanswer"] = ""
 
@@ -117,6 +130,28 @@ def get_stimuli(limit=None, cond=None):
     out = random.sample(out, k=limit)
 
     return out
+
+
+def get_stimuli_by_list(list_idx, limit=None):
+    """Get a specific list of stimuli for the ppt"""
+    with open(MODULE_NAME + "/data/stimuli_lists.json") as f:
+        data = json.load(f)
+
+    # Select one list
+    stimuli = data[list_idx]
+
+    for item in stimuli:
+
+        # Randomly present questions
+        if random.random() < QUESTION_PROP:
+            item["question"] = ""
+            item["qanswer"] = ""
+
+    # Shuffle & limit
+    limit = limit or len(stimuli)
+    stimuli = random.sample(stimuli, k=limit)
+
+    return stimuli
 
 
 def ua_data(request):
@@ -146,6 +181,9 @@ def init_ppt(request):
     # Create key
     key = generate_key()
 
+    # Get list index
+    list_idx = get_list_idx()
+
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
         ip = x_forwarded_for.split(',')[0]
@@ -153,7 +191,7 @@ def init_ppt(request):
         ip = request.META.get('REMOTE_ADDR', "")
 
     ppt = Participant.objects.create(
-        key=key, ip_address=ip, condition=1)
+        key=key, ip_address=ip, list_idx=list_idx)
 
     ppt.SONA_code = sona_code
 
@@ -182,7 +220,7 @@ def expt(request):
     ppt = init_ppt(request)
 
     # Get experimental items
-    items = get_stimuli(limit=limit)
+    items = get_stimuli_by_list(list_idx=ppt.list_idx, limit=limit)
 
     # Create view context
     conf = {"key": ppt.key, "ppt_id": ppt.id}

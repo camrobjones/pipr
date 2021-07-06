@@ -98,15 +98,43 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
 
     version_data = {"sent_id": sent_id,
                     "order": order,
+                    "item_type": "ACTIVE",
                     "continuation": continuation,
                     "unambiguous": unambiguous,
-                    "item_id": f"{i+1}_{order}_{continuation}_{am_str}",
-                    "passage": passage,
+                    "item_id": f"{sent_id}_{order}_{continuation}_{am_str}",
+                    "stimulus": passage,
                     "question": question,
                     "qanswer": answer
                     }
 
     return version_data
+
+
+def create_lists(stimuli):
+    """Create lists counterbalanced across conditions
+    """
+    # Get no of unique versions
+    n_lists = len(stimuli[0])
+
+    # Initialize list of lists
+    lists = []
+
+    for list_index in range(n_lists):
+
+        # Initialize version index as list_index
+        version_index = list_index
+        current_list = []
+
+        for item in stimuli:
+
+            current_list.append(item[version_index])
+
+            # Increment index by 1 mod n_lists
+            version_index = (version_index + 1) % n_lists
+
+        lists.append(current_list)
+
+    return lists
 
 
 with open("pipr3/data/stims_raw.txt") as f:
@@ -166,5 +194,11 @@ for i, sec in enumerate(stim_secs):
     # Add both versions to master list
     stimuli_list.append(version_list)
 
+# Save stim versions
 with open("pipr3/data/stimuli.json", "w") as f:
     json.dump(stimuli_list, f, indent=4)
+
+# Create and save lists
+lists = create_lists(stimuli_list)
+with open("pipr3/data/stimuli_lists.json", "w") as f:
+    json.dump(lists, f, indent=4)

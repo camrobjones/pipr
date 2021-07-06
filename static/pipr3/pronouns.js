@@ -278,18 +278,18 @@ var instructions = {
     </h2>
     <p class='instructions'>
       In this experiment, you will be asked to read short 
-      passages on the screen. Each passage has been broken up into
+      passages. Each passage has been broken up into
       small groups of words. You can reveal the next group of words
-      by repeatedly pressing the space bar. Your task is to silently
-      read each passage by reading each group of words and pressing
+      by pressing the space bar. Your task is to silently
+      read each passage by repeatedly reading each group of words and pressing
       the space bar until you finish the passage. Please read each
-      passage only once at your normal reading speed.
+      passage your normal reading speed.
     </p>
 
     <p class='instructions'>
       After some of the passages, a statement will appear on the screen.
       You will then have to indicate whether the statment is true or false.
-      You can do this using the 'true' and 'false' buttons on the screen.
+      You can do this using the 'True' and 'False' buttons on the screen.
       Therefore it is important that you read each passage carefully and
       understand what it describes.
     </p>
