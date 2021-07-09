@@ -3,9 +3,9 @@
 Intro:  John was shopping / for antiques. / He was trying / to decide between / a beautiful / hand-blown / glass plate / and an / intricately decorated / steel plate. / John leaned forward / to examine / the plates / on the shelf. /
 Setup: He briefly lost / his balance / and knocked / into the shelf / which caused / the plates / to fall / to the floor. / 
 Critical: When / #{the steel plate }/ #fell on / #{the glass plate }, / #{it} broke. /
-Critical Spillover: #John felt terrible / #and the / store attendant / came rushing / over to / see what / #had happened. / 
-Continuation: #Thankfully, /#[steel/glass] plate / #was completely unharmed / #on the floor. /
-Continuation Spillover: #John apologised / profusely and / promised to pay / for the damage.
+Critical Spillover: #John felt terrible / #and the / #store attendant / came rushing / over to / see what / #had happened. / 
+Continuation: #Thankfully, / #the [steel/glass] plate / #was completely unharmed / #on the floor. /
+Continuation Spillover: #John apologised / #profusely and / promised to pay / for the damage.
 
 Questions: 
 
@@ -16,9 +16,9 @@ A: True
 Intro: Alice had / started collecting / ornate swords / while she / was living / in Japan. / One day,/  she was showing / the collection / to her friend, / Erin. / They each / picked up one / of the swords: / Alice’s was / made of steel / while Erin’s was/  made of glass. / 
 Setup: They hit / the swords / together in / mock combat. /
 Critical: When / #{the steel sword} / #collided with/  #{the glass sword}, / #{it} broke. /
-Critical Spillover: #Erin looked mortified / #about what / had happened. /
+Critical Spillover: #Erin looked mortified / #about what / #had happened. /
 Continuation: Alice simply laughed / #and said / #“At least / #the [glass/steel] sword / #is okay / #after #that clash!” /
-Continuation Spillover: Erin was / very grateful / to have / such a / carefree and / supportive friend.
+Continuation Spillover: #Erin was / #very grateful / to have / such a / carefree and / supportive friend.
 
 Questions:
 
@@ -28,9 +28,9 @@ A: False
 Intro: Tyler was / playing baseball / for his / High School team. / His team / was in / the lead, / but only by / a small margin. / It was / Tyler’s turn / to bat. / He walked up / to the plate / and rested / his bat / on his shoulder. / The pitcher / hurled the ball. /
 Setup: Tyler concentrated hard, / tensed his muscles, / and swung confidently. /
 Critical: #When {the baseball} / #collided with / #{the bat}, / #{it} broke / #in two. /
-Critical Spillover: #Tyler was shocked / and took / several seconds / to process / what had happened. /
+Critical Spillover: #Tyler was shocked / #and took / several seconds / to process / what had happened. /
 Continuation: He looked over / #to see that / #the [baseball/bat] / #was still / #in one piece / #after the collision. /
-Continuation Spillover: #Tyler’s coach / ran over / to check if / he was okay.
+Continuation Spillover: #Tyler’s coach / #ran over / to check if / he was okay.
 
 Questions:
 
@@ -41,9 +41,9 @@ A: False
 Intro: Anna and / her family / were at / the zoo. / Lots of / the animals / were in / mixed enclosures. / The anteaters / were living with / the chimpanzees / and the flamingos / were in with / the rhinos. / Anna stopped / to watch / a pig and / a cheetah, / which were / making their / way across / a shared enclosure. /
 Setup: There was / plenty of / space  for / the animals / to move / around inside. /
 Critical:  {the pig} was / running alongside / #{the cheetah}, / #but then / #{it} sped up / #and pulled ahead. /
-Critical Spillover: #Anna looked over / #and saw / one of / the zoo staff / entering the enclosure. /
+Critical Spillover: #Anna looked over / #and saw / #one of / the zoo staff / entering the enclosure. /
 Continuation: When she / #looked back, / #the [pig/cheetah] / #was still / #trailing behind / #by several feet. /
-Continuation Spillover: #Just then, / Anna’s sister / pulled her away / to look at / the koalas.
+Continuation Spillover: #Just then, / #Anna’s sister / pulled her away / to look at / the koalas.
 
 Questions:
 
@@ -54,9 +54,9 @@ A: True
 Intro: Larry was waiting / to cross / the street / to get to / his favorite / coffee shop. / He was / about to / step out into / the street / when he saw / a car / and a bicycle / coming toward him. /
 Setup: He stepped back / in alarm / and watched / the vehicles pass. /
 Critical: {the bicycle} / was going alongside / #{the car} / #but then / #{it} sped up / #and pulled ahead. /
-Critical Spillover: #Larry paused  carefully / #this time / and looked / left and right. /
+Critical Spillover: #Larry paused  carefully / #this time / #and looked / left and right. /
 Continuation: #He saw / #the [bicycle/car] / #was still / #trailing behind / #by several yards. /
-Continuation Spillover: #Larry crossed / the road, / went into / the cafe, / and ordered / a cappuccino.
+Continuation Spillover: #Larry crossed / #the road, / went into / the cafe, / and ordered / a cappuccino.
 
 Questions:
 
@@ -67,9 +67,9 @@ A: False
 Intro: Hannah was out / for a walk / in the forest / after a / stressful day. / She liked to / take her mind / off her problems / by collecting / interesting objects / she found / on her travels. / She had found / a brick / that someone / had painted purple, / and a feather / from a bird / she didn’t recognise. /
 Setup: She took / the objects out / and placed them / on the ground / to admire them. /
 Critical: Hannah put / {the brick} / #next to / #{the feather}, / #but the wind / #blew {it} away. /
-Critical Spillover: #Hannah stared miserably / #out into / the distance. /
+Critical Spillover: #Hannah stared miserably / #out into / #the distance. /
 Continuation: #She opened / #her bag / #and picked up / #the [brick/feather] / #with a sigh. /
-Continuation Spillover: #It was starting / to get dark / and she needed / to be getting home.
+Continuation Spillover: #It was starting / #to get dark / and she needed / to be getting home.
 
 Questions:
 
@@ -78,12 +78,12 @@ A: True
 
 7. Alyssa packed the can of tomatoes in the same bag as the lime, and on her walk home from the store it got crushed.
 
-Intro: Alyssa’s friend Adam / was coming over / for dinner, / and she / had decided / to make / a potato curry. / She made / a list / of everything / she needed: / potatoes, rice, / a lime, / and a can / of chopped tomatoes. / She then went / down to / the store / to pick / everything up. /
+Intro: Alyssa’s friend Adam / was coming over / for dinner, / and she / had decided / to make / a potato curry. / She went to / the store / to pick up / some ingredients: / potatoes, rice, / a lime, / and a can / of chopped tomatoes.
 Setup: She was / running late / by the time / she got to / the checkout / and she / packed away / the items / in a rush. /
 Critical: Alyssa packed / {the can of tomatoes} / in the same / bag as / {the lime}, / #and on / #her walk home / #from the store / #{it} got crushed. /
-Critical Spillover: Alyssa carefully / unpacked all / of the items / and placed them / #on the table. /
+Critical Spillover: #Alyssa carefully / #unpacked all / #of the items / and placed them / #on the table. /
 Continuation: #Fortunately, / #the [can of tomatoes/lime] / #hadn’t been crushed / #on the walk. /
-Continuation Spillover: #Alyssa washed / her hands / and started / to prepare / the food.
+Continuation Spillover: #Alyssa washed / #her hands / and started / to prepare / the food.
 
 Questions:
 
@@ -92,12 +92,12 @@ A: False
 
 8. Sam put the concrete box next to the styrofoam box, but the wind blew it away.
 
-Intro: Sam was / working on / a building site. / His job / was to accept / deliveries of materials, / unpack them, / and update / the inventory. / That morning, / they had received / two boxes / which would / be used / in different parts / of the building. / One of / the boxes / was made / of concrete / and the other / was made / of styrofoam. /
+Intro: Sam was / working on / a building site. / His job / was to / accept deliveries / of materials, / and unpack them. / That morning, / they received / two boxes: / one of / the boxes / was made / of concrete / and the other / was made / of styrofoam. /
 Setup: He decided / to put / both of / the boxes / away at / the edge / of the site. /
 Critical: Sam put / {the concrete box} / #next to / #{the styrofoam box}, / #but the wind / #blew {it} away. /
-Critical Spillover: #Sam quickly / #ran to tell / his supervisor / what had happened. /
+Critical Spillover: #Sam quickly / #ran to tell / #his supervisor / what had happened. /
 Continuation: The supervisor / #was furious, / #but relieved  that / #the [concrete/styrofoam] box / #hadn’t moved / #in the wind. /
-Continuation Spillover: #Sam apologized / and said / he would be / more careful / in future. 
+Continuation Spillover: #Sam apologized / #and said / he would be / more careful / in the future. 
 
 Questions:
 
@@ -108,9 +108,9 @@ A: True
 Intro: Chloe lived / on a farm / with her parents. / Her parents / had just / told her / that she / was grounded / for a week, / and she / was throwing / a tantrum. / She marched / out of / the door / and down to / the chicken coop, / where she saw / a large rock / and a loose egg / lying on / the floor. /
 Setup: As she approached, / the chickens fled, / clucking loudly. /
 Critical: #When Chloe / #threw {the rock} / #at {the egg}, / #{it} cracked. /
-Critical Spillover: #Chloe suddenly heard / #her parents running / toward the barn / and she rushed / to tidy up. /
+Critical Spillover: #Chloe suddenly heard / #her parents running / #toward the barn / and she rushed / to tidy up. /
 Continuation: #Luckily, / #the [rock/egg] / #didn’t have / #a scratch on it / #from the collision. /
-Continuation Spillover: #When her / parents arrived, / they told Chloe / that she / would have / to wash / the dishes / every night / that week.
+Continuation Spillover: #When her / #parents arrived, / they told Chloe / that she / would have / to wash / the dishes / every night / that week.
 
 Questions:
 
@@ -122,9 +122,9 @@ A: False
 Intro: Gabriel was having / friends over / to watch / a film. / They were / getting hungry / so he decided / to warm up / some bread / to serve / with hummus. / He preheated / the oven, / and took out / a plate / on which / to heat / the bread. /
 Setup: While the oven / heated up, / he got / the hummus / out of / the fridge / and put / it in / a serving bowl. /
 Critical: Gabriel put / {the plate} / in the oven / with {the bread} / to warm up, / but after / #a couple / #of minutes / #{it} was / #burned to a crisp. /
-Critical Spillover: #Gabriel laughed / #loudly at / how silly / he had been. /
+Critical Spillover: #Gabriel laughed / #loudly at / #how silly / he had been. /
 Continuation: #He inspected / #the [plate/bread], / #which fortunately / #didn’t get burned / #in the oven. /
-Continuation Spillover: #He turned / the oven off / and went to / the living room / to set up / the projector.
+Continuation Spillover: #He turned / #the oven off / and went to / the living room / to set up / the projector.
 
 Questions:
 
@@ -135,11 +135,11 @@ A: True
 11. When Ryan left his key in the bag with his laptop, it came out with scratches all over it.
 
 Intro: Ryan was / rushing home / from work / to meet / a friend / for dinner. / He went / to pack up / his things: / his phone, / his key, / and his laptop. / But then / his day / started going / all wrong. / When he / reached for / his phone, / he knocked over / his coffee / and it spilled / on his jacket. /
-Setup: When he / went to / turn off / his computer, / one of / the programs / had an error /  and he couldn’t / close it. /
+Setup: When he / went to / turn off / his computer, / one of / the programs / had an error. /
 Critical: When Ryan / left {his key} / in the bag / #with {his laptop}, / #{it} came / #out with / #scratches all over it. /
-Critical Spillover: #Ryan felt exhausted / #when he eventually / got home. /
+Critical Spillover: #Ryan felt exhausted / #when he eventually / #got home. /
 Continuation: #He inspected / #his [key/laptop], / #which fortunately / #hadn’t gotten scratched / #in his bag. /
-Continuation Spillover: #Ryan was / relieved that / his friend suggested / ordering food / rather than cooking.
+Continuation Spillover: #Ryan decided / #to order food / instead of cooking.
 
 Questions:
 
@@ -148,12 +148,12 @@ A: False
 
 12. The bowling ball collided with the soccer ball, which was flying in the opposite direction. It was knocked completely off course.
 
-Intro: Alex and Jared / were messing around / in the / games room / of their house. / The room had / a dart board / and a miniature / bowling alley. / They were / standing at / opposite ends / of the room / throwing different / items at / each other. / At the / same moment, / Alex threw / a bowling ball / at Jared, / while Jared threw / a soccer ball / back. /
+Intro: Alex and Jared / were messing around / in their / games room, / which had / a dart board / and a miniature / bowling alley. / They were / throwing objects / at each other / across the room. / At the / same moment, / Alex threw / a bowling ball / at Jared, / while Jared threw / a soccer ball / back. /
 Setup: The balls / flew through / the air / toward each other. /
 Critical: {the bowling ball} / collided with / {the soccer ball}, / which was / #flying in / #the opposite direction. / #{it} was knocked / #completely off course. /
-Critical Spillover: #Jared yelled excitedly / #as the balls / #collided. /
+Critical Spillover: #Jared yelled excitedly / #as the balls / #collided in / #mid-air. /
 Continuation: #The [bowling/soccer] ball / #blew straight through, / #unperturbed by / #the collision. /
-Continuation Spillover: #When the balls / landed on / the ground / they made / an almighty crash. 
+Continuation Spillover: #When the balls / #landed on / the ground / they made / an almighty crash. 
 
 Questions:
 
@@ -165,9 +165,9 @@ A: True
 Intro: Jennifer was admiring / the collection / of marvellous objects / on her bookshelf. / There was / a small / marble bust / of Socrates, / a hand-painted / porcelain vase, / and a piece / of igneous rock / from Mount Etna. / Suddenly, / she felt / a rumbling / all around / the room: / it was / an earthquake! /
 Setup: She looked on / in horror / as objects / began to fall / from shelf / to shelf. /
 Critical: #When {the vase} / #fell on / #{the rock}, / #{it} broke. /
-Critical Spillover: #Jennifer quickly / #ran for cover / and after / a few seconds / the rumbling subsided. /
+Critical Spillover: #Jennifer quickly / #ran for cover / #and after / a few seconds / the rumbling subsided. /
 Continuation: Jennifer darted / over to / #the shelf / #and saw that / #the [vase/rock] / #was still intact / #on the floor. /
-Continuation Spillover: #A tall lamp / had also / fallen over, / but it / was still / working.
+Continuation Spillover: #A tall lamp / #had also / fallen over, / but it / was still / working.
 
 Questions:
 
@@ -175,12 +175,12 @@ Q: Jennifer had a marble bust of Aristotle.
 A: False
 14. Sofia placed the teacup next to the wine bottle, but it fell over when a passerby bumped into the table.
 
-Intro: Sofia was hosting / a small party / in her apartment / for her birthday. / She went to / the kitchen / to pour herself / a glass / of wine, / but couldn’t find / any glasses, / so she had / to use / a teacup instead. / She wandered / back to / the living room, / bringing the wine bottle / with her. /
-Setup: She spotted / a group / of friends / sitting at / the dining table, / and went over / to join them. /
-Critical: Sofia placed / {the teacup} / #next to / #{the wine bottle}, / #but {it}/ #fell over / #when a passer-by / #bumped into / the table. /
+Intro: Sofia was hosting / a birthday party / in her apartment. / She went / to the kitchen / to pour herself / a glass / of wine, / but couldn’t find / any glasses, / so she / had to use / a teacup instead. / She wandered / back to / the living room, / bringing the wine bottle / with her. /
+Setup: She went over / to join /  a group / of friends / sitting at / the dining table. /
+Critical: Sofia placed / {the teacup} / #next to / #{the wine bottle}, / #but {it}/ #fell over / #when a passer-by / #bumped into / #the table. /
 Critical Spillover: Sofia quickly used / a napkin / to mop up / the wine / #which had spilled / #on the table. /
 Continuation: #The [teacup/wine bottle] / #had remained upright / #throughout the commotion. /
-Continuation Spillover: #She went back / through to / the kitchen / to dispose of / the napkin / and wash / her hands.
+Continuation Spillover: #She went / #back  to / the kitchen / to dispose of / the napkin / and wash / her hands.
 
 Questions:
 
@@ -189,12 +189,12 @@ A: True
 
 15. Lily put the cheese in the oven with the bread to warm up, but by the time she came back it had melted.
 
-Intro: Lily was cooking / dinner for / her friends. / For a starter, / they were having / a selection / of cheeses / and homemade bread; / the main course / was a whole / roast duck; / and for dessert / she had prepared / a lemon pie. /
+Intro: Lily was cooking / dinner for / her friends. / For a starter, / they were having / a selection / of cheeses / and homemade bread; / the main course / was a whole / roast duck. /
 Setup: She was dashing / back and forth / between the kitchen / and the dining room / to keep / her guests / entertained while / she prepared / the food. /
 Critical: Lily put / {the cheese} / in the oven / with {the bread} / to warm up, / #but by / #the time / #she came back / #{it} had melted. /
-Critical Spillover: #Lily  quickly took / #everything out / of the oven / and placed it / on the counter. /
+Critical Spillover: #Lily  quickly took / #everything out / #of the oven / and placed it / on the counter. /
 Continuation: She inspected / #the food / #and saw that / #the [cheese/bread] / #hadn’t melted / #in the oven. /
-Continuation Spillover: #She started / getting cutlery / out of / the drawer / to set / the table / for her guests.
+Continuation Spillover: #She started / #getting cutlery / out of / the drawer / to set / the table / for her guests.
 
 Questions:
 
@@ -206,9 +206,9 @@ A: False
 Intro: Ethan was / moving house. / All that / was left / to pack / was a pair / of boxes. / One of / the boxes / was made / of cardboard, / and the other / was made / of steel. /
 Setup: The furniture / was already / packed into / the moving van / and there wasn’t / much space left. /
 Critical: Ethan put / {the steel box} / next to / {the cardboard box} / in the moving van / #and after / #an hour's drive / #on the bumpy road, / #{it} got crushed. /
-Critical Spillover: #Ethan carefully checked / #the rest of / his belongings / as he unpacked / the van. /
+Critical Spillover: #Ethan carefully checked / #the rest of / his belongings / #as he unpacked / the van. /
 Continuation: He was relieved / #that nothing else / #had been damaged, / #and the [steel/cardboard] box / #hadn’t been crushed / #during the journey. /
-Continuation Spillover: #Ethan tipped / the van driver / $40 and / thanked him / for all / of his help.
+Continuation Spillover: #Ethan tipped / #the van driver / $40 and / thanked him / for all / of his help.
 
 Questions:
 
@@ -218,33 +218,33 @@ A: True
 Intro: Jayden was / camping with / the cub scouts. / They were /  sitting around / the campfire, / eating sweet treats / and singing songs. / Jayden had / picked up / a marshmallow / and a cookie / from the selection / of treats. /
 Setup: A counsellor / helped him / attach the treats / to the end / of a skewer. /
 Critical: Jayden heated / {the cookie} / #along with / #{the marshmallow} / #over the campfire, / #but {it} melted / #before he had / #a chance / to eat it. /
-Critical Spillover: Jayden felt embarrassed, / but the counsellor / consoled him. /
+Critical Spillover: #Jayden felt embarrassed, / but the counsellor / consoled him. /
 Continuation: #Jayden was / #glad that / #the [cookie/marshmallow], / #hadn’t melted / #over the fire. /
-Continuation Spillover: #Just then, / the group / started singing / “She’ll be Coming / Round the Mountain”.
+Continuation Spillover: #Just then, / #the group / started singing / “She’ll be Coming / Round the Mountain”.
 
 Questions:
 
 Q: Jayden camping with his parents.
 A: False
 18. Daniel packed the fork into his lunchbox along with the napkin. On his walk to work, he could hear it rattling around inside.
-Intro: Daniel had slept / through his alarm / and was / in a rush / to get to work. / Fortunately, / his wife / had already / prepared his lunch. / She had even / left a fork / and a napkin / on the table / next to / his lunchbox. /
+Intro: Daniel was / in a rush / to get / to work. / Fortunately, / his wife / had already / prepared his lunch. / She had even / left a fork / and a napkin / on the table / next to / his lunchbox. /
 Setup: He was / incredibly grateful, / given how late / he was running. /
 Critical: Daniel packed / {the fork} / into his lunchbox / along with / {the napkin}. / On his walk / #to work, / #he could / #hear {it} / #rattling around inside. /
-Critical Spillover: #Daniel became annoyed / #at the sound, / so he took / the box out / to check / what was / causing it. /
+Critical Spillover: #Daniel became annoyed / #at the sound, / #so he took / the box out / to check / what was / causing it. /
 Continuation: He listened closely / while he shook / the box, / and he could / tell that / #it wasn’t / #the [fork/napkin] / #that was making / #the rattling sound / #inside the lunchbox. /
-Continuation Spillover: #He put / the box / back in / his bag / and hurried away / to work.
+Continuation Spillover: #He put / #the box / back in / his bag / and hurried away / to work.
 
 Questions:
 
 Q: Daniel’s wife had prepared his lunch.
 A: True
 19. The truck lost control and crashed into the oncoming bicycle. All that was left of it was a crushed heap of metal.
-Intro: Matt was trying / to cross / the street / to get to / his favorite / taco place. / He was waiting / for the traffic / to quiet down / and give him / an opportunity / to dash across. / Just when / he thought / he might / have a chance, / he saw / a truck / coming toward him / from the left, / and a bicycle / approaching from / the right. /
+Intro: Matt was trying / to cross / the street / to get to / his favorite / taco place. / He was / waiting for / the traffic / to quiet down / so he could / dash across. / Just when / he thought / he might / have a chance, / he saw / a truck / coming toward him / from the left, / and a bicycle / approaching from / the right. /
 Setup: Matt gave / a glum sigh / and watched / the vehicles / as they sped / toward each other. /
 Critical: {the truck} / lost control / and crashed into / {the bicycle}. / All that / #was left / #of {it} / #was a / #crushed heap of metal. /
-Critical Spillover: #Matt felt panicked / #as he tried / to process / what was / going on. /
+Critical Spillover: #Matt felt panicked / #as he tried / #to process / what was / going on. /
 Continuation: #He looked back / #and saw that / #the [truck/bicycle] / #was totally unharmed / #after the collision. /
-Continuation Spillover: #Fortunately, / nobody had / been hurt.
+Continuation Spillover: #Fortunately, / #nobody had / been hurt.
 
 Questions:
 
@@ -255,9 +255,9 @@ A: False
 Intro: Chris walked / out to / the park / to meet / his friends. / He had brought / a soccer ball / for them / to play with / when they arrived. / He also had / a book / with him / to read / while he waited. /
 Setup: He spotted / a nice place / to sit / on a grassy hill / with a great view / of the rest / of the park. /
 Critical: Chris placed / {the book} / next to / {the soccer ball} / #on the / #grassy hill, / #but {it} / #rolled away / #down the slope. /
-Critical Spillover: #Chris looked up / and saw / his friends, / Helen and Jonathan, / arriving. /
+Critical Spillover: #Chris looked up / #and saw / his friends, / Helen and Jonathan, / arriving. /
 Continuation: #He picked up / #the [book/soccer ball] / #which was still / #sitting by him / #on the hill. /
-Continuation Spillover: #He got up / and walked over / to greet / his friends.
+Continuation Spillover: #He got up / #and walked over / to greet / his friends.
 
 Questions:
 
@@ -268,9 +268,9 @@ A: True
 Intro: Mary was planning / to hike  / up to / a local waterfall, / and wanted / to make sure / she didn’t / get hungry. / So she packed / a bag / to take / with her. / She decided / to bring / a flask / of coffee, / a cheese sandwich, / a melon, / and an apple. /
 Setup: She wanted / to put / the fruit into / a jar / so that / it wouldn’t / get crushed / on the journey. /
 Critical:  Mary tried / to pack / {the apple},/  along with / #{the melon}, / #into the jar, / #but {it} / #wouldn't fit. /
-Critical Spillover: #Mary hardly cared / #as she / already had / #plenty of food. /
+Critical Spillover: #Mary hardly cared / #as she / #already had / #plenty of food. /
 Continuation: #She sealed / #the [apple/melon] / #inside the jar / #with a lid. /
-Continuation Spillover: #As she / set off, / the sun / was just beginning / to rise over / the distant hills.
+Continuation Spillover: #As she / #set off, / the sun / was just beginning / to rise over / the distant hills.
 
 Questions:
 
@@ -279,11 +279,11 @@ A: True
 22. Sarah tried to climb up the wall, with one hand on the window ledge and the other on the drainpipe, but it gave way.
 
 Intro: Sarah had left / her keys inside, / her apartment / and was / going to / try to / climb up / to an /open window. / She would / have to / pull herself / up using / a drainpipe / on one / side and / a window ledge / on the other. /
-Setup: Her apartment / was on / the second floor:  / even if / she fell / she was / sure she / would be / okay. /
+Setup: Her apartment / was on / the second floor:  / it didn’t look / too far. /
 Critical: Sarah tried / to climb up / the wall, / with one / hand on / {the window ledge} / and the / #other on / #{the drainpipe}, / #but {it} / #gave way. /
-Critical Spillover: #Sarah struggled desperately / #to keep / her balance / as her / hand slipped. / 
+Critical Spillover: #Sarah struggled desperately / #to keep / #her balance / as her / hand slipped. / 
 Continuation: She managed / to hold / herself up, / with just / #the one hand / #holding firm / #to the / #[window ledge/drainpipe] / #above her head. /
-Continuation Spillover: #She wedged / her foot / on a / protruding brick, / and hauled / herself inside.
+Continuation Spillover: #She wedged / #her foot / on a / protruding brick, / and hauled / herself inside.
 
 Questions:
 
@@ -295,9 +295,9 @@ A: False
 Intro: Toby and Olivia / were having / a food fight. / They raced / out of / the kitchen / and into / the yard, / each carrying / as much fruit / as they could. / Toby crouched behind / a low wall, / while Olivia hid / behind the shed. / At the exact / same moment, / Toby threw / a coconut / at Olivia / and she threw / a peach back. /
 Setup: The pieces / of fruit / flew through / the air / toward each other. /
 Critical: When {the peach} / #collided with / #{the coconut}, / #{it} was / #smashed to pieces. /
-Critical Spillover: #Olivia cheered excitedly / #at the / dramatic collision. /
+Critical Spillover: #Olivia cheered excitedly / #at the / #dramatic collision. /
 Continuation: Toby rushed over / #and picked up / #the [peach/coconut] / #which was still / #in one piece / #on the ground. /
-Continuation Spillover: #He looked up / and saw Olivia / preparing to / splatter him / with a volley / of grapes.
+Continuation Spillover: #He looked up / #and saw Olivia / preparing to / splatter him / with a volley / of grapes.
 
 Questions:
 
@@ -309,9 +309,9 @@ A: True
 Intro: Jack stood up, / furious. / He began / shouting obscenities / and threats / at Adam. / He reached out / and grabbed / an ornament / from the table / next to him, / and prepared / to throw it / at Adam. / Adam picked up / a rock / from the floor / and threatened / to throw / it back. /
 Setup: Each man / threw his / object at / the same moment, / and they / flew towards / each other / across the room. /
 Critical: #When {the rock} / #collided with / #{the ornament}, / #{it} shattered. /
-Critical Spillover: #Adam felt terrified / #and shouted / to try / to calm / Jack down. /
+Critical Spillover: #Adam felt terrified / #and shouted / #to try / to calm / Jack down. /
 Continuation: #Jack picked up / #the [rock/ornament] / #which had survived / #without any damage / #from the collision. /
-Continuation Spillover: #Adam ran / out of / the room / before Jack / could throw / anything else / at him.
+Continuation Spillover: #Adam ran / #out of / the room / before Jack / could throw / anything else / at him.
 
 Questions:
 
@@ -321,9 +321,9 @@ A: False
 Intro: Ben was preparing / to go away / for a conference. / He had picked / out a shirt / to wear / for his presentation, / and a coffee mug / in case / his hotel room / didn’t have one. / 
 Setup: He checked / the time / and realized / he had / to catch / the bus / to the  /convention center / in just / 15 minutes. /
 Critical: Ben packed  / {his shirt} / in the same / suitcase as / #{his mug}. / #When he / #took it out, / #{it} was broken. /
-Critical Spillover: #Ben carefully unpacked / #the rest of / his belongings / and saw that / nothing else / had been damaged. /
+Critical Spillover: #Ben carefully unpacked / #the rest of / #his belongings / and saw that / nothing else / had been damaged. /
 Continuation: #He put away / #the [shirt/mug], / #which had / #survived unscathed / #from the journey. /
-Continuation Spillover:  #Ben went down / to the hotel foyer / to meet / the other attendees.
+Continuation Spillover:  #Ben went down / #to the hotel foyer / to meet / the other attendees.
 
 Questions:
 
@@ -335,9 +335,9 @@ A: True
 Intro: Charlotte was / going away / on a weekend trip / to Cabo. / She had / decided to bring / a couple of / summer dresses / to wear / while she / was there, / a shirt and / a pair of jeans / for the flight home, / and a book / to read / on the beach. /
 Setup: She was going / to meet / her friend, Laura, / at the hotel / when she arrived. /
 Critical: Charlotte packed / {her shirt} / in the same / suitcase as / #{her book}. / #When she / #took it out, / #{it} was creased. /
-Critical Spillover: #Charlotte calmly started / #putting the rest / of her things / away in / the wardrobe. /
+Critical Spillover: #Charlotte calmly started / #putting the rest / #of her things / away in / the wardrobe. /
 Continuation: #She was glad, / #at least, / #that the [shirt/book] / #hadn’t gotten creased / #in her suitcase. /
-Continuation Spillover:  #After an hour, / she went downstairs / to meet Laura / in the foyer.
+Continuation Spillover:  #After an hour, / #she went downstairs / to meet Laura / in the foyer.
 
 Questions:
 
@@ -347,22 +347,22 @@ A: False
 Intro: Noah was out / at the arcade / with his friends. / It was starting / to get late / and he was / playing tennis / early the next day. / He decided / it was time / to leave. / He made sure / to collect / all of / his belongings: / his phone, / his coins, / and his keys. /
 Setup: He said farewell / to his friends / and started / to head home. /
 Critical: Noah put / {his keys} away / in his pocket / with {his coins}, / #but on / #his walk home / #{they} made / #a hole in / #the pocket lining. /
-Critical Spillover: #Noah felt annoyed / when he found / the hole. /
+Critical Spillover: #Noah felt annoyed / #when he found / the hole. /
 Continuation: He got ready / for bed, / #and put / #his [keys/coins], / #which hadn’t / #made the hole, / #on his desk. /
-Continuation Spillover:  #He resolved / to mend / his pants / before he / went out / the next day.
+Continuation Spillover:  #He resolved / #to mend / his pants / before he / went out / the next day.
 
 Questions:
 
 Q: Noah resolved to mend his pants the next day.
-A: False
+A: True
 
 28. When the racquet collided with the tennis ball, it bounced back and hit Josh in the face.
 Intro: Josh and Paula / were playing tennis. / Paula was / about to serve, / and Josh was / completely unprepared, / looking down / at his phone. / Paula began / her wind-up / and tossed / the ball / in the air. / Josh looked up / and was startled. / He hurried / to get / the racquet / in front / of his body. / 
 Setup: Paula smashed / a serve / directly at him / as he tried / to shield himself. /
 Critical: When {the racquet} / collided with / #{the tennis ball}, / #{it} bounced back / #and hit Josh / #in the face. /
-Critical Spillover:  #Josh clutched angrily / #at his nose / and groaned / in pain. /
-Continuation: #Fortunately, he / #didn’t also / #get hit by / #the [racquet/tennis ball] / #during the #commotion. /
-Continuation Spillover:  Paula felt bad / and rushed over / to check that / Josh was okay. 
+Critical Spillover:  #Josh clutched angrily / #at his nose / #and groaned / in pain. /
+Continuation: #Fortunately, he / #didn’t also / #get hit by / #the [racquet/tennis ball] / #during the commotion. /
+Continuation Spillover:  #Paula felt bad / #and rushed over / to check that / Josh was okay. 
 
 Questions:
 
@@ -373,9 +373,9 @@ A: False
 Intro: It was lunchtime, / and Natalie decided / to get out / of the office / for an hour / and eat / in the park. / She picked up / her lunch / and put / her phone and / a chocolate bar / away in / her pocket. / The park / was busy / with other people / milling around / and enjoying / the weather. /
 Setup: She found / a spot / to sit down / and began / to eat / her lunch. /
 Critical: Natalie regretted putting / {the chocolate bar} / in her pocket / #with {her phone}: / #when she / #took it out, / #{it} had melted. /
-Critical Spillover:  #Natalie felt upset / #and quite / taken aback. /
+Critical Spillover:  #Natalie felt upset / #and quite / #taken aback. /
 Continuation: #She was relieved / #at least / #that her [chocolate bar/phone] / #hadn’t melted / #in the heat. /
-Continuation Spillover:  #She finished eating / her lunch, / and started / walking back / to the office.
+Continuation Spillover:  #She finished eating / #her lunch, / and started / walking back / to the office.
 
 Questions:
 
@@ -386,9 +386,9 @@ A: True
 Intro: Alice was / running late for / a hair appointment. / As she / was looking for / her wallet, / she spotted / a banana / on the / kitchen table. /
 Setup: She hadn’t / had time / to eat lunch, / and she / was starting / to get hungry. /
 Critical: Alice stuffed / {the banana} / in her pocket / #with {her wallet}. / #When she / #took it out, / #{it} was squashed. /
-Critical Spillover:  #Alice slumped glumly /  #into a chair / in the / waiting room, / feeling annoyed. /
+Critical Spillover:  #Alice slumped glumly /  #into a chair / #in the / waiting room, / feeling annoyed. /
 Continuation: #She put away / #the [banana/wallet], / #which hadn’t / #been squashed / #in her pocket. /
-Continuation Spillover: #Just then, / the hairdresser / called her over / and asked her / to come through.
+Continuation Spillover: #Just then, / #the hairdresser / called her over / and asked her / to come over.
 
 Questions:
 

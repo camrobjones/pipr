@@ -16,8 +16,8 @@ header.top-bar {
     background-color: #212121;
     display: flex;
     justify-content: space-between;
-    height: 72px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    height: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);s
     z-index: 4;
     align-items: center;
 }
@@ -26,7 +26,7 @@ h1#top-bar-title {
     color: white;
     font-family: 'Open Sans', 'Arial', sans-serif;
     margin: 0 20px 0 30px;
-    font-size: 1.5em;
+    font-size: 1.1rem;
     font-weight: 400;
     min-width: 350px;
     white-space: nowrap;
@@ -167,7 +167,7 @@ button#submit:hover, .btn:hover {
 /* Demographics */
 
 form#jspsych-survey-html-form {
-    min-height: calc(90vh - 92px);
+    min-height: calc(90vh - 50px);
 }
 
 div.question {
@@ -288,9 +288,12 @@ textarea {
 }
 
 div#expt-container {
-    min-height: calc(100vh - 92px);
+    height: calc(100vh - 50px);
+    /*max-height: 800px;*/
+    min-height: 600px;
     font-size:1.4em;
-    margin-bottom:20px;
+    margin-top: 10px;
+    margin-bottom:5px;
 }
 
 @media (max-width: 600px) {
@@ -328,7 +331,8 @@ p.instructions {
 }
 
 .instructions-container {
-    min-height: calc(90vh - 92px);
+    /*min-height: calc(90vh - 50px);*/
+    min-height: 600px;
     max-width:800px;
     margin:auto;
 }

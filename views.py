@@ -324,14 +324,16 @@ def save_results(request):
             rt_crit=passage.get("rt4"),
             rt_crit_sp1=passage.get("rt5"),
             rt_crit_sp2=passage.get("rt6"),
+            rt_crit_sp3=passage.get("rt7"),
 
             # Continuation region times (ms)
-            rt_cont_p3=passage.get("rt7"),
-            rt_cont_p2=passage.get("rt8"),
-            rt_cont_p1=passage.get("rt9"),
-            rt_cont=passage.get("rt10"),
-            rt_cont_sp1=passage.get("rt11"),
-            rt_cont_sp2=passage.get("rt12"),
+            rt_cont_p3=passage.get("rt8"),
+            rt_cont_p2=passage.get("rt9"),
+            rt_cont_p1=passage.get("rt10"),
+            rt_cont=passage.get("rt11"),
+            rt_cont_sp1=passage.get("rt12"),
+            rt_cont_sp2=passage.get("rt13"),
+            rt_cont_sp3=passage.get("rt14"),
 
             # Whole reading time (ms)
             passage_reading_time=reading_time,
@@ -350,7 +352,9 @@ def save_results(request):
     ppt.birth_year = demo_data.get('demographics_year') or None
     ppt.gender = demo_data.get('demographics_gender')
     ppt.handedness = demo_data.get('demographics_handedness')
-    ppt.conditions = demo_data.get('demographics_conditions')
+    ppt.dyslexia = demo_data.get('dyslexia') == "true"
+    ppt.adhd = demo_data.get('adhd') == "true"
+    ppt.asd = demo_data.get('asd') == "true"
     ppt.vision = demo_data.get('demographics_vision')
 
     # Get matches
@@ -381,7 +385,7 @@ def save_results(request):
     # Grant credit
     if ppt.SONA_code != "":
         response = requests.get(
-            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2073&credit_token=bb358887ebaf4f199f934440e18b427b&survey_code={ppt.SONA_code}")
+            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2119&credit_token=480328d4b651403f923543a70fc0db11&survey_code={ppt.SONA_code}")
         content = response.content.decode()
         ppt.notes = ppt.notes + f"SONA credit response:\n{content}\n"
 

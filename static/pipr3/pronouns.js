@@ -226,7 +226,7 @@ var welcome = {
   stimulus: `
              <div class='instructions-container'>
               <h2 class='instructions-header'>Welcome</h2>
-              <p class='welcome'>Thank you for participating in this study.</p>
+              <p class='welcome'>Thank you for your interest in this study.</p>
               <p class='welcome' ontouchstart="response(32)">
                 <b>Press ${continueText} to continue</b>
               </p>
@@ -283,7 +283,7 @@ var instructions = {
       by pressing the space bar. Your task is to silently
       read each passage by repeatedly reading each group of words and pressing
       the space bar until you finish the passage. Please read each
-      passage your normal reading speed.
+      passage at your normal reading speed.
     </p>
 
     <p class='instructions'>
@@ -895,10 +895,10 @@ function addStimulus(timeline, trial_info, trial_part) {
     let fixcross = {
         type : 'spr-moving-window',
         stimulus : '+',
-        background_color : "rgb(250, 250, 250)", // light gray
+        background_color : "rgb(245, 245, 245)", // light gray
         choices : FIX_CHOICES,
-        font_family : "Roboto Mono",
-        font_size : 26,
+        font_family : "Open Sans",
+        font_size : 25,
         width : 950,
         height : 600,
         trial_duration : FIX_DUR,
@@ -913,10 +913,10 @@ function addStimulus(timeline, trial_info, trial_part) {
     let present_text = {
         type : 'spr-moving-window',
         stimulus : trial_info.stimulus,
-        background_color : "rgb(250, 250, 250)", // light gray
+        background_color : "rgb(245, 245, 245)", // light gray
         font_color : "rgb(0, 0, 0)", // black
         font_family : "Open Sans",
-        font_size : 26,
+        font_size : 25,
         width : 950,
         height : 600,
         post_trial_gap : ISI,
@@ -992,7 +992,9 @@ var timeline = [];
 
 let list_1 = {list_name : "list1", table : stimuli}.table;
 
-var timeline = [welcome, consent];
+var timeline = [welcome];
+
+timeline.push(consent);
 
 // Fullscreen for non-touch
 timeline.push(start_fullscreen);

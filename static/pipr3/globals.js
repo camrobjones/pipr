@@ -20,7 +20,7 @@ const MAX_SUCCEEDING_ITEMS_OF_TYPE = 2
 // participants with a low screen resolution when you set this too
 // high.
 const MIN_WIDTH = 1000;
-const MIN_HEIGHT = 700;
+const MIN_HEIGHT = 650;
 
 // The ISI will be added after each trial/stimulus
 const ISI = 500; //ms

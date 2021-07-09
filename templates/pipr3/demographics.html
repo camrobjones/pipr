@@ -92,21 +92,24 @@
 
         <div class='question'>
 
-            <h3 class='question-title'>Have you ever been diagnosed with any of the following conditions?</h3>
-
-            <p class='question-subtitle'>Dyslexia, autism spectrum disorder, attention deficit hyperactivity disorder</p>
-
+            <h3 class='question-title'>Have you ever been diagnosed with any of the following conditions? Please check all that apply.</h3>
             
             <div class='radio-option'>
-                <input type='radio' name='demographics_conditions' id='demographics_conditions_yes'
-                value="yes"/>
-                <label for='demographics_conditions_yes'>Yes</label>
+                <input type='checkbox' name='dyslexia' id='demographics_dyslexia'
+                value="true"/>
+                <label for='demographics_dyslexia'>Dyslexia</label>
             </div>
 
             <div class='radio-option'>
-                <input type='radio' name='demographics_conditions' id='demographics_conditions_no'
-                value="no"/>
-                <label for='demographics_conditions_yes'>No</label>
+                <input type='checkbox' name='adhd' id='demographics_adhd'
+                value="true"/>
+                <label for='demographics_adhd'>Attention deficit hyperacticity disorder</label>
+            </div>
+
+            <div class='radio-option'>
+                <input type='checkbox' name='asd' id='demographics_asd'
+                value="true"/>
+                <label for='demographics_adhd'>Autism spectrum disorder</label>
             </div>
 
         </div>

@@ -35,7 +35,9 @@ class Participant(models.Model):
     birth_year = models.IntegerField(blank=True, null=True)
     gender = models.CharField(blank=True, null=True, max_length=2)
     handedness = models.CharField(blank=True, null=True, max_length=10)
-    conditions = models.CharField(blank=True, null=True, max_length=10)
+    dyslexia = models.BooleanField(blank=True, null=True)
+    adhd = models.BooleanField(blank=True, null=True)
+    asd = models.BooleanField(blank=True, null=True)
     vision = models.CharField(blank=True, null=True, max_length=10)
 
     # Feedback
@@ -75,6 +77,7 @@ class Trial(models.Model):
     rt_crit = models.FloatField(default=-1)
     rt_crit_sp1 = models.FloatField(default=-1)
     rt_crit_sp2 = models.FloatField(default=-1)
+    rt_crit_sp3 = models.FloatField(default=-1)
 
     # Continuation region times (ms)
     rt_cont_p3 = models.FloatField(default=-1)
@@ -83,6 +86,7 @@ class Trial(models.Model):
     rt_cont = models.FloatField(default=-1)
     rt_cont_sp1 = models.FloatField(default=-1)
     rt_cont_sp2 = models.FloatField(default=-1)
+    rt_cont_sp3 = models.FloatField(default=-1)
 
     # Whole reading time (ms)
     passage_reading_time = models.FloatField(default=-1)

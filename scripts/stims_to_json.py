@@ -5,13 +5,35 @@ Transform raw text of stims into json
 import re
 import json
 
+from fontTools.ttLib import TTFont
+from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
+
 """
 Helper functions
 """
 
 
-def insert_linebreaks(text, max_chars=72, group_pattern=" */ *"):
-    """Return text with linebreaks (with max linewidth of max_chars)"""
+font = TTFont('pipr3/static/pipr3/fonts/Open_Sans/OpenSans-Regular.ttf')
+cmap = font['cmap']
+t = cmap.getcmap(3,1).cmap
+s = font.getGlyphSet()
+units_per_em = font['head'].unitsPerEm
+
+
+def getTextWidth(text, pointSize):
+    total = 0
+    for c in text:
+        if ord(c) in t and t[ord(c)] in s:
+            total += s[t[ord(c)]].width
+        else:
+            total += s['.notdef'].width
+    total = total*float(pointSize)/units_per_em
+    return total
+
+
+def insert_linebreaks(text, max_width=840, font_size=25,
+                      group_pattern=" */ *"):
+    """Return text with linebreaks (with max linewidth of max_width px)"""
 
     # Split into SPR groups
     groups = re.split(group_pattern, text)
@@ -19,18 +41,25 @@ def insert_linebreaks(text, max_chars=72, group_pattern=" */ *"):
     # Initialise variables
     new_text = ""
     current_line = ""
+    line_width = 0
 
     # Cycle through SPR groups
     for group in groups:
 
+        clean_group = re.sub("[\{\}#\/]", "", group) + " "
+
+        group_width = getTextWidth(clean_group, font_size)
+
         # If line is not full, add group to line
-        if len(current_line + (group + " /")) <= max_chars:
+        if (line_width + group_width) <= max_width:
             current_line += (group + " /")
+            line_width += group_width
 
         # If line is full, add to text and clear line
         else:
             new_text += (current_line[:-1] + "\n" + "/")
             current_line = group + " /"
+            line_width = group_width
 
     # Add any remaining text in current line
     if current_line:
@@ -42,6 +71,18 @@ def insert_linebreaks(text, max_chars=72, group_pattern=" */ *"):
     return new_text
 
 
+"""
+"""
+
+# data = json.load(open("pipr3/data/stimuli.json"))
+# for i, item in enumerate(data):
+#     lens = []
+#     for version in item: 
+#         lens.append(version["stimulus"].count("\n"))
+
+#     print(i+1, lens)
+
+
 def create_version(passage, sent_id, order, continuation, unambiguous):
     """Create a version of the stimulus"""
 
@@ -50,14 +91,14 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
 
     # Extract continuations
     d_parts = re.split("\[|\]", d)
-    continuations = re.split("/", d_parts[1])
+    cont1, cont2 = re.split("/", d_parts[1])
 
     # Order
     if order == "B":
         # Swap NP1 & NP2
         np1, np2 = np2, np1
         # Swap continuations (so they map to np1/2 order)
-        continuations = [continuations[1], continuations[0]]
+        cont1, cont2 = cont2, cont1
 
     # NP1 capitalization
     if re.search("\. \/ *$", a):
@@ -65,9 +106,9 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
 
     # Continuation
     if continuation == "NP1":
-        d = d_parts[0] + continuations[0] + d_parts[2]
+        cont = cont1
     else:
-        d = d_parts[0] + continuations[1] + d_parts[2]
+        cont = cont2
 
     # Unambiguous
     if unambiguous == 1:
@@ -83,12 +124,19 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
     # Find longest np
     longest = np1 if len(np1) > len(np2) else np2
     longest = "{" + longest + "}"
+
+    # Find longest continuation
+    cont_long = cont1 if len(cont1) > len(cont2) else cont2
+    cont_long = "{" + cont_long + "}"
+    d = d_parts[0] + cont_long + d_parts[2]
+
     # Build passage
     passage = ''.join([a, np1, b, np2, c, longest, d])
     # Insert linebreaks
     passage = insert_linebreaks(passage)
     # Replace longest NP with actual pronoun
     passage = re.sub(longest, pronoun, passage)
+    passage = re.sub(cont_long, cont, passage)
 
     """
     Create version data

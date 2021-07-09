@@ -111,6 +111,9 @@ jsPsych.plugins[SPR_MW_PLUGIN_NAME] = (
         const RE_INTERPUNCTION = RegExp(INTERPUNCTION, 'u');
         const RE_WORD_INTERPUNCTION= RegExp(WORD_INTERPUNCTION, 'u');
 
+        // New params
+        const MARGIN_SCALE = 1.5;
+
         /**
          * Creates a range between [start, end).
          *
@@ -349,9 +352,9 @@ jsPsych.plugins[SPR_MW_PLUGIN_NAME] = (
 
             let delta_y = determineLineHeight(trial_pars.font_family, trial_pars.font_size);
             // We could add this to the trial_pars.
-            let y = delta_y * 1.5;
+            let y = delta_y * MARGIN_SCALE;
             let word = 0;
-            const BASE_Y = delta_y * 1.5; // The height on which lines begin.
+            const BASE_Y = delta_y * MARGIN_SCALE; // The height on which lines begin.
             const BASE_X = BASE_Y;
 
             for (let line = 0; line < lines.length; line++) {
