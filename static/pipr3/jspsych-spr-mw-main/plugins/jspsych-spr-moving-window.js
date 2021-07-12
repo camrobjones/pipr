@@ -336,11 +336,16 @@ jsPsych.plugins[SPR_MW_PLUGIN_NAME] = (
          * @param {Object} trial Object with trial information
          */
         function createCanvas(display_element, trial_pars) {
-            let canvas = document.createElement('canvas')
+
+            let container = document.createElement('DIV');
+            container.setAttribute("id", `${SPR_CANVAS}-container`);
+            display_element.appendChild(container);
+
+            let canvas = document.createElement('canvas');
             canvas.setAttribute("width", trial_pars.width);
             canvas.setAttribute("height", trial_pars.height);
             canvas.setAttribute("id", SPR_CANVAS);
-            display_element.appendChild(canvas);
+            container.appendChild(canvas);
             ctx = canvas.getContext('2d');
         }
 

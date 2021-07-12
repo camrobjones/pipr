@@ -336,11 +336,11 @@ var post_practice = {
     <h2 class='instructions-header'>
       End of practice
     </h2>
-    <p class='instructions'>
+    <p class='instructions-c'>
       That concludes the practice part of the exercise.
     </p>
 
-    <p class='instructions'>
+    <p class='instructions-c'>
       Press the spacebar to continue to the main experiment.
     </p>
 
