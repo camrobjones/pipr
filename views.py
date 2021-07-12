@@ -47,7 +47,7 @@ SYLL_MS = 191  # Source: https://doi.org/10.1167/iovs.11-8284
 SYLL_MS = 30  # Source: https://doi.org/10.1167/iovs.11-8284
 READING_TIME_BASE = 250  # Thinking time buffer
 
-NO_LISTS = 8
+NO_LISTS = 4
 
 # What % of passages have comp questions
 QUESTION_PROP = 1/3
@@ -132,9 +132,9 @@ def get_stimuli(limit=None, cond=None):
     return out
 
 
-def get_stimuli_by_list(list_idx, limit=None):
+def get_stimuli_by_list(list_idx, condition, limit=None):
     """Get a specific list of stimuli for the ppt"""
-    with open(MODULE_NAME + "/data/stimuli_lists.json") as f:
+    with open(MODULE_NAME + f"/data/stimuli_lists_{condition}.json") as f:
         data = json.load(f)
 
     # Select one list
@@ -184,6 +184,9 @@ def init_ppt(request):
     # Get list index
     list_idx = get_list_idx()
 
+    # Get condition
+    condition = request.GET.get('condition')
+
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
         ip = x_forwarded_for.split(',')[0]
@@ -191,7 +194,7 @@ def init_ppt(request):
         ip = request.META.get('REMOTE_ADDR', "")
 
     ppt = Participant.objects.create(
-        key=key, ip_address=ip, list_idx=list_idx)
+        key=key, ip_address=ip, list_idx=list_idx, condition=condition)
 
     ppt.SONA_code = sona_code
 
@@ -220,7 +223,8 @@ def expt(request):
     ppt = init_ppt(request)
 
     # Get experimental items
-    items = get_stimuli_by_list(list_idx=ppt.list_idx, limit=limit)
+    items = get_stimuli_by_list(list_idx=ppt.list_idx, limit=limit,
+                                condition=ppt.condition)
 
     # Create view context
     conf = {"key": ppt.key, "ppt_id": ppt.id}

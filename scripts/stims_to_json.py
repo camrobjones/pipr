@@ -246,7 +246,27 @@ for i, sec in enumerate(stim_secs):
 with open("pipr3/data/stimuli.json", "w") as f:
     json.dump(stimuli_list, f, indent=4)
 
-# Create and save lists
-lists = create_lists(stimuli_list)
-with open("pipr3/data/stimuli_lists.json", "w") as f:
-    json.dump(lists, f, indent=4)
+
+"""
+Create and save lists
+"""
+
+# Ambiguous
+stims_am = [
+        [v for v in item if v['unambiguous'] == 0]
+        for item in stimuli_list
+]
+
+lists_am = create_lists(stims_am)
+with open("pipr3/data/stimuli_lists_AM.json", "w") as f:
+    json.dump(lists_am, f, indent=4)
+
+# Unambiguous
+stims_un = [
+        [v for v in item if v['unambiguous'] == 1]
+        for item in stimuli_list
+]
+
+lists_un = create_lists(stims_un)
+with open("pipr3/data/stimuli_lists_UN.json", "w") as f:
+    json.dump(lists_un, f, indent=4)

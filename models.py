@@ -31,6 +31,21 @@ class Participant(models.Model):
     list_idx = models.IntegerField(blank=True, null=True)
     end_time = models.DateTimeField(blank=True, null=True)
 
+    # Conditions
+    UNAMBIGUOUS = "UN"
+    AMBIGUOUS = "AM"
+    UNASSIGNED = "NA"
+    CONDITIONS = [
+        (UNAMBIGUOUS, "Unambiguous"),
+        (AMBIGUOUS, "Ambiguous"),
+        (UNASSIGNED, "Unassigned")
+    ]
+    condition = models.CharField(
+        max_length=2,
+        choices=CONDITIONS,
+        default=UNASSIGNED
+    )
+
     # Demographics
     birth_year = models.IntegerField(blank=True, null=True)
     gender = models.CharField(blank=True, null=True, max_length=2)
