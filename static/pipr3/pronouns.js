@@ -174,7 +174,13 @@ var template = document.querySelector('#demographics');
 /* --- Progress Bar --- */
 
 // Initialise variables
-var total_trials = 13 + stimuli.length;
+if (conf.condition == "AM") {
+  var total_trials = 13 + stimuli.length;
+} else {
+  // Two post-test q's missing
+  var total_trials = 11 + stimuli.length;
+}
+
 
 // welcome, consent, instr, p1, p2, eop, stimuli, end_trials, demo, post * 5
 
@@ -281,8 +287,9 @@ var instructions = {
       passages. Each passage has been broken up into
       small groups of words. You can reveal the next group of words
       by pressing the space bar. Your task is to silently
-      read each passage by repeatedly reading each group of words and pressing
-      the space bar until you finish the passage. Please read each
+      read each passage by repeatedly pressing
+      the space bar and reading each group of words
+      until you finish the passage. Please read each
       passage at your normal reading speed.
     </p>
 
@@ -731,7 +738,7 @@ var post_test_inconsistent = {
     <h3 class='question-title'>
       Did you think that any of the passages contained information that was
       potentially inconsistent or contradictory? If so, what sort of 
-      examples did you notice and how did you resolve the inconsistency.
+      examples did you notice and how did you resolve the inconsistency?
     </h3>
   
     <textarea class="form-control feedback" id="post_test_inconsistent"
@@ -1012,11 +1019,14 @@ addStimuliToTimeline(timeline, list_1, "trial");
 
 // Post-test questions
 timeline.push(end_trials, demographics, post_test_purpose,
-              post_test_inconsistent, post_test_pronoun,
-              post_test_example, post_test_other);
+              post_test_inconsistent);
+
+if (conf.condition == "AM") {
+  timeline.push(post_test_pronoun, post_test_example);
+}
 
 // End fullscreen for non-touch
-timeline.push(end_fullscreen);
+timeline.push(post_test_other, end_fullscreen);
 
 // Debrief block for all
 timeline.push(debrief_block);

@@ -964,7 +964,7 @@ window.jsPsych = (function() {
           if(w < mw || h < mh){
             var msg = '<p>Your browser window is too small to complete this experiment. '+
               'Please maximize the size of your browser window. If your browser window is already maximized, '+
-              'you will not be able to complete this experiment.</p>'+
+              'try zooming out.</p>'+
               '<p>The minimum width is '+mw+'px. Your current width is '+w+'px.</p>'+
               '<p>The minimum height is '+mh+'px. Your current height is '+h+'px.</p>';
             core.getDisplayElement().innerHTML = msg;

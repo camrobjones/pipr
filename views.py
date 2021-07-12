@@ -227,7 +227,7 @@ def expt(request):
                                 condition=ppt.condition)
 
     # Create view context
-    conf = {"key": ppt.key, "ppt_id": ppt.id}
+    conf = {"key": ppt.key, "ppt_id": ppt.id, "condition": ppt.condition}
     context = {"items": items, "conf": conf}
 
     # Create new key for new expt attempt
