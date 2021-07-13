@@ -17,7 +17,7 @@ Intro: Alice had / started collecting / ornate swords / while she / was living /
 Setup: They hit / the swords / together in / mock combat. /
 Critical: When / #{the steel sword} / #collided with/  #{the glass sword}, / #{it} broke. /
 Critical Spillover: #Erin looked mortified / #about what / #had happened. /
-Continuation: Alice simply laughed / #and said / #“At least / #the [glass/steel] sword / #is okay / #after #that clash!” /
+Continuation: Alice simply laughed / #and said / #“At least / #the [steel/glass] sword / #is okay / #after #that clash!” /
 Continuation Spillover: #Erin was / #very grateful / to have / such a / carefree and / supportive friend.
 
 Questions:
@@ -337,7 +337,7 @@ Setup: She was going / to meet / her friend, Laura, / at the hotel / when she ar
 Critical: Charlotte packed / {her shirt} / in the same / suitcase as / #{her book}. / #When she / #took it out, / #{it} was creased. /
 Critical Spillover: #Charlotte calmly started / #putting the rest / #of her things / away in / the wardrobe. /
 Continuation: #She was glad, / #at least, / #that the [shirt/book] / #hadn’t gotten creased / #in her suitcase. /
-Continuation Spillover:  #After an hour, / #she went downstairs / to meet Laura / in the foyer.
+Continuation Spillover:  #After an hour, / #she went downstairs / to meet Laura / at a bar.
 
 Questions:
 
@@ -388,7 +388,7 @@ Setup: She hadn’t / had time / to eat lunch, / and she / was starting / to get
 Critical: Alice stuffed / {the banana} / in her pocket / #with {her wallet}. / #When she / #took it out, / #{it} was squashed. /
 Critical Spillover:  #Alice slumped glumly /  #into a chair / #in the / waiting room, / feeling annoyed. /
 Continuation: #She put away / #the [banana/wallet], / #which hadn’t / #been squashed / #in her pocket. /
-Continuation Spillover: #Just then, / #the hairdresser / called her over / and asked her / to come over.
+Continuation Spillover: #Just then, / #the hairdresser / called Alice’s name / and asked her / to come over.
 
 Questions:
 

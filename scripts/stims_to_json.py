@@ -100,10 +100,6 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
         # Swap continuations (so they map to np1/2 order)
         cont1, cont2 = cont2, cont1
 
-    # NP1 capitalization
-    if re.search("\. \/ *$", a):
-        np1 = np1[0].title() + np1[1:]
-
     # Continuation
     if continuation == "NP1":
         cont = cont1
@@ -124,6 +120,10 @@ def create_version(passage, sent_id, order, continuation, unambiguous):
     # Find longest np
     longest = np1 if len(np1) > len(np2) else np2
     longest = "{" + longest + "}"
+
+    # NP1 capitalization
+    if re.search("\. \/ *$", a):
+        np1 = np1[0].title() + np1[1:]
 
     # Find longest continuation
     cont_long = cont1 if len(cont1) > len(cont2) else cont2

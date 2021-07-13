@@ -18,7 +18,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "2_A_NP2_un",
-            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the steel sword /#collided with /#the glass sword, /#the steel sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the steel sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
+            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the steel sword /#collided with /#the glass sword, /#the steel sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the glass sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
             "question": "Alice had started her sword collection in China.",
             "qanswer": "False"
         },
@@ -40,7 +40,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "4_B_NP2_un",
-            "stimulus": "Anna and /her family /were at /the zoo. /Lots of /the animals /were in \n/mixed enclosures. /The anteaters /were living with /the chimpanzees \n/and the flamingos /were in with /the rhinos. /Anna stopped /to watch \n/a pig and /a cheetah, /which were /making their /way across \n/a shared enclosure. /There was /plenty of /space  for /the animals /to move \n/around inside. /The cheetah was /running alongside /#the pig, /#but then \n/#The cheetah sped up /#and pulled ahead. /#Anna looked over /#and saw \n/#one of /the zoo staff /entering the enclosure. /When she /#looked back, \n/#the pig /#was still /#trailing behind /#by several feet. /#Just then, \n/#Anna\u2019s sister /pulled her away /to look at /the koalas. ",
+            "stimulus": "Anna and /her family /were at /the zoo. /Lots of /the animals /were in \n/mixed enclosures. /The anteaters /were living with /the chimpanzees \n/and the flamingos /were in with /the rhinos. /Anna stopped /to watch \n/a pig and /a cheetah, /which were /making their /way across \n/a shared enclosure. /There was /plenty of /space  for /the animals /to move \n/around inside. /The cheetah was /running alongside /#the pig, /#but then \n/#the cheetah sped up /#and pulled ahead. /#Anna looked over /#and saw \n/#one of /the zoo staff /entering the enclosure. /When she /#looked back, \n/#the pig /#was still /#trailing behind /#by several feet. /#Just then, \n/#Anna\u2019s sister /pulled her away /to look at /the koalas. ",
             "question": "The anteaters shared an enclosure with the chimpanzees.",
             "qanswer": "True"
         },
@@ -128,7 +128,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "12_B_NP2_un",
-            "stimulus": "Alex and Jared /were messing around /in their /games room, /which had \n/a dart board /and a miniature /bowling alley. /They were /throwing objects \n/at each other /across the room. /At the /same moment, /Alex threw \n/a bowling ball /at Jared, /while Jared threw /a soccer ball /back. /The balls \n/flew through /the air /toward each other. /The soccer ball /collided with \n/the bowling ball, /which was /#flying in /#the opposite direction. \n/#The soccer ball was knocked /#completely off course. \n/#Jared yelled excitedly /#as the balls /#collided in /#mid-air. /#The bowling ball \n/#blew straight through, /#unperturbed by /#the collision. /#When the balls \n/#landed on /the ground /they made /an almighty crash. ",
+            "stimulus": "Alex and Jared /were messing around /in their /games room, /which had \n/a dart board /and a miniature /bowling alley. /They were /throwing objects \n/at each other /across the room. /At the /same moment, /Alex threw \n/a bowling ball /at Jared, /while Jared threw /a soccer ball /back. /The balls \n/flew through /the air /toward each other. /The soccer ball /collided with \n/the bowling ball, /which was /#flying in /#the opposite direction. \n/#the soccer ball was knocked /#completely off course. \n/#Jared yelled excitedly /#as the balls /#collided in /#mid-air. /#The bowling ball \n/#blew straight through, /#unperturbed by /#the collision. /#When the balls \n/#landed on /the ground /they made /an almighty crash. ",
             "question": "The games room contained a dart board.",
             "qanswer": "True"
         },
@@ -282,7 +282,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "26_A_NP2_un",
-            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her shirt /in the same \n/suitcase as /#her book. /#When she /#took it out, /#her shirt was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the book \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /in the foyer. ",
+            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her shirt /in the same \n/suitcase as /#her book. /#When she /#took it out, /#her shirt was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the book \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /at a bar. ",
             "question": "Charlotte was going away to Miami.",
             "qanswer": "False"
         },
@@ -326,7 +326,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "30_A_NP2_un",
-            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/the banana /in her pocket /#with her wallet. /#When she /#took it out, \n/#the banana was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the wallet, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser /called her over \n/and asked her /to come over. ",
+            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/the banana /in her pocket /#with her wallet. /#When she /#took it out, \n/#the banana was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the wallet, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser \n/called Alice\u2019s name /and asked her /to come over. ",
             "question": "Alice on her way to a doctor\u2019s appointment.",
             "qanswer": "False"
         }
@@ -350,7 +350,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "2_B_NP1_un",
-            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the glass sword /#collided with /#the steel sword, /#the steel sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the steel sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
+            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the glass sword /#collided with /#the steel sword, /#the steel sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the glass sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
             "question": "Alice had started her sword collection in China.",
             "qanswer": "False"
         },
@@ -383,7 +383,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "5_A_NP2_un",
-            "stimulus": "Larry was waiting /to cross /the street /to get to /his favorite /coffee shop. \n/He was /about to /step out into /the street /when he saw /a car \n/and a bicycle /coming toward him. /He stepped back /in alarm \n/and watched /the vehicles pass. /The bicycle /was going alongside /#the car \n/#but then /#The bicycle sped up /#and pulled ahead. /#Larry paused  carefully \n/#this time /#and looked /left and right. /#He saw /#the car /#was still \n/#trailing behind /#by several yards. /#Larry crossed /#the road, /went into \n/the cafe, /and ordered /a cappuccino. ",
+            "stimulus": "Larry was waiting /to cross /the street /to get to /his favorite /coffee shop. \n/He was /about to /step out into /the street /when he saw /a car \n/and a bicycle /coming toward him. /He stepped back /in alarm \n/and watched /the vehicles pass. /The bicycle /was going alongside /#the car \n/#but then /#the bicycle sped up /#and pulled ahead. /#Larry paused  carefully \n/#this time /#and looked /left and right. /#He saw /#the car /#was still \n/#trailing behind /#by several yards. /#Larry crossed /#the road, /went into \n/the cafe, /and ordered /a cappuccino. ",
             "question": "Larry ordered a espresso.",
             "qanswer": "False"
         },
@@ -537,7 +537,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "19_B_NP2_un",
-            "stimulus": "Matt was trying /to cross /the street /to get to /his favorite /taco place. \n/He was /waiting for /the traffic /to quiet down /so he could /dash across. \n/Just when /he thought /he might /have a chance, /he saw /a truck \n/coming toward him /from the left, /and a bicycle /approaching from \n/the right. /Matt gave /a glum sigh /and watched /the vehicles /as they sped \n/toward each other. /The bicycle /lost control /and crashed into /the truck. \n/All that /#was left /#of The bicycle /#was a /#crushed heap of metal. \n/#Matt felt panicked /#as he tried /#to process /what was /going on. \n/#He looked back /#and saw that /#the truck /#was totally unharmed \n/#after the collision. /#Fortunately, /#nobody had /been hurt. ",
+            "stimulus": "Matt was trying /to cross /the street /to get to /his favorite /taco place. \n/He was /waiting for /the traffic /to quiet down /so he could /dash across. \n/Just when /he thought /he might /have a chance, /he saw /a truck \n/coming toward him /from the left, /and a bicycle /approaching from \n/the right. /Matt gave /a glum sigh /and watched /the vehicles /as they sped \n/toward each other. /The bicycle /lost control /and crashed into /the truck. \n/All that /#was left /#of the bicycle /#was a /#crushed heap of metal. \n/#Matt felt panicked /#as he tried /#to process /what was /going on. \n/#He looked back /#and saw that /#the truck /#was totally unharmed \n/#after the collision. /#Fortunately, /#nobody had /been hurt. ",
             "question": "Matt was trying to visit his favorite sushi restaurant.",
             "qanswer": "False"
         },
@@ -614,7 +614,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "26_B_NP1_un",
-            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her book /in the same \n/suitcase as /#her shirt. /#When she /#took it out, /#her shirt was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the book \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /in the foyer. ",
+            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her book /in the same \n/suitcase as /#her shirt. /#When she /#took it out, /#her shirt was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the book \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /at a bar. ",
             "question": "Charlotte was going away to Miami.",
             "qanswer": "False"
         },
@@ -658,7 +658,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "30_B_NP1_un",
-            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/her wallet /in her pocket /#with the banana. /#When she /#took it out, \n/#the banana was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the wallet, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser /called her over \n/and asked her /to come over. ",
+            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/her wallet /in her pocket /#with the banana. /#When she /#took it out, \n/#the banana was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the wallet, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser \n/called Alice\u2019s name /and asked her /to come over. ",
             "question": "Alice on her way to a doctor\u2019s appointment.",
             "qanswer": "False"
         }
@@ -682,7 +682,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "2_B_NP2_un",
-            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the glass sword /#collided with /#the steel sword, /#the glass sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the glass sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
+            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the glass sword /#collided with /#the steel sword, /#the glass sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the steel sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
             "question": "Alice had started her sword collection in China.",
             "qanswer": "False"
         },
@@ -704,7 +704,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "4_A_NP2_un",
-            "stimulus": "Anna and /her family /were at /the zoo. /Lots of /the animals /were in \n/mixed enclosures. /The anteaters /were living with /the chimpanzees \n/and the flamingos /were in with /the rhinos. /Anna stopped /to watch \n/a pig and /a cheetah, /which were /making their /way across \n/a shared enclosure. /There was /plenty of /space  for /the animals /to move \n/around inside. /The pig was /running alongside /#the cheetah, /#but then \n/#The pig sped up /#and pulled ahead. /#Anna looked over /#and saw \n/#one of /the zoo staff /entering the enclosure. /When she /#looked back, \n/#the cheetah /#was still /#trailing behind /#by several feet. /#Just then, \n/#Anna\u2019s sister /pulled her away /to look at /the koalas. ",
+            "stimulus": "Anna and /her family /were at /the zoo. /Lots of /the animals /were in \n/mixed enclosures. /The anteaters /were living with /the chimpanzees \n/and the flamingos /were in with /the rhinos. /Anna stopped /to watch \n/a pig and /a cheetah, /which were /making their /way across \n/a shared enclosure. /There was /plenty of /space  for /the animals /to move \n/around inside. /The pig was /running alongside /#the cheetah, /#but then \n/#the pig sped up /#and pulled ahead. /#Anna looked over /#and saw \n/#one of /the zoo staff /entering the enclosure. /When she /#looked back, \n/#the cheetah /#was still /#trailing behind /#by several feet. /#Just then, \n/#Anna\u2019s sister /pulled her away /to look at /the koalas. ",
             "question": "The anteaters shared an enclosure with the chimpanzees.",
             "qanswer": "True"
         },
@@ -792,7 +792,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "12_A_NP2_un",
-            "stimulus": "Alex and Jared /were messing around /in their /games room, /which had \n/a dart board /and a miniature /bowling alley. /They were /throwing objects \n/at each other /across the room. /At the /same moment, /Alex threw \n/a bowling ball /at Jared, /while Jared threw /a soccer ball /back. /The balls \n/flew through /the air /toward each other. /The bowling ball /collided with \n/the soccer ball, /which was /#flying in /#the opposite direction. \n/#The bowling ball was knocked /#completely off course. \n/#Jared yelled excitedly /#as the balls /#collided in /#mid-air. /#The soccer ball \n/#blew straight through, /#unperturbed by /#the collision. /#When the balls \n/#landed on /the ground /they made /an almighty crash. ",
+            "stimulus": "Alex and Jared /were messing around /in their /games room, /which had \n/a dart board /and a miniature /bowling alley. /They were /throwing objects \n/at each other /across the room. /At the /same moment, /Alex threw \n/a bowling ball /at Jared, /while Jared threw /a soccer ball /back. /The balls \n/flew through /the air /toward each other. /The bowling ball /collided with \n/the soccer ball, /which was /#flying in /#the opposite direction. \n/#the bowling ball was knocked /#completely off course. \n/#Jared yelled excitedly /#as the balls /#collided in /#mid-air. /#The soccer ball \n/#blew straight through, /#unperturbed by /#the collision. /#When the balls \n/#landed on /the ground /they made /an almighty crash. ",
             "question": "The games room contained a dart board.",
             "qanswer": "True"
         },
@@ -946,7 +946,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "26_B_NP2_un",
-            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her book /in the same \n/suitcase as /#her shirt. /#When she /#took it out, /#her book was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the shirt \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /in the foyer. ",
+            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her book /in the same \n/suitcase as /#her shirt. /#When she /#took it out, /#her book was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the shirt \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /at a bar. ",
             "question": "Charlotte was going away to Miami.",
             "qanswer": "False"
         },
@@ -990,7 +990,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "30_B_NP2_un",
-            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/her wallet /in her pocket /#with the banana. /#When she /#took it out, \n/#her wallet was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the banana, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser /called her over \n/and asked her /to come over. ",
+            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/her wallet /in her pocket /#with the banana. /#When she /#took it out, \n/#her wallet was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the banana, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser \n/called Alice\u2019s name /and asked her /to come over. ",
             "question": "Alice on her way to a doctor\u2019s appointment.",
             "qanswer": "False"
         }
@@ -1014,7 +1014,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "2_A_NP1_un",
-            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the steel sword /#collided with /#the glass sword, /#the glass sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the glass sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
+            "stimulus": "Alice had /started collecting /ornate swords /while she /was living /in Japan. \n/One day, /she was showing /the collection /to her friend, /Erin. /They each \n/picked up one /of the swords: /Alice\u2019s was /made of steel /while Erin\u2019s was \n/made of glass. /They hit /the swords /together in /mock combat. /When \n/#the steel sword /#collided with /#the glass sword, /#the glass sword broke. \n/#Erin looked mortified /#about what /#had happened. /Alice simply laughed \n/#and said /#\u201cAt least /#the steel sword /#is okay /#after #that clash!\u201d /#Erin was \n/#very grateful /to have /such a /carefree and /supportive friend. ",
             "question": "Alice had started her sword collection in China.",
             "qanswer": "False"
         },
@@ -1047,7 +1047,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "5_B_NP2_un",
-            "stimulus": "Larry was waiting /to cross /the street /to get to /his favorite /coffee shop. \n/He was /about to /step out into /the street /when he saw /a car \n/and a bicycle /coming toward him. /He stepped back /in alarm \n/and watched /the vehicles pass. /The car /was going alongside /#the bicycle \n/#but then /#The car sped up /#and pulled ahead. /#Larry paused  carefully \n/#this time /#and looked /left and right. /#He saw /#the bicycle /#was still \n/#trailing behind /#by several yards. /#Larry crossed /#the road, /went into \n/the cafe, /and ordered /a cappuccino. ",
+            "stimulus": "Larry was waiting /to cross /the street /to get to /his favorite /coffee shop. \n/He was /about to /step out into /the street /when he saw /a car \n/and a bicycle /coming toward him. /He stepped back /in alarm \n/and watched /the vehicles pass. /The car /was going alongside /#the bicycle \n/#but then /#the car sped up /#and pulled ahead. /#Larry paused  carefully \n/#this time /#and looked /left and right. /#He saw /#the bicycle /#was still \n/#trailing behind /#by several yards. /#Larry crossed /#the road, /went into \n/the cafe, /and ordered /a cappuccino. ",
             "question": "Larry ordered a espresso.",
             "qanswer": "False"
         },
@@ -1201,7 +1201,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "19_A_NP2_un",
-            "stimulus": "Matt was trying /to cross /the street /to get to /his favorite /taco place. \n/He was /waiting for /the traffic /to quiet down /so he could /dash across. \n/Just when /he thought /he might /have a chance, /he saw /a truck \n/coming toward him /from the left, /and a bicycle /approaching from \n/the right. /Matt gave /a glum sigh /and watched /the vehicles /as they sped \n/toward each other. /The truck /lost control /and crashed into /the bicycle. \n/All that /#was left /#of The truck /#was a /#crushed heap of metal. \n/#Matt felt panicked /#as he tried /#to process /what was /going on. \n/#He looked back /#and saw that /#the bicycle /#was totally unharmed \n/#after the collision. /#Fortunately, /#nobody had /been hurt. ",
+            "stimulus": "Matt was trying /to cross /the street /to get to /his favorite /taco place. \n/He was /waiting for /the traffic /to quiet down /so he could /dash across. \n/Just when /he thought /he might /have a chance, /he saw /a truck \n/coming toward him /from the left, /and a bicycle /approaching from \n/the right. /Matt gave /a glum sigh /and watched /the vehicles /as they sped \n/toward each other. /The truck /lost control /and crashed into /the bicycle. \n/All that /#was left /#of the truck /#was a /#crushed heap of metal. \n/#Matt felt panicked /#as he tried /#to process /what was /going on. \n/#He looked back /#and saw that /#the bicycle /#was totally unharmed \n/#after the collision. /#Fortunately, /#nobody had /been hurt. ",
             "question": "Matt was trying to visit his favorite sushi restaurant.",
             "qanswer": "False"
         },
@@ -1278,7 +1278,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "26_A_NP1_un",
-            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her shirt /in the same \n/suitcase as /#her book. /#When she /#took it out, /#her book was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the shirt \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /in the foyer. ",
+            "stimulus": "Charlotte was /going away /on a weekend trip /to Cabo. /She had \n/decided to bring /a couple of /summer dresses /to wear /while she \n/was there, /a shirt and /a pair of jeans /for the flight home, /and a book \n/to read /on the beach. /She was going /to meet /her friend, Laura, \n/at the hotel /when she arrived. /Charlotte packed /her shirt /in the same \n/suitcase as /#her book. /#When she /#took it out, /#her book was creased. \n/#Charlotte calmly started /#putting the rest /#of her things /away in \n/the wardrobe. /#She was glad, /#at least, /#that the shirt \n/#hadn\u2019t gotten creased /#in her suitcase. /#After an hour, \n/#she went downstairs /to meet Laura /at a bar. ",
             "question": "Charlotte was going away to Miami.",
             "qanswer": "False"
         },
@@ -1322,7 +1322,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "30_A_NP1_un",
-            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/the banana /in her pocket /#with her wallet. /#When she /#took it out, \n/#her wallet was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the banana, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser /called her over \n/and asked her /to come over. ",
+            "stimulus": "Alice was /running late for /a hair appointment. /As she /was looking for \n/her wallet, /she spotted /a banana /on the /kitchen table. /She hadn\u2019t \n/had time /to eat lunch, /and she /was starting /to get hungry. /Alice stuffed \n/the banana /in her pocket /#with her wallet. /#When she /#took it out, \n/#her wallet was squashed. /#Alice slumped glumly /#into a chair /#in the \n/waiting room, /feeling annoyed. /#She put away /#the banana, /#which hadn\u2019t \n/#been squashed /#in her pocket. /#Just then, /#the hairdresser \n/called Alice\u2019s name /and asked her /to come over. ",
             "question": "Alice on her way to a doctor\u2019s appointment.",
             "qanswer": "False"
         }
