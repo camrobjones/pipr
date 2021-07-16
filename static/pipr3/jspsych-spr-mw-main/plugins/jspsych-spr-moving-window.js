@@ -306,9 +306,6 @@ jsPsych.plugins[SPR_MW_PLUGIN_NAME] = (
             let nwordstotal = splitIntoTokens(stim, RE_WHITE_SPACE).length;
             let word_indices = range(0, nwordstotal);
             let groups = splitIntoTokens(stim, split_re);
-            console.log(stim);
-            console.log(split_re);
-            console.log(groups);
             let group_indices = [];
 
             for (let nthgroup = 0; nthgroup < groups.length; nthgroup++) {

@@ -85,11 +85,11 @@ def get_reading_time(text, syll_ms=SYLL_MS):
     return reading_time
 
 
-def get_list_idx():
+def get_list_idx(condition):
     """Generate list index for new participant"""
 
     # Get most recent ppt
-    last_ppt = Participant.objects.last()
+    last_ppt = Participant.objects.filter(condition=condition).last()
 
     # Increment last list idx if it exists
     if last_ppt:
@@ -181,11 +181,11 @@ def init_ppt(request):
     # Create key
     key = generate_key()
 
-    # Get list index
-    list_idx = get_list_idx()
-
     # Get condition
     condition = request.GET.get('condition')
+
+    # Get list index
+    list_idx = get_list_idx(condition=condition)
 
     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
     if x_forwarded_for:
@@ -197,6 +197,7 @@ def init_ppt(request):
         key=key, ip_address=ip, list_idx=list_idx, condition=condition)
 
     ppt.SONA_code = sona_code
+    ppt.get_args = str(request.GET.dict())
 
     return ppt
 

@@ -65,7 +65,7 @@ function saveResults() {
   data.ppt_id = conf.ppt_id;
   axios.post(url, data, {headers: headers})
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
     });
 }
 
@@ -790,7 +790,7 @@ var post_test_example = {
 
     <p class='question-subtitle'>
       When the glass plate fell on the steel plate, it broke. ... 
-      Fortunately the glass plate was completely unharmed on the floor
+      Fortunately the glass plate was completely unharmed on the floor.
     </p>
 
     <h3 class='question-title'>
