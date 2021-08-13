@@ -3,7 +3,7 @@ import json
 
 import pandas as pd
 
-from pipr2.views import no_syllables
+from pipr3.views import no_syllables
 
 
 def get_sylls(text):
@@ -15,21 +15,20 @@ def get_sylls(text):
     return sylls
 
 
-stims = json.load(open("pipr2/data/stimuli.json"))
+stims = json.load(open("pipr3/data/stimuli.json"))
 
 syll_data = []
 
-for stim_pair in stims:
-    for stim in stim_pair:
+for item in stims:
+    for stim in item:
         row_data = {"item_id": stim['item_id']}
-        row_data['passage_sylls'] = get_sylls(stim['passage'])
-        crit_q = [q for q in stim["questions"] if q["critical"]][0]["prompt"]
-        row_data['question_sylls'] = no_syllables(crit_q)
+        row_data['passage_sylls'] = get_sylls(stim['stimulus'])
         syll_data.append(row_data)
 
 df = pd.DataFrame(syll_data)
 
-df.to_csv("pipr2/data/syll_data.csv")
+df.to_csv("pipr3/data/syll_data.csv")
+df.to_csv("~/Documents/ucsd/projects/pronouns/pipr/analysis/pipr3/syll_data.csv")
 
 
 # PIPR 1
