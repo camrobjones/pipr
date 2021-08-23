@@ -21,7 +21,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_gender' id='gender_1'
-                value="f"/>
+                value="f"/ required>
                 <label for='gender_1'>1) Female</label>
             </div>
 
@@ -29,7 +29,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_gender' id='gender_2'
-                value="m"/>
+                value="m"/ required>
                 <label for='gender_2'>2) Male</label>
             </div>
 
@@ -37,7 +37,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_gender' id='gender_3'
-                value="nb"/>
+                value="nb"/ required>
                 <label for='gender_3'>3) Non-binary</label>
             </div>
 
@@ -45,7 +45,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_gender' id='gender_4'
-                value="na"/>
+                value="na"/ required>
                 <label for='gender_4'>4) Prefer not to say</label>
             </div>
 
@@ -59,7 +59,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_handedness' id='handedness_1'
-                value="Right"/>
+                value="Right"/ required>
                 <label for='handedness_1'>1) Right</label>
             </div>
 
@@ -67,7 +67,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_handedness' id='handedness_2'
-                value="Left"/>
+                value="Left"/ required>
                 <label for='handedness_2'>2) Left</label>
             </div>
 
@@ -75,7 +75,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_handedness' id='handedness_3'
-                value="Both"/>
+                value="Both"/ required>
                 <label for='handedness_3'>3) Both</label>
             </div>
 
@@ -83,7 +83,7 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_handedness' id='handedness_4'
-                value="Other"/>
+                value="Other"/ required>
                 <label for='handedness_4'>4) Prefer not to say</label>
             </div>
 
@@ -121,14 +121,41 @@
             
             <div class='radio-option'>
                 <input type='radio' name='demographics_vision' id='demographics_vision_yes'
-                value="yes"/>
+                value="yes"/ required>
                 <label for='demographics_vision_yes'>Yes</label>
             </div>
 
             <div class='radio-option'>
                 <input type='radio' name='demographics_vision' id='demographics_vision_no'
-                value="no"/>
+                value="no"/ required>
                 <label for='demographics_vision_yes'>No</label>
+            </div>
+
+            <div class='radio-explainer'>
+                <label for='demographics_vision_reason'>If you answered "no" please explain why.</label>
+                <input type='text' class='form-control'
+                       name='demographics_vision_reason' id='demographics_vision_reason'
+                />
+                
+            </div>
+
+        </div>
+
+        <div class='question'>
+
+            <h3 class='question-title'>Are you a native English speaker?</h3>
+
+            
+            <div class='radio-option'>
+                <input type='radio' name='demographics_english' id='demographics_english_yes'
+                value="yes"/ required>
+                <label for='demographics_english_yes'>Yes</label>
+            </div>
+
+            <div class='radio-option'>
+                <input type='radio' name='demographics_english' id='demographics_english_no'
+                value="no"/ required>
+                <label for='demographics_english_no'>No</label>
             </div>
 
         </div>
@@ -137,7 +164,7 @@
         <div class='question'>
 
             <h3 class='question-title'>What languages do you speak?</h3>
-            <p class='question-subtitle'>Add a row for every language you speak.</p>
+            <p class='question-subtitle'>Add a row for every language you speak <b>including English</b>.</p>
             <div id='language-box-container'>
                 <div class='form-row'>
                     <div class='col'>

@@ -361,6 +361,9 @@ def save_results(request):
     ppt.adhd = demo_data.get('adhd') == "true"
     ppt.asd = demo_data.get('asd') == "true"
     ppt.vision = demo_data.get('demographics_vision')
+    ppt.vision_reason = demo_data.get('demographics_vision_reason')
+
+    ppt.native_english = demo_data.get('demographics_english') == "yes"
 
     # Get matches
     lang_matches = [re.match(LANGUAGE_REGEX, l) for l in demo_data]

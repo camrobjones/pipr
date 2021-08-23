@@ -54,6 +54,8 @@ class Participant(models.Model):
     adhd = models.BooleanField(blank=True, null=True)
     asd = models.BooleanField(blank=True, null=True)
     vision = models.CharField(blank=True, null=True, max_length=10)
+    vision_reason = models.TextField(default="")
+    native_english = models.BooleanField(blank=True, null=True)
 
     # Feedback
     post_test_purpose = models.TextField(default="")
