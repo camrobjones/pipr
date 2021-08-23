@@ -1001,21 +1001,21 @@ let list_1 = {list_name : "list1", table : stimuli}.table;
 
 var timeline = [welcome];
 
-// timeline.push(consent);
+timeline.push(consent);
 
 // Fullscreen for non-touch
-// timeline.push(start_fullscreen);
+timeline.push(start_fullscreen);
 
 // Main expt timeline for all
-// timeline.push(instructions);
+timeline.push(instructions);
 
 // Add trial procedure
-// addStimuliToTimeline(timeline, PRACTICE_ITEMS, "practice");
+addStimuliToTimeline(timeline, PRACTICE_ITEMS, "practice");
 
-// timeline.push(post_practice);
+timeline.push(post_practice);
 
 // Add trial procedure
-// addStimuliToTimeline(timeline, list_1, "trial");
+addStimuliToTimeline(timeline, list_1, "trial");
 
 // Post-test questions
 timeline.push(end_trials, demographics, post_test_purpose,

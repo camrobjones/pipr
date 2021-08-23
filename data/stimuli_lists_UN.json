@@ -73,7 +73,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "7_B_NP1_un",
-            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the lime /in the same /bag as /the can of tomatoes, /#and on /#her walk home \n/#from the store /#the can of tomatoes got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the lime /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
+            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. /She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the lime /in the same /bag as /the can of tomatoes, /#and on /#her walk home \n/#from the store /#the can of tomatoes got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the lime /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
             "question": "Alyssa was making a potato salad.",
             "qanswer": "False"
         },
@@ -405,7 +405,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "7_B_NP2_un",
-            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the lime /in the same /bag as /the can of tomatoes, /#and on /#her walk home \n/#from the store /#the lime got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the can of tomatoes /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
+            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. /She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the lime /in the same /bag as /the can of tomatoes, /#and on /#her walk home \n/#from the store /#the lime got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the can of tomatoes /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
             "question": "Alyssa was making a potato salad.",
             "qanswer": "False"
         },
@@ -737,7 +737,7 @@
             "continuation": "NP1",
             "unambiguous": 1,
             "item_id": "7_A_NP1_un",
-            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the can of tomatoes /in the same /bag as /the lime, /#and on /#her walk home \n/#from the store /#the lime got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the can of tomatoes /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
+            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. /She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the can of tomatoes /in the same /bag as /the lime, /#and on /#her walk home \n/#from the store /#the lime got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the can of tomatoes /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
             "question": "Alyssa was making a potato salad.",
             "qanswer": "False"
         },
@@ -1069,7 +1069,7 @@
             "continuation": "NP2",
             "unambiguous": 1,
             "item_id": "7_A_NP2_un",
-            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the can of tomatoes /in the same /bag as /the lime, /#and on /#her walk home \n/#from the store /#the can of tomatoes got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the lime /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
+            "stimulus": "Alyssa\u2019s friend Adam /was coming over /for dinner, /and she /had decided \n/to make /a potato curry. /She went to /the store /to pick up \n/some ingredients: /potatoes, rice, /a lime, /and a can \n/of chopped tomatoes. /She was /running late /by the time /she got to \n/the checkout /and she /packed away /the items /in a rush. /Alyssa packed \n/the can of tomatoes /in the same /bag as /the lime, /#and on /#her walk home \n/#from the store /#the can of tomatoes got crushed. /#Alyssa carefully \n/#unpacked all /#of the items /and placed them /#on the table. /#Fortunately, \n/#the lime /#hadn\u2019t been crushed /#on the walk. /#Alyssa washed \n/#her hands /and started /to prepare /the food. ",
             "question": "Alyssa was making a potato salad.",
             "qanswer": "False"
         },

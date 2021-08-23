@@ -188,6 +188,10 @@ def init_ppt(request):
     # Get condition
     condition = request.GET.get('condition')
 
+    # Randomly assign condition
+    if condition is None:
+        condition = random.choice(["AM", "UN"])
+
     # Get list index
     list_idx = get_list_idx(condition=condition)
 

@@ -78,7 +78,7 @@ A: True
 
 7. Alyssa packed the can of tomatoes in the same bag as the lime, and on her walk home from the store it got crushed.
 
-Intro: Alyssa’s friend Adam / was coming over / for dinner, / and she / had decided / to make / a potato curry. / She went to / the store / to pick up / some ingredients: / potatoes, rice, / a lime, / and a can / of chopped tomatoes.
+Intro: Alyssa’s friend Adam / was coming over / for dinner, / and she / had decided / to make / a potato curry. / She went to / the store / to pick up / some ingredients: / potatoes, rice, / a lime, / and a can / of chopped tomatoes. /
 Setup: She was / running late / by the time / she got to / the checkout / and she / packed away / the items / in a rush. /
 Critical: Alyssa packed / {the can of tomatoes} / in the same / bag as / {the lime}, / #and on / #her walk home / #from the store / #{it} got crushed. /
 Critical Spillover: #Alyssa carefully / #unpacked all / #of the items / and placed them / #on the table. /
