@@ -389,18 +389,13 @@ def save_results(request):
 
     # Grant credit
     if ppt.SONA_code != "":
-        if ppt.condition == "AM":
-            response = requests.get(
-                f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2119&credit_token=480328d4b651403f923543a70fc0db11&survey_code={ppt.SONA_code}")
-        elif ppt.condition == "UN":
-            response = requests.get(
-                f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2124&credit_token=101dc33a192441d0ac1289b631f936d4&survey_code={ppt.SONA_code}")
+        response = requests.get(
+            f"https://ucsd.sona-systems.com/services/SonaAPI.svc/WebstudyCredit?experiment_id=2151&credit_token=5edbe67c06d3444abf48aa43985c572b&survey_code={ppt.SONA_code}")
         content = response.content.decode()
         ppt.notes = ppt.notes + f"SONA credit response:\n{content}\n"
 
     ppt.save()
 
-    # Notify User
     return JsonResponse({"success": True})
 
 
