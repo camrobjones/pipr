@@ -9,6 +9,7 @@ import os
 import random
 import json
 import re
+import math
 
 import requests
 import pandas as pd
@@ -140,12 +141,15 @@ def get_stimuli_by_list(list_idx, condition, limit=None):
     # Select one list
     stimuli = data[list_idx]
 
-    for item in stimuli:
+    # Get idx of stimuli to remove questions from
+    n_no_q = math.floor((1-QUESTION_PROP) * len(stimuli))
+    no_q_idx = random.sample(range(len(stimuli)), k=n_no_q)
 
-        # Randomly present questions
-        if random.random() > QUESTION_PROP:
-            item["question"] = ""
-            item["qanswer"] = ""
+    # Remove question from sampled items
+    for idx in no_q_idx:
+        item = stimuli[idx]
+        item["question"] = ""
+        item["qanswer"] = ""
 
     # Shuffle & limit
     limit = limit or len(stimuli)

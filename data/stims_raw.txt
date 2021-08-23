@@ -184,7 +184,7 @@ Continuation Spillover: #She went / #back  to / the kitchen / to dispose of / th
 
 Questions:
 
-Q: The party was for Sofia’s birthday.
+Q: The party was in Sofia's apartment.
 A: True
 
 15. Lily put the cheese in the oven with the bread to warm up, but by the time she came back it had melted.
@@ -315,8 +315,9 @@ Continuation Spillover: #Adam ran / #out of / the room / before Jack / could thr
 
 Questions:
 
-Q: Jack ran out of the room.
+Q: Adam started shouting at Jack.
 A: False
+
 25. Ben packed his shirt in the same suitcase as his mug. When he took it out it was broken.
 Intro: Ben was preparing / to go away / for a conference. / He had picked / out a shirt / to wear / for his presentation, / and a coffee mug / in case / his hotel room / didn’t have one. / 
 Setup: He checked / the time / and realized / he had / to catch / the bus / to the  /convention center / in just / 15 minutes. /

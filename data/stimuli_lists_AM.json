@@ -151,7 +151,7 @@
             "unambiguous": 0,
             "item_id": "14_A_NP2_amb",
             "stimulus": "Sofia was hosting /a birthday party /in her apartment. /She went \n/to the kitchen /to pour herself /a glass /of wine, /but couldn\u2019t find \n/any glasses, /so she /had to use /a teacup instead. /She wandered /back to \n/the living room, /bringing the wine bottle /with her. /She went over /to join \n/a group /of friends /sitting at /the dining table. /Sofia placed /the teacup \n/#next to /#the wine bottle, /#but it /#fell over /#when a passer-by \n/#bumped into /#the table. /Sofia quickly used /a napkin /to mop up /the wine \n/#which had spilled /#on the table. /#The wine bottle /#had remained upright \n/#throughout the commotion. /#She went /#back  to /the kitchen /to dispose of \n/the napkin /and wash /her hands. ",
-            "question": "The party was for Sofia\u2019s birthday.",
+            "question": "The party was in Sofia's apartment.",
             "qanswer": "True"
         },
         {
@@ -261,7 +261,7 @@
             "unambiguous": 0,
             "item_id": "24_B_NP2_amb",
             "stimulus": "Jack stood up, /furious. /He began /shouting obscenities /and threats \n/at Adam. /He reached out /and grabbed /an ornament /from the table \n/next to him, /and prepared /to throw it /at Adam. /Adam picked up /a rock \n/from the floor /and threatened /to throw /it back. /Each man /threw his \n/object at /the same moment, /and they /flew towards /each other \n/across the room. /#When the ornament /#collided with /#the rock, \n/#it shattered. /#Adam felt terrified /#and shouted /#to try /to calm \n/Jack down. /#Jack picked up /#the rock /#which had survived \n/#without any damage /#from the collision. /#Adam ran /#out of /the room \n/before Jack /could throw /anything else /at him. ",
-            "question": "Jack ran out of the room.",
+            "question": "Adam started shouting at Jack.",
             "qanswer": "False"
         },
         {
@@ -483,7 +483,7 @@
             "unambiguous": 0,
             "item_id": "14_B_NP1_amb",
             "stimulus": "Sofia was hosting /a birthday party /in her apartment. /She went \n/to the kitchen /to pour herself /a glass /of wine, /but couldn\u2019t find \n/any glasses, /so she /had to use /a teacup instead. /She wandered /back to \n/the living room, /bringing the wine bottle /with her. /She went over /to join \n/a group /of friends /sitting at /the dining table. /Sofia placed \n/the wine bottle /#next to /#the teacup, /#but it /#fell over \n/#when a passer-by /#bumped into /#the table. /Sofia quickly used /a napkin \n/to mop up /the wine /#which had spilled /#on the table. /#The wine bottle \n/#had remained upright /#throughout the commotion. /#She went /#back  to \n/the kitchen /to dispose of /the napkin /and wash /her hands. ",
-            "question": "The party was for Sofia\u2019s birthday.",
+            "question": "The party was in Sofia's apartment.",
             "qanswer": "True"
         },
         {
@@ -593,7 +593,7 @@
             "unambiguous": 0,
             "item_id": "24_A_NP1_amb",
             "stimulus": "Jack stood up, /furious. /He began /shouting obscenities /and threats \n/at Adam. /He reached out /and grabbed /an ornament /from the table \n/next to him, /and prepared /to throw it /at Adam. /Adam picked up /a rock \n/from the floor /and threatened /to throw /it back. /Each man /threw his \n/object at /the same moment, /and they /flew towards /each other \n/across the room. /#When the rock /#collided with /#the ornament, \n/#it shattered. /#Adam felt terrified /#and shouted /#to try /to calm \n/Jack down. /#Jack picked up /#the rock /#which had survived \n/#without any damage /#from the collision. /#Adam ran /#out of /the room \n/before Jack /could throw /anything else /at him. ",
-            "question": "Jack ran out of the room.",
+            "question": "Adam started shouting at Jack.",
             "qanswer": "False"
         },
         {
@@ -815,7 +815,7 @@
             "unambiguous": 0,
             "item_id": "14_B_NP2_amb",
             "stimulus": "Sofia was hosting /a birthday party /in her apartment. /She went \n/to the kitchen /to pour herself /a glass /of wine, /but couldn\u2019t find \n/any glasses, /so she /had to use /a teacup instead. /She wandered /back to \n/the living room, /bringing the wine bottle /with her. /She went over /to join \n/a group /of friends /sitting at /the dining table. /Sofia placed \n/the wine bottle /#next to /#the teacup, /#but it /#fell over \n/#when a passer-by /#bumped into /#the table. /Sofia quickly used /a napkin \n/to mop up /the wine /#which had spilled /#on the table. /#The teacup \n/#had remained upright /#throughout the commotion. /#She went /#back  to \n/the kitchen /to dispose of /the napkin /and wash /her hands. ",
-            "question": "The party was for Sofia\u2019s birthday.",
+            "question": "The party was in Sofia's apartment.",
             "qanswer": "True"
         },
         {
@@ -925,7 +925,7 @@
             "unambiguous": 0,
             "item_id": "24_A_NP2_amb",
             "stimulus": "Jack stood up, /furious. /He began /shouting obscenities /and threats \n/at Adam. /He reached out /and grabbed /an ornament /from the table \n/next to him, /and prepared /to throw it /at Adam. /Adam picked up /a rock \n/from the floor /and threatened /to throw /it back. /Each man /threw his \n/object at /the same moment, /and they /flew towards /each other \n/across the room. /#When the rock /#collided with /#the ornament, \n/#it shattered. /#Adam felt terrified /#and shouted /#to try /to calm \n/Jack down. /#Jack picked up /#the ornament /#which had survived \n/#without any damage /#from the collision. /#Adam ran /#out of /the room \n/before Jack /could throw /anything else /at him. ",
-            "question": "Jack ran out of the room.",
+            "question": "Adam started shouting at Jack.",
             "qanswer": "False"
         },
         {
@@ -1147,7 +1147,7 @@
             "unambiguous": 0,
             "item_id": "14_A_NP1_amb",
             "stimulus": "Sofia was hosting /a birthday party /in her apartment. /She went \n/to the kitchen /to pour herself /a glass /of wine, /but couldn\u2019t find \n/any glasses, /so she /had to use /a teacup instead. /She wandered /back to \n/the living room, /bringing the wine bottle /with her. /She went over /to join \n/a group /of friends /sitting at /the dining table. /Sofia placed /the teacup \n/#next to /#the wine bottle, /#but it /#fell over /#when a passer-by \n/#bumped into /#the table. /Sofia quickly used /a napkin /to mop up /the wine \n/#which had spilled /#on the table. /#The teacup /#had remained upright \n/#throughout the commotion. /#She went /#back  to /the kitchen /to dispose of \n/the napkin /and wash /her hands. ",
-            "question": "The party was for Sofia\u2019s birthday.",
+            "question": "The party was in Sofia's apartment.",
             "qanswer": "True"
         },
         {
@@ -1257,7 +1257,7 @@
             "unambiguous": 0,
             "item_id": "24_B_NP1_amb",
             "stimulus": "Jack stood up, /furious. /He began /shouting obscenities /and threats \n/at Adam. /He reached out /and grabbed /an ornament /from the table \n/next to him, /and prepared /to throw it /at Adam. /Adam picked up /a rock \n/from the floor /and threatened /to throw /it back. /Each man /threw his \n/object at /the same moment, /and they /flew towards /each other \n/across the room. /#When the ornament /#collided with /#the rock, \n/#it shattered. /#Adam felt terrified /#and shouted /#to try /to calm \n/Jack down. /#Jack picked up /#the ornament /#which had survived \n/#without any damage /#from the collision. /#Adam ran /#out of /the room \n/before Jack /could throw /anything else /at him. ",
-            "question": "Jack ran out of the room.",
+            "question": "Adam started shouting at Jack.",
             "qanswer": "False"
         },
         {
