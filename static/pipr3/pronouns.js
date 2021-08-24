@@ -169,20 +169,31 @@ function ex_captcha() {
   });
 }
 
-var template = document.querySelector('#demographics');
+var demographics_template = document.querySelector('#demographics');
+
+// OSIVQ
+osivq_instructions_template = document.querySelector('#osivq-instructions');
+osivq_1_template = document.querySelector('#osivq-1');
+
+// VVIQ
+vviq_instructions_template = document.querySelector('#vviq-instructions');
+vviq_1_template = document.querySelector('#vviq-1');
+vviq_2_template = document.querySelector('#vviq-2');
+vviq_3_template = document.querySelector('#vviq-3');
+vviq_4_template = document.querySelector('#vviq-4');
 
 /* --- Progress Bar --- */
 
 // Initialise variables
 if (conf.condition == "AM") {
-  var total_trials = 13 + stimuli.length;
+  var total_trials = 18 + stimuli.length;
 } else {
   // Two post-test q's missing
-  var total_trials = 11 + stimuli.length;
+  var total_trials = 16 + stimuli.length;
 }
 
 
-// welcome, consent, instr, p1, p2, eop, stimuli, end_trials, demo, post * 5
+// welcome, consent, instr, p1, p2, eop, (stimuli), end_trials, vviq * 5, demo, post * 5
 
 var current_trial = 0;
 
@@ -680,7 +691,7 @@ var end_trials = {
         Trials Complete
       </h2>
     <p class='instructions'>
-      Thank you. You have completed all of the passages.
+      Thank you. You have completed all of the scenarios.
     </p>
 
     <p class='instructions'>
@@ -695,12 +706,91 @@ var end_trials = {
   on_finish: updateProgress
 };
 
+// OSIVQ
+
+var osivq_instructions = {
+
+  // OSIVQ Instructions
+  type: "html-keyboard-response",
+  stimulus: osivq_instructions_template.innerHTML,
+  data: {trial_part: 'osivq'},
+  on_finish: updateProgress
+
+};
+
+var osivq_1 = {
+
+  // OSIVQ Page 1
+  type: "survey-html-form",
+  html: osivq_1_template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'osivq'},
+  on_finish: updateProgress
+
+};
+
+// VVIQ
+
+var vviq_instructions = {
+
+  // VVIQ Instructions
+  type: "html-keyboard-response",
+  stimulus: vviq_instructions_template.innerHTML,
+  data: {trial_part: 'vviq'},
+  on_finish: updateProgress
+
+};
+
+var vviq_1 = {
+
+  // VVIQ Page 1
+  type: "survey-html-form",
+  html: vviq_1_template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'vviq'},
+  on_finish: updateProgress
+
+};
+
+var vviq_2 = {
+
+  // VVIQ Page 2
+  type: "survey-html-form",
+  html: vviq_2_template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'vviq'},
+  on_finish: updateProgress
+
+};
+
+var vviq_3 = {
+
+  // VVIQ Page 3
+  type: "survey-html-form",
+  html: vviq_3_template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'vviq'},
+  on_finish: updateProgress
+
+};
+
+var vviq_4 = {
+
+  // VVIQ Page 4
+  type: "survey-html-form",
+  html: vviq_4_template.innerHTML,
+  choices: jsPsych.NO_KEYS,
+  data: {trial_part: 'vviq'},
+  on_finish: updateProgress
+
+};
+
 
 var demographics = {
 
   // Demographics Trial
   type: "survey-html-form",
-  html: template.innerHTML,
+  html: demographics_template.innerHTML,
   choices: jsPsych.NO_KEYS,
   data: {trial_part: 'demographics'},
   on_finish: updateProgress
@@ -1016,6 +1106,12 @@ timeline.push(post_practice);
 
 // Add trial procedure
 addStimuliToTimeline(timeline, list_1, "trial");
+
+// OSIVQ
+// timeline.push(osivq_instructions, osivq_1);
+
+// VVIQ
+timeline.push(vviq_instructions, vviq_1, vviq_2, vviq_3, vviq_4);
 
 // Post-test questions
 timeline.push(end_trials, demographics, post_test_purpose,

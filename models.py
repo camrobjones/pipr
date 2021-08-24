@@ -129,3 +129,25 @@ class Language(models.Model):
     learned = models.TextField(default="")  # Age first learned
     active = models.TextField(default="")  # No. years used
     proportion = models.TextField(default="")  # % of time used currently
+
+
+class Likert(models.Model):
+    """Responses to likert-style rating questions"""
+    participant = models.ForeignKey(
+        Participant,
+        on_delete=models.CASCADE
+    )
+
+    # Scales
+    VVIQ = "VVIQ"
+    OSIVQ = "OSIVQ"
+    SCALES = [
+        (VVIQ, "Unambiguous"),
+        (OSIVQ, "Ambiguous")
+    ]
+    scale = models.CharField(
+        max_length=10,
+        choices=SCALES
+    )
+    item_id = models.CharField(max_length=10)  # Item ID within scale
+    response = models.IntegerField()  # Participant response to question

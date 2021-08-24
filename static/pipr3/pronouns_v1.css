@@ -519,3 +519,53 @@ div#copy-confirm.show {
     opacity:1;
 }
 
+
+/* VVIQ/OSIVQ */
+
+.option-container.likert {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 25px 0 20px 0;
+}
+
+.radio-option.likert {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: auto;
+    padding: 0 5px;
+}
+
+h2.section-title.likert {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000000d1;
+}
+
+h3.question-title.likert {
+    margin-top: 5px;
+}
+
+label.radio-label.likert {
+    text-align: center;
+}
+
+input.likert {
+    margin: 3px;
+}
+
+div.question.likert {
+    border-top: 1px solid #ccc;
+}
+
+ol.instructions {
+    text-align: justify;
+    margin-left: 2em;
+}
+
+label.radio-label.likert.bottom {
+    font-size: 0.8em;
+}
+

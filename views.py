@@ -21,7 +21,7 @@ from django.utils import timezone as tz
 from django.conf import settings
 from django.contrib.auth.decorators import user_passes_test
 
-from pipr3.models import Participant, Trial, Stimulus, Language
+from pipr3.models import Participant, Trial, Stimulus, Language, Likert
 from pipr3.data.words import wordlist
 
 """
@@ -358,9 +358,13 @@ def save_results(request):
         )
         trial.save()
 
-    demo = [item for item in data if item.get('trial_part') == "demographics"]
+    # -- Demographics -- #
 
-    demo = demo[0]
+    # Get demo trial
+    demo = [item for item in data if item.get('trial_part') == "demographics"]
+    demo = demo[0]  # only one demo trial
+
+    # Extract data to ppt obj
     demo_data = json.loads(demo.get('responses', "{}"))
     ppt.birth_year = demo_data.get('demographics_year') or None
     ppt.gender = demo_data.get('demographics_gender')
@@ -370,8 +374,39 @@ def save_results(request):
     ppt.asd = demo_data.get('asd') == "true"
     ppt.vision = demo_data.get('demographics_vision')
     ppt.vision_reason = demo_data.get('demographics_vision_reason')
-
     ppt.native_english = demo_data.get('demographics_english') == "yes"
+
+    # -- VVIQ -- #
+
+    # Get relevant items
+    vviq_items = [item for item in data if item.get('trial_part') == "vviq"]
+
+    for vviq_item in vviq_items:
+
+        # Get response data
+        vviq_data = json.loads(vviq_item.get('responses', "{}"))
+        
+        # Pass empty trials (e.g. instructions)
+        if not vviq_data:
+            continue
+
+        for key, value in vviq_data.items():
+
+            # Get item_id
+            match = re.match("vviq-response-([0-9+]-[0-9+])", key)
+            item_id = match.groups()[0]
+
+            # Convert response to int
+            response = int(value)
+
+            likert_response = Likert.objects.create(
+                participant=ppt,
+                scale="VVIQ",
+                item_id=item_id,
+                response=response
+                )
+
+    # -- Languages -- #
 
     # Get matches
     lang_matches = [re.match(LANGUAGE_REGEX, l) for l in demo_data]
@@ -499,6 +534,23 @@ def lang_data():
     return df
 
 
+def likert_data():
+    """Get likert response data"""
+    data_list = []
+
+    for response in Likert.objects.all():
+
+        data = response.__dict__
+        data.pop('_state')
+
+        data_list.append(data)
+
+    df = pd.DataFrame(data_list)
+    df = df.sort_values('id').reset_index(drop=True)
+
+    return df
+
+
 @user_passes_test(is_admin)
 def download_data(request, model):
     """Download csv of model data"""
@@ -508,6 +560,8 @@ def download_data(request, model):
         data = ppt_data()
     elif model == "language":
         data = lang_data()
+    elif model == "likert":
+        data = likert_data()
     else:
         raise ValueError(
             "'model' must be 'trial' or 'participant', not %r" % model)
