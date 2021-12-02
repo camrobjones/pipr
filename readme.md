@@ -3,7 +3,7 @@
 
 Web interface for PIPR experiment using django/jsPsych.
 
-Hosted at https://camrobjones.com/pipr/.
+Hosted at https://camrobjones.com/pipr/expt.
 
 ## Overview
 
