@@ -1,0 +1,181 @@
+,item_id,condition,question,sylls
+0,1_A,Syntax norming,What broke?,2
+1,1_B,Syntax norming,What broke?,2
+2,2_A,Syntax norming,What broke?,2
+3,2_B,Syntax norming,What broke?,2
+4,3_A,Syntax norming,What broke?,2
+5,3_B,Syntax norming,What broke?,2
+6,4_A,Syntax norming,What sped up and pulled ahead?,7
+7,4_B,Syntax norming,What sped up and pulled ahead?,7
+8,5_A,Syntax norming,What sped up and pulled ahead?,7
+9,5_B,Syntax norming,What sped up and pulled ahead?,7
+10,6_A,Syntax norming,What did the wind blow away?,7
+11,6_B,Syntax norming,What did the wind blow away?,7
+12,7_A,Syntax norming,What got crushed?,3
+13,7_B,Syntax norming,What got crushed?,3
+14,8_A,Syntax norming,What did the wind blow away?,7
+15,8_B,Syntax norming,What did the wind blow away?,7
+16,9_A,Syntax norming,What cracked?,2
+17,9_B,Syntax norming,What cracked?,2
+18,10_A,Syntax norming,What was burned?,3
+19,10_B,Syntax norming,What was burned?,3
+20,11_A,Syntax norming,What came out with scratches all over it?,10
+21,11_B,Syntax norming,What came out with scratches all over it?,10
+22,12_A,Syntax norming,What was knocked off course?,5
+23,12_B,Syntax norming,What was knocked off course?,5
+24,13_A,Syntax norming,What broke?,2
+25,13_B,Syntax norming,What broke?,2
+26,14_A,Syntax norming,What fell over?,4
+27,14_B,Syntax norming,What fell over?,4
+28,15_A,Syntax norming,What melted?,3
+29,15_B,Syntax norming,What melted?,3
+30,16_A,Syntax norming,What got crushed?,3
+31,16_B,Syntax norming,What got crushed?,3
+32,17_A,Syntax norming,What melted?,3
+33,17_B,Syntax norming,What melted?,3
+34,18_A,Syntax norming,What could Daniel hear rattling?,8
+35,18_B,Syntax norming,What could Daniel hear rattling?,8
+36,19_A,Syntax norming,What got crushed?,3
+37,19_B,Syntax norming,What got crushed?,3
+38,20_A,Syntax norming,What rolled away?,4
+39,20_B,Syntax norming,What rolled away?,4
+40,21_A,Syntax norming,What wouldn't fit?,4
+41,21_B,Syntax norming,What wouldn't fit?,4
+42,22_A,Syntax norming,What gave way?,3
+43,22_B,Syntax norming,What gave way?,3
+44,23_A,Syntax norming,What was smashed to pieces?,6
+45,23_B,Syntax norming,What was smashed to pieces?,6
+46,24_A,Syntax norming,What shattered?,3
+47,24_B,Syntax norming,What shattered?,3
+48,25_A,Syntax norming,What was broken?,4
+49,25_B,Syntax norming,What was broken?,4
+50,26_A,Syntax norming,What was creased?,4
+51,26_B,Syntax norming,What was creased?,4
+52,27_A,Syntax norming,What made a hole in the lining?,8
+53,27_B,Syntax norming,What made a hole in the lining?,8
+54,28_A,Syntax norming,What hit Josh in the face?,6
+55,28_B,Syntax norming,What hit Josh in the face?,6
+56,29_A,Syntax norming,What melted?,3
+57,29_B,Syntax norming,What melted?,3
+58,30_A,Syntax norming,What was squashed?,3
+59,30_B,Syntax norming,What was squashed?,3
+60,1_A,Physics norming,,0
+61,1_B,Physics norming,,0
+62,2_A,Physics norming,,0
+63,2_B,Physics norming,,0
+64,3_A,Physics norming,,0
+65,3_B,Physics norming,,0
+66,4_A,Physics norming,,0
+67,4_B,Physics norming,,0
+68,5_A,Physics norming,,0
+69,5_B,Physics norming,,0
+70,6_A,Physics norming,,0
+71,6_B,Physics norming,,0
+72,7_A,Physics norming,,0
+73,7_B,Physics norming,,0
+74,8_A,Physics norming,,0
+75,8_B,Physics norming,,0
+76,9_A,Physics norming,,0
+77,9_B,Physics norming,,0
+78,10_A,Physics norming,,0
+79,10_B,Physics norming,,0
+80,11_A,Physics norming,,0
+81,11_B,Physics norming,,0
+82,12_A,Physics norming,,0
+83,12_B,Physics norming,,0
+84,13_A,Physics norming,,0
+85,13_B,Physics norming,,0
+86,14_A,Physics norming,,0
+87,14_B,Physics norming,,0
+88,15_A,Physics norming,,0
+89,15_B,Physics norming,,0
+90,16_A,Physics norming,,0
+91,16_B,Physics norming,,0
+92,17_A,Physics norming,,0
+93,17_B,Physics norming,,0
+94,18_A,Physics norming,,0
+95,18_B,Physics norming,,0
+96,19_A,Physics norming,,0
+97,19_B,Physics norming,,0
+98,20_A,Physics norming,,0
+99,20_B,Physics norming,,0
+100,21_A,Physics norming,,0
+101,21_B,Physics norming,,0
+102,22_A,Physics norming,,0
+103,22_B,Physics norming,,0
+104,23_A,Physics norming,,0
+105,23_B,Physics norming,,0
+106,24_A,Physics norming,,0
+107,24_B,Physics norming,,0
+108,25_A,Physics norming,,0
+109,25_B,Physics norming,,0
+110,26_A,Physics norming,,0
+111,26_B,Physics norming,,0
+112,27_A,Physics norming,,0
+113,27_B,Physics norming,,0
+114,28_A,Physics norming,,0
+115,28_B,Physics norming,,0
+116,29_A,Physics norming,,0
+117,29_B,Physics norming,,0
+118,30_A,Physics norming,,0
+119,30_B,Physics norming,,0
+120,1_A,Experimental,What broke?,2
+121,1_B,Experimental,What broke?,2
+122,2_A,Experimental,What broke?,2
+123,2_B,Experimental,What broke?,2
+124,3_A,Experimental,What broke?,2
+125,3_B,Experimental,What broke?,2
+126,4_A,Experimental,What sped up and pulled ahead?,7
+127,4_B,Experimental,What sped up and pulled ahead?,7
+128,5_A,Experimental,What sped up and pulled ahead?,7
+129,5_B,Experimental,What sped up and pulled ahead?,7
+130,6_A,Experimental,What did the wind blow away?,7
+131,6_B,Experimental,What did the wind blow away?,7
+132,7_A,Experimental,What got crushed?,3
+133,7_B,Experimental,What got crushed?,3
+134,8_A,Experimental,What did the wind blow away?,7
+135,8_B,Experimental,What did the wind blow away?,7
+136,9_A,Experimental,What cracked?,2
+137,9_B,Experimental,What cracked?,2
+138,10_A,Experimental,What was burned?,3
+139,10_B,Experimental,What was burned?,3
+140,11_A,Experimental,What came out with scratches all over it?,10
+141,11_B,Experimental,What came out with scratches all over it?,10
+142,12_A,Experimental,What was knocked off course?,5
+143,12_B,Experimental,What was knocked off course?,5
+144,13_A,Experimental,What broke?,2
+145,13_B,Experimental,What broke?,2
+146,14_A,Experimental,What fell over?,4
+147,14_B,Experimental,What fell over?,4
+148,15_A,Experimental,What melted?,3
+149,15_B,Experimental,What melted?,3
+150,16_A,Experimental,What got crushed?,3
+151,16_B,Experimental,What got crushed?,3
+152,17_A,Experimental,What melted?,3
+153,17_B,Experimental,What melted?,3
+154,18_A,Experimental,What could Daniel hear rattling?,8
+155,18_B,Experimental,What could Daniel hear rattling?,8
+156,19_A,Experimental,What got crushed?,3
+157,19_B,Experimental,What got crushed?,3
+158,20_A,Experimental,What rolled away?,4
+159,20_B,Experimental,What rolled away?,4
+160,21_A,Experimental,What wouldn't fit?,4
+161,21_B,Experimental,What wouldn't fit?,4
+162,22_A,Experimental,What gave way?,3
+163,22_B,Experimental,What gave way?,3
+164,23_A,Experimental,What was smashed to pieces?,6
+165,23_B,Experimental,What was smashed to pieces?,6
+166,24_A,Experimental,What shattered?,3
+167,24_B,Experimental,What shattered?,3
+168,25_A,Experimental,What was broken?,4
+169,25_B,Experimental,What was broken?,4
+170,26_A,Experimental,What was creased?,4
+171,26_B,Experimental,What was creased?,4
+172,27_A,Experimental,What made a hole in the lining?,8
+173,27_B,Experimental,What made a hole in the lining?,8
+174,28_A,Experimental,What hit Josh in the face?,6
+175,28_B,Experimental,What hit Josh in the face?,6
+176,29_A,Experimental,What melted?,3
+177,29_B,Experimental,What melted?,3
+178,30_A,Experimental,What was squashed?,3
+179,30_B,Experimental,What was squashed?,3

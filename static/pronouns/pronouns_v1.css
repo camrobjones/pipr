@@ -217,7 +217,7 @@ select {
     height: 2em;
 }
 
-input[type="radio" i] {
+.demographics input[type="radio" i] {
     margin: 3px 7px 3px 3px;
 }
 
@@ -239,7 +239,7 @@ div#language-box-container {
         
     }
 
-    div.question input[type="number"], select {
+    div.question input[type="number"], select.demographics {
     width: 60px;
     padding: 3px 3px;
     font-size: 0.9em;
