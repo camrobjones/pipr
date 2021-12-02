@@ -3,7 +3,7 @@
 
 Web interface for PIPR experiment using django/jsPsych.
 
-Hosted at https://camrobjones.com/pronouns/.
+Hosted at https://camrobjones.com/pipr/.
 
 ## Overview
 
@@ -11,23 +11,4 @@ Stimuli and fillers are loaded from csvs in 'data/' and rendered as timeline var
 
 Stimuli and fillers are mixed and randomly ordered. Participants are presented with a sentence for 3s, then a question and two possible responses (NP1, NP2). The order of the responses is randomised.
 
-User responses are sent back at the end of the experiment and saved as a JSON in 'data/results/{timestamp}-{session-key}.json'.
-
-## Todo
-
-### Stimuli
-
-    - Create more stimuli
-    - Improve lower quality stimuli
-        - Some experimental stimuli don't work in the norming formats.
-
-### DB
-
-    - Create schema to store:
-        - Stimuli
-        - Particicpants
-        - Participant Responses
-
-## Updates
-
-- Added CAPTCHA v3 protection
+User responses are sent back at the end of the experiment and saved as a JSON in 'data/results/{timestamp}-{session-key}.json' and subsequently stored in the database (schema defined in models.py).
