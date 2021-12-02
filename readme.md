@@ -1,5 +1,5 @@
 
-# Does world knowledge influence the propositionalinterpretation of language? Evidence from pronoun resolution
+# Does world knowledge influence the propositional interpretation of language? Evidence from pronoun resolution
 
 Code to run 3 Experiments investigating the influence of physical plausibility on language comprehension.
 
@@ -11,6 +11,8 @@ The directory organization follows django convention. HTML templates are found i
 `/templates/<appname>/`. JS files are in `static/<appname>/`. Python code to
 load the data, serve the experiment page, and store results is in `views.py`
 and the definition of the database schema is in `models.py`.
+
+The language model code (for all 3 expts) is on the `expt3` branch in the `lm` directory.
 
 The apps should be "plug-and-play" so you should be able to import them into
 a different django project and run them. Let me know if you have any difficulty
