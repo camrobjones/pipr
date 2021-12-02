@@ -143,6 +143,29 @@ def generate_lstm_stims():
     tc_df.to_csv(f"pipr3/data/token_counts.csv")
 
 
+"""
+Check all ambiguous versions of the stims are identical before
+continuation region
+"""
+
+
+def get_pre_cont(text):
+    """Get pre-cont section of text"""
+    regions = list(re.finditer("#[^/]+/", text))  # Find all recorded groups
+    first_cont = regions[7]
+
+    return text[:first_cont.start()]
+
+
+def check_all_ambiguous_same():
+    for (ix, item) in enumerate(stimuli):
+        for order in ["A", "B"]:
+            pair = [v['stimulus'] for v in item if v["order"] == order and v["unambiguous"] == 0]
+            a = get_pre_cont(pair[0])
+            b = get_pre_cont(pair[1])
+
+            if a != b:
+                print(ix, order)
 
 # It broke ... steel plate unharmed
 # [tensor(-24.3314), tensor(-17.6134), tensor(-31.3971), tensor(-27.5524), tensor(-18.1449), tensor(-28.9194), tensor(-25.0143)]
