@@ -118,8 +118,6 @@ def ua_data(request):
     """Store ppt ua_data"""
     post = json.loads(request.body.decode('utf-8'))
 
-    # print(post)
-
     ppt_id = post['ppt_id']
 
     ppt = Participant.objects.get(pk=ppt_id)
