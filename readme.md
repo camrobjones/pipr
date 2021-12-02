@@ -1,18 +1,19 @@
 
-# PIPR Experiment 2
+# PIPR Experiment 3
 
 Web interface for PIPR experiment using django/jsPsych.
 
-Hosted at https://camrobjones.com/pipr2/.
+Hosted at https://camrobjones.com/pipr3/.
 
 ## Overview
 
-Stimuli and fillers are loaded from csvs in 'data/' and rendered as timeline variables in jsPsych. The The ratio of fillers to experimental items is parameterisable (currently 2:1). Fillers are 50% NP1-biased and 50% NP-2 biased, so the overall (syntax) NP1-biased:NP2-biased ratio is 1:2.
+Participants read passages which contain a) a critical sentence with an
+ambiguous pronoun and b) a continuation sentence which is inconsistent
+with one interpretation of the pronoun.
 
-Stimuli and fillers are mixed and randomly ordered. Participants are presented with a sentence for 3s, then a question and two possible responses (NP1, NP2). The order of the responses is randomised.
+Self-paced reading is used to measure the reading speed of the continuation
+sentence to check whether it is sensitive to the plausibility of the
+pronoun interpretation which it contradicts. The self-paced reading
+code is adapted from https://github.com/UiL-OTS-labs/jspsych-uil-template-docs.
 
-User responses are sent back at the end of the experiment and saved as a JSON in 'data/results/{timestamp}-{session-key}.json'.
-
-## Todo
-
-## Updates
+`lm/` contains code for getting surprisal for each item (for E1/2 and E3 stimuli).
