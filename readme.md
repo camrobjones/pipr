@@ -1,14 +1,17 @@
 
-# PIPR Experiment 1
+# Does world knowledge influence the propositionalinterpretation of language? Evidence from pronoun resolution
 
-Web interface for PIPR experiment using django/jsPsych.
+Code to run 3 Experiments investigating the influence of physical plausibility on language comprehension.
 
-Hosted at https://camrobjones.com/pipr/.
+The code for each experiment is kept on separate branches (expt1, expt2, and expt3).
 
-## Overview
+All experiments are run on a python/django backend and a js-psych driven frontend.
 
-Stimuli and fillers are loaded from csvs in 'data/' and rendered as timeline variables in jsPsych. The The ratio of fillers to experimental items is parameterisable (currently 2:1). Fillers are 50% NP1-biased and 50% NP-2 biased, so the overall (syntax) NP1-biased:NP2-biased ratio is 1:2.
+The directory organization follows django convention. HTML templates are found in 
+`/templates/<appname>/`. JS files are in `static/<appname>/`. Python code to
+load the data, serve the experiment page, and store results is in `views.py`
+and the definition of the database schema is in `models.py`.
 
-Stimuli and fillers are mixed and randomly ordered. Participants are presented with a sentence for 3s, then a question and two possible responses (NP1, NP2). The order of the responses is randomised.
-
-User responses are sent back at the end of the experiment and saved as a JSON in 'data/results/{timestamp}-{session-key}.json' and subsequently stored in the database (schema defined in models.py).
+The apps should be "plug-and-play" so you should be able to import them into
+a different django project and run them. Let me know if you have any difficulty
+finding/running/adapting anything! c8jones@ucsd.edu
